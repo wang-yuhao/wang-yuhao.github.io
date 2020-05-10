@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/web.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/web.jpg">
+  <link rel="mask-icon" href="/images/web.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":true,"color":"#222","save":"manual"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":{"disqus":null},"activeClass":"disqus"},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Interactive machine learning playground for the mlr package done in shiny.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4-mlrPlayground">
+<meta property="og:url" content="http://yoursite.com/2019/09/06/4-mlrPlayground/index.html">
+<meta property="og:site_name" content="Adventure">
+<meta property="og:description" content="Interactive machine learning playground for the mlr package done in shiny.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2019/09/06/4-mlrPlayground/4-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/06/4-mlrPlayground/4-2.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/06/4-mlrPlayground/4-3.png">
+<meta property="article:published_time" content="2019-09-06T15:42:55.000Z">
+<meta property="article:modified_time" content="2020-05-09T13:31:19.691Z">
+<meta property="article:author" content="Yuhao Wang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/06/4-mlrPlayground/4-1.png">
+
+<link rel="canonical" href="http://yoursite.com/2019/09/06/4-mlrPlayground/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>4-mlrPlayground | Adventure</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Adventure</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Spirit of indepence, thought of freedom</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-book">
+
+    <a href="/book/" rel="section"><i class="fa fa-fw fa-book"></i>Book</a>
+
+  </li>
+        <li class="menu-item menu-item-sport">
+
+    <a href="/sport/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Sport</a>
+
+  </li>
+        <li class="menu-item menu-item-travel">
+
+    <a href="/travel/" rel="section"><i class="fa fa-fw fa-plane"></i>Travel</a>
+
+  </li>
+        <li class="menu-item menu-item-movie">
+
+    <a href="/movie/" rel="section"><i class="fa fa-fw fa-film"></i>Movie</a>
+
+  </li>
+        <li class="menu-item menu-item-music">
+
+    <a href="/music/" rel="section"><i class="fa fa-fw fa-music"></i>Music</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/06/4-mlrPlayground/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/selfie.jpg">
+      <meta itemprop="name" content="Yuhao Wang">
+      <meta itemprop="description" content="Keep on going never give up.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Adventure">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          4-mlrPlayground
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-06 17:42:55" itemprop="dateCreated datePublished" datetime="2019-09-06T17:42:55+02:00">2019-09-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-09 15:31:19" itemprop="dateModified" datetime="2020-05-09T15:31:19+02:00">2020-05-09</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2019/09/06/4-mlrPlayground/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/06/4-mlrPlayground/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Interactive machine learning playground for the mlr package done in shiny.</p>
+<a id="more"></a>
+<p>Select predefined (but tunable) tasks:<br><img src="4-1.png" alt="#4-1"></p>
+<p>Select learner and plot prediction plane:<br><img src="4-2.png" alt="#4-2"></p>
+<p>Adjust hyperparameters of learner and see the change in the predictions:<br><img src="4-3.png" alt="#4-3"></p>
+<h2 id="How-to-start"><a href="#How-to-start" class="headerlink" title="How to start:"></a>How to start:</h2><p>Use this link:<br><a href="http://sebastian-gruber.shinyapps.io/mlrPlayground" target="_blank" rel="noopener">http://sebastian-gruber.shinyapps.io/mlrPlayground</a></p>
+<p>Or:<br>Install the package and execute mlrPlayground::start().</p>
+<p>Or:<br>Clone the git, open the file <code>inst/mlrPlayground/global.R</code> in Rstudio and press the “start app” button.</p>
+<h2 id="About-the-learner-config-file-only-for-advanced-users"><a href="#About-the-learner-config-file-only-for-advanced-users" class="headerlink" title="About the learner.config file (only for advanced users):"></a>About the learner.config file (only for advanced users):</h2><p>The file is located in inst/mlrPlayground and offers highy adaptability for the learners and its hyperparameters.<br>Stuff you can define in there:</p>
+<ul>
+<li>learners selectable in the UI (or remove already selectable learners; but don’t forget to adjust unit tests in this case)</li>
+<li>hyperparameter names</li>
+<li>hyperparameter default min/max values for the sliders</li>
+<li>hyperparameter default values</li>
+<li>your own tooltips for the hyperparameters</li>
+<li>removing specific hyperparameters from the UI<br>Examples and an indepth description of how to do all this is located in the first section in learner.config.</li>
+</ul>
+<h2 id="About-the-R6-class-system-only-for-developers"><a href="#About-the-R6-class-system-only-for-developers" class="headerlink" title="About the R6 class system (only for developers):"></a>About the R6 class system (only for developers):</h2><p>Every learning process is considered as a class. Currently there are 6 classes. The base class is called “LearningProcess” and is meant as a base scheme with all required methods listed for all the other classes. The currently working classes are “ClassifLearningProcess” and “RegrLearningProcess”. Besides these “Classif3dLearningProcess”, “Regr3dLearningProcess” are not fully implemented and “ClusterLearningProcess” is implemented, but not working right now. All the plots should now be defined in each class, so tasks/datasets in the same class have the SAME predictions and plots. This hopefully makes everything a lot clearer and more uniform. The methods for these plots are already named and called everywhere (“getDataPlot” and “getPredPlot”), so no further methods should be introduced. Every plot should be defined in one of these methods in each class respectively. So whenever a plot is changed, only adapt the class, not any code anywhere else. To make the method “getPredPlot” work, one also has to implement the method “calculatePred”, which basically calculates the predictions on a bounded set of equidistant (and predefined) points. When defining methods, ALWAYS use isolate on reactive values. Otherwise calling the method elsewhere may lead to highly unintended behaviour, like infinite update loops or triggered observers in some totally different place - basically stuff making debugging feel totally like hell.</p>
+<h2 id="About-unit-tests-only-for-developers"><a href="#About-unit-tests-only-for-developers" class="headerlink" title="About unit tests (only for developers):"></a>About unit tests (only for developers):</h2><p>Because all the app files have to be placed in the inst/mlrPlayground folder, unit tests can’t be written for functions (and especially the R6 classes) defined there. Also the package shinytest meant for “interactive UI” testing seems to not work - every new execution of the same test suddenly changes some value in the overall state, thus throwing a test error.<br>Fortunately a different way was found to still do some potent testing.<br>shinytest allows to start the app, set input values and catch output values in a script without visiting the app. The current unit tests simply set the input to all different kinds of tasks and learners and checks if the dataset/prediction plot json data changed compared to the last input (this way we can make sure the plots are actually updated with the input instead of guessing that “not NULL” as a output condition for the plot may actually be enough).</p>
+<p>Github: <a href="https://github.com/SebGruber1996/mlrPlayground" target="_blank" rel="noopener">https://github.com/SebGruber1996/mlrPlayground</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/09/05/3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication/" rel="prev" title="3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication">
+      <i class="fa fa-chevron-left"></i> 3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/" rel="next" title="5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation">
+      5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-start"><span class="nav-number">1.</span> <span class="nav-text">How to start:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-the-learner-config-file-only-for-advanced-users"><span class="nav-number">2.</span> <span class="nav-text">About the learner.config file (only for advanced users):</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-the-R6-class-system-only-for-developers"><span class="nav-number">3.</span> <span class="nav-text">About the R6 class system (only for developers):</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-unit-tests-only-for-developers"><span class="nav-number">4.</span> <span class="nav-text">About unit tests (only for developers):</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yuhao Wang"
+      src="/images/selfie.jpg">
+  <p class="site-author-name" itemprop="name">Yuhao Wang</p>
+  <div class="site-description" itemprop="description">Keep on going never give up.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wang-yuhao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wang-yuhao" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitlab.lrz.de/YuhaoWang" title="Gitlab → https:&#x2F;&#x2F;gitlab.lrz.de&#x2F;YuhaoWang" rel="noopener" target="_blank"><i class="fa fa-fw fa-gitlab"></i>Gitlab</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wang.yuhao@campus.lmu.de" title="E-Mail → mailto:wang.yuhao@campus.lmu.de" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/profile.php?id=100024612941908" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100024612941908" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/310835246" title="QQ → 310835246"><i class="fa fa-fw fa-qq"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/w942521" title="Wechat → w942521"><i class="fa fa-fw fa-wechat"></i>Wechat</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Friends
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://changkun.us/" title="https:&#x2F;&#x2F;changkun.us&#x2F;" rel="noopener" target="_blank">Changkun Ou</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-Yuhao Wang"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yuhao Wang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='100,100,100' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yuhao-de.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: {page: {
+            url: "http://yoursite.com/2019/09/06/4-mlrPlayground/",
+            identifier: "2019/09/06/4-mlrPlayground/",
+            title: "4-mlrPlayground"
+          }
+        }
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yuhao-de.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
