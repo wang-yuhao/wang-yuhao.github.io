@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/web.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/web.jpg">
+  <link rel="mask-icon" href="/images/web.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":true,"color":"#222","save":"manual"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":{"disqus":null},"activeClass":"disqus"},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Introduction(说明):">
+<meta property="og:type" content="article">
+<meta property="og:title" content="9-Build-eCommerce-Platform-with-NodeJS&#x2F;Express&#x2F;Bootstrap&#x2F;MongoDB&#x2F;AliCloud">
+<meta property="og:url" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/index.html">
+<meta property="og:site_name" content="Adventure">
+<meta property="og:description" content="Introduction(说明):">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/menu.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/signup.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/products.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/shoppingcart.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/checkout1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/checkout2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/order.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/comments.png">
+<meta property="article:published_time" content="2020-04-09T13:19:59.000Z">
+<meta property="article:modified_time" content="2020-05-10T04:55:00.622Z">
+<meta property="article:author" content="Yuhao Wang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/menu.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>9-Build-eCommerce-Platform-with-NodeJS/Express/Bootstrap/MongoDB/AliCloud | Adventure</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Adventure</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Spirit of indepence, thought of freedom</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-book">
+
+    <a href="/book/" rel="section"><i class="fa fa-fw fa-book"></i>Book</a>
+
+  </li>
+        <li class="menu-item menu-item-sport">
+
+    <a href="/sport/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Sport</a>
+
+  </li>
+        <li class="menu-item menu-item-travel">
+
+    <a href="/travel/" rel="section"><i class="fa fa-fw fa-plane"></i>Travel</a>
+
+  </li>
+        <li class="menu-item menu-item-movie">
+
+    <a href="/movie/" rel="section"><i class="fa fa-fw fa-film"></i>Movie</a>
+
+  </li>
+        <li class="menu-item menu-item-music">
+
+    <a href="/music/" rel="section"><i class="fa fa-fw fa-music"></i>Music</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/selfie.jpg">
+      <meta itemprop="name" content="Yuhao Wang">
+      <meta itemprop="description" content="Keep on going never give up.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Adventure">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          9-Build-eCommerce-Platform-with-NodeJS/Express/Bootstrap/MongoDB/AliCloud
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-09 15:19:59" itemprop="dateCreated datePublished" datetime="2020-04-09T15:19:59+02:00">2020-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-10 06:55:00" itemprop="dateModified" datetime="2020-05-10T06:55:00+02:00">2020-05-10</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Introduction-说明"><a href="#Introduction-说明" class="headerlink" title="Introduction(说明):"></a>Introduction(说明):</h2><a id="more"></a>
+<h4 id="Menu-菜单"><a href="#Menu-菜单" class="headerlink" title="Menu(菜单):"></a>Menu(菜单):</h4><p><img src="menu.png" alt="menu.png"></p>
+<h4 id="signup-注册"><a href="#signup-注册" class="headerlink" title="signup(注册):"></a>signup(注册):</h4><p><img src="signup.png" alt="signup.png"></p>
+<h4 id="Products-商品"><a href="#Products-商品" class="headerlink" title="Products(商品):"></a>Products(商品):</h4><p><img src="products.png" alt="products.png"></p>
+<h4 id="Shopping-cart-购物车"><a href="#Shopping-cart-购物车" class="headerlink" title="Shopping cart(购物车):"></a>Shopping cart(购物车):</h4><p><img src="shoppingcart.png" alt="shoppingcart.png"></p>
+<h4 id="Checkout-填写订单"><a href="#Checkout-填写订单" class="headerlink" title="Checkout(填写订单):"></a>Checkout(填写订单):</h4><p><img src="checkout1.png" alt="checkout1.png"><br><img src="checkout2.png" alt="checkout2.png"></p>
+<h4 id="Order-订单"><a href="#Order-订单" class="headerlink" title="Order(订单):"></a>Order(订单):</h4><p><img src="order.png" alt="order.png"></p>
+<h4 id="Comment-建议"><a href="#Comment-建议" class="headerlink" title="Comment(建议):"></a>Comment(建议):</h4><p><img src="comments.png" alt="comment.png"></p>
+<h4 id="Last-semester-did-a-Paktikum-in-a-german-company-the-main-job-was-independently-building-an-eCommerce-Platform-to-sell-german-products-to-China-customs-and-this-Website-is-the-outcome-It-should-have-more-functions-but-due-to-Corona-virus-the-plan-was-forced-to-be-interrupted-and-more-content-will-be-perfected-one-after-another"><a href="#Last-semester-did-a-Paktikum-in-a-german-company-the-main-job-was-independently-building-an-eCommerce-Platform-to-sell-german-products-to-China-customs-and-this-Website-is-the-outcome-It-should-have-more-functions-but-due-to-Corona-virus-the-plan-was-forced-to-be-interrupted-and-more-content-will-be-perfected-one-after-another" class="headerlink" title="Last semester did a Paktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customs, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another."></a>Last semester did a Paktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customs, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another.</h4><h4 id="This-eCommerce-Platform-was-designed-primarily-for-a-mobile-device-Use-Express-structure-bootstrap-and-handlebars-for-frontend-Nodejs-control-the-backend-Mongodb-store-the-database-early-the-project-was-deployed-on-the-Azure-but-due-to-the-GFW-limits-the-network-speed-user-can-not-open-the-Website-fast-so-have-to-change-to-AliCloud-on-HongKong-this-server-is-efficiency-cheaper-and-doesn’t-need-to-register-in-the-government-department-it-is-an-excellent-choice-for-the-global-eCommerce-Platform"><a href="#This-eCommerce-Platform-was-designed-primarily-for-a-mobile-device-Use-Express-structure-bootstrap-and-handlebars-for-frontend-Nodejs-control-the-backend-Mongodb-store-the-database-early-the-project-was-deployed-on-the-Azure-but-due-to-the-GFW-limits-the-network-speed-user-can-not-open-the-Website-fast-so-have-to-change-to-AliCloud-on-HongKong-this-server-is-efficiency-cheaper-and-doesn’t-need-to-register-in-the-government-department-it-is-an-excellent-choice-for-the-global-eCommerce-Platform" class="headerlink" title="This eCommerce Platform was designed primarily for a mobile device, Use Express structure, bootstrap, and handlebars for frontend, Nodejs control the backend, Mongodb store the database, early the project was deployed on the Azure, but due to the GFW limits the network speed, user can not open the Website fast, so have to change to AliCloud on HongKong, this server is efficiency, cheaper and doesn’t need to register in the government department, it is an excellent choice for the global eCommerce Platform."></a>This eCommerce Platform was designed primarily for a mobile device, Use Express structure, bootstrap, and handlebars for frontend, Nodejs control the backend, Mongodb store the database, early the project was deployed on the Azure, but due to the GFW limits the network speed, user can not open the Website fast, so have to change to AliCloud on HongKong, this server is efficiency, cheaper and doesn’t need to register in the government department, it is an excellent choice for the global eCommerce Platform.</h4><h2 id="Try-to-use-different-functionality-to-deconstruct-the-whole-project-and-review-the-development-process-again"><a href="#Try-to-use-different-functionality-to-deconstruct-the-whole-project-and-review-the-development-process-again" class="headerlink" title="Try to use different functionality to deconstruct the whole project and review the development process again."></a>Try to use different functionality to deconstruct the whole project and review the development process again.</h2><h4 id="1-Structure"><a href="#1-Structure" class="headerlink" title="1.  Structure:"></a>1.  Structure:</h4><p>The first and most important part is to use npm install express framework for the eCommerce platform structure. </p>
+<ul>
+<li><p>You can set up middleware to respond to HTTP requests.</p>
+</li>
+<li><p>The routing table is defined to perform different HTTP request actions.</p>
+</li>
+<li><p>You can dynamically render HTML pages by passing parameters to the template.</p>
+</li>
+</ul>
+<h4 id="2-Router"><a href="#2-Router" class="headerlink" title="2. Router"></a>2. Router</h4><p>You can think of it as a “mini-application”, which can operate middleware and routing methods. Every Express program has a built-in app routing. You can use Router () to create a new router object.</p>
+<h4 id="3-Use-Mongoose-to-operate-database"><a href="#3-Use-Mongoose-to-operate-database" class="headerlink" title="3. Use Mongoose to operate database:"></a>3. Use Mongoose to operate database:</h4><p>create a user schema:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var mongoose &#x3D; require(&#39;mongoose&#39;);</span><br><span class="line">var Schema &#x3D; mongoose.Schema;</span><br><span class="line">var bcrypt &#x3D; require(&#39;bcrypt-nodejs&#39;);</span><br><span class="line"></span><br><span class="line">var userSchema &#x3D; new Schema(&#123;</span><br><span class="line">    username: &#123;type: String, required: true&#125;,</span><br><span class="line">    password: &#123;type: String, required: true&#125;,</span><br><span class="line">    searchHistory: [Object],</span><br><span class="line">    advice: [Object],</span><br><span class="line">    dreamList: [Object]</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">userSchema.methods.encryptPassword &#x3D; function(password)&#123;</span><br><span class="line">    return bcrypt.hashSync(password, bcrypt.genSaltSync(5), null);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">userSchema.methods.validPassword &#x3D; function(password)&#123;</span><br><span class="line">    return bcrypt.compareSync(password, this.password);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; mongoose.model(&#39;User&#39;,userSchema)</span><br></pre></td></tr></table></figure>
+
+<p>use a user schema</p>
+<h4 id="4-Pass-values-between-frontend-backend-and-database"><a href="#4-Pass-values-between-frontend-backend-and-database" class="headerlink" title="4. Pass values between frontend, backend, and database."></a>4. Pass values between frontend, backend, and database.</h4><p>4.1 Pass values from frontend to backend</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action&#x3D;&quot;&#x2F;user&#x2F;signup&quot; method&#x3D;&quot;post&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;form-group&quot;&gt;</span><br><span class="line">        &lt;label for&#x3D;&quot;username&quot;&gt; 用户名 &lt;&#x2F;label&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;username&quot; name&#x3D;&quot;username&quot; class&#x3D;&quot;form-control&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;form-group&quot;&gt;</span><br><span class="line">         &lt;label for&#x3D;&quot;password&quot;&gt;密码&lt;&#x2F;label&gt;</span><br><span class="line">         &lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;_csrf&quot; value&#x3D;&quot;&#123;&#123; csrfToken &#125;&#125;&quot;&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;btn btn-primary btn-center&quot; type&#x3D;&quot;submit&quot;&gt; 注册&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4.2 Router receive the value from the frontend</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">passport.use(&#39;local.signup&#39;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#39;username&#39;,</span><br><span class="line">    passwordField: &#39;password&#39;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">        const errors &#x3D; validationResult(req).array()</span><br><span class="line">        console.log(errors.length);</span><br><span class="line">        if (errors.length&gt;0) &#123;</span><br><span class="line">            var messages &#x3D; [];</span><br><span class="line">            for(i &#x3D; 0; i &lt; errors.length; i++)&#123;</span><br><span class="line">                console.log(errors[i].msg);</span><br><span class="line">                messages.push(errors[i].msg);</span><br><span class="line">            &#125;</span><br><span class="line">         console.log(messages);</span><br><span class="line">         return done(null, false, req.flash(&#39;error&#39;, messages));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        User.findOne(&#123;&#39;username&#39;: username&#125;, function(err, user)&#123;</span><br><span class="line">           if(err)&#123;</span><br><span class="line">               console.log(&quot;err:&quot;+err);</span><br><span class="line">               return done(err);  </span><br><span class="line">           &#125;</span><br><span class="line">           if(user)&#123;</span><br><span class="line">               return done(null, false, &#123;message: &#39;Email is already in use.&#39;&#125;);</span><br><span class="line">           &#125;</span><br><span class="line">           var newUser &#x3D; new User();</span><br><span class="line">           newUser.username &#x3D; username;</span><br><span class="line">           newUser.password &#x3D; newUser.encryptPassword(password);</span><br><span class="line">           newUser.save(function(err, result)&#123;</span><br><span class="line">               if(err)&#123;</span><br><span class="line">                   return done(err);</span><br><span class="line">               &#125;</span><br><span class="line">               return done(null, newUser);</span><br><span class="line">           &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+<p>4.3 Router store the data into database</p>
+<ul>
+<li><p>Router find and dave one record</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">passport.use(&#39;local.signup&#39;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#39;username&#39;,</span><br><span class="line">    passwordField: &#39;password&#39;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">        const errors &#x3D; validationResult(req).array()</span><br><span class="line">        console.log(errors.length);</span><br><span class="line">        if (errors.length&gt;0) &#123;</span><br><span class="line">            var messages &#x3D; [];</span><br><span class="line">            for(i &#x3D; 0; i &lt; errors.length; i++)&#123;</span><br><span class="line">                console.log(errors[i].msg);</span><br><span class="line">                messages.push(errors[i].msg);</span><br><span class="line">            &#125;</span><br><span class="line">         console.log(messages);</span><br><span class="line">         return done(null, false, req.flash(&#39;error&#39;, messages));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        User.findOne(&#123;&#39;username&#39;: username&#125;, function(err, user)&#123;</span><br><span class="line">           if(err)&#123;</span><br><span class="line">               console.log(&quot;err:&quot;+err);</span><br><span class="line">               return done(err);  </span><br><span class="line">           &#125;</span><br><span class="line">           if(user)&#123;</span><br><span class="line">               return done(null, false, &#123;message: &#39;Email is already in use.&#39;&#125;);</span><br><span class="line">           &#125;</span><br><span class="line">           var newUser &#x3D; new User();</span><br><span class="line">           newUser.username &#x3D; username;</span><br><span class="line">           newUser.password &#x3D; newUser.encryptPassword(password);</span><br><span class="line">           newUser.save(function(err, result)&#123;</span><br><span class="line">               if(err)&#123;</span><br><span class="line">                   return done(err);</span><br><span class="line">               &#125;</span><br><span class="line">               return done(null, newUser);</span><br><span class="line">           &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure></li>
+<li><p>Router update and push one record from database</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">router.post(&#39;&#x2F;dreamList&#39;, isLoggedIn, function(req, res, next)&#123;</span><br><span class="line">    var userId &#x3D; req.user.id;</span><br><span class="line">    var user&#x3D; req.user;</span><br><span class="line">    var name&#x3D; req.body.name;</span><br><span class="line">    var description&#x3D; req.body.description;</span><br><span class="line"></span><br><span class="line">    User.updateOne(&#123;&quot;_id&quot;: userId&#125;,&#123;$push: &#123;&quot;dreamList&quot;: &#123;&quot;name&quot;:name, &quot;description&quot;: description&#125;&#125;&#125;,&#123;multi:1&#125;, function(err)&#123;</span><br><span class="line">        if(err)&#123;</span><br><span class="line">            return res.write(&#39;Error!&#39;);</span><br><span class="line">        &#125;</span><br><span class="line">        res.redirect(&#39;&#x2F;dreamList&#39;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Router pass a record to frontend</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">router.post(&#39;&#x2F;search&#39;, function(req, res, next)&#123;</span><br><span class="line">    var replace &#x3D; req.body.searchItem;</span><br><span class="line">    var re &#x3D; new RegExp(replace);</span><br><span class="line">    Product.find(&#123;$or:[&#123;title: re&#125;,&#123;description: re&#125;]&#125;, function(err, products)&#123;</span><br><span class="line">        res.render(&#39;shop&#x2F;search-result&#39;, &#123;title: &#39;search result&#39;, products: products, searchItem: replace&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Javascript receive the data from the router</p>
+</li>
+</ul>
+<p>Js received two variables</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var category &#x3D; &quot;&#123;&#123;category&#125;&#125;&quot;;</span><br><span class="line">var products &#x3D; &#123;&#123;&#123;json products&#125;&#125;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Router passed two variables in different way</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* GET second level page. *&#x2F;</span><br><span class="line">router.get(&#39;&#x2F;second-level&#x2F;:category&#39;, function(req, res, next) &#123;</span><br><span class="line">  category &#x3D; req.params.category;</span><br><span class="line">  console.log(category);</span><br><span class="line">  Product.find(&#123;category: category&#125;, function(err, docs)&#123;</span><br><span class="line">&#x2F;*adjust the data sequence to fit the mobil interface by change productChunks to docs *&#x2F;</span><br><span class="line">    res.render(&#39;shop&#x2F;second-level&#39;, &#123; title: &#39;Shopping cart&#39;, products: docs, category: category &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>The second way have to install handlebars-helper.</p>
+<h4 id="5-Handlebars"><a href="#5-Handlebars" class="headerlink" title="5. Handlebars"></a>5. <a href="http://handlebarsjs.com/guide/#what-is-handlebars" target="_blank" rel="noopener">Handlebars</a></h4><p>Handlebars is a simple templating language.</p>
+<p>It uses a template and an input object to generate HTML or other text formats. Handlebars templates look like a regular text with embedded Handlebars expressions.</p>
+<h1 id="if"><a href="#if" class="headerlink" title="if"></a>if</h1><p>Use handlebars can simplify many steps</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;entry&quot;&gt;</span><br><span class="line">&#123;&#123;#if author&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">&#123;&#123;&#x2F;if&#125;&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Input:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  author: true,</span><br><span class="line">  firstName: &quot;Yehuda&quot;,</span><br><span class="line">  lastName: &quot;Katz&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;entry&quot;&gt;</span><br><span class="line">&lt;h1&gt;Yehuda Katz&lt;&#x2F;h1&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="each"><a href="#each" class="headerlink" title="each"></a>each</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul class&#x3D;&quot;people_list&quot;&gt;</span><br><span class="line">  &#123;&#123;#each people&#125;&#125;</span><br><span class="line">    &lt;li&gt;&#123;&#123;this&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">  &#123;&#123;&#x2F;each&#125;&#125;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Input: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  people: [</span><br><span class="line">    &quot;Yehuda Katz&quot;,</span><br><span class="line">    &quot;Alan Johnson&quot;,</span><br><span class="line">    &quot;Charles Jolley&quot;,</span><br><span class="line">  ],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul class&#x3D;&quot;people_list&quot;&gt;</span><br><span class="line">    &lt;li&gt;Yehuda Katz&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li&gt;Alan Johnson&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li&gt;Charles Jolley&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-Bootstrap"><a href="#6-Bootstrap" class="headerlink" title="6. Bootstrap"></a>6. <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank" rel="noopener">Bootstrap</a></h4><p>Bootstrap is an open-source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+<p>There are many beauty model, you can directly reference some model in you programm. Like:</p>
+<ul>
+<li><p>Navbar</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav class&#x3D;&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;navbar-brand&quot; href&#x3D;&quot;#&quot;&gt;Navbar&lt;&#x2F;a&gt;</span><br><span class="line">  &lt;button class&#x3D;&quot;navbar-toggler&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#navbarSupportedContent&quot; aria-controls&#x3D;&quot;navbarSupportedContent&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle navigation&quot;&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;navbar-toggler-icon&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;button&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;navbarSupportedContent&quot;&gt;</span><br><span class="line">    &lt;ul class&#x3D;&quot;navbar-nav mr-auto&quot;&gt;</span><br><span class="line">      &lt;li class&#x3D;&quot;nav-item active&quot;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;#&quot;&gt;Home &lt;span class&#x3D;&quot;sr-only&quot;&gt;(current)&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;</span><br><span class="line">      &lt;&#x2F;li&gt;</span><br><span class="line">      &lt;li class&#x3D;&quot;nav-item&quot;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;#&quot;&gt;Link&lt;&#x2F;a&gt;</span><br><span class="line">      &lt;&#x2F;li&gt;</span><br><span class="line">      &lt;li class&#x3D;&quot;nav-item dropdown&quot;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;nav-link dropdown-toggle&quot; href&#x3D;&quot;#&quot; id&#x3D;&quot;navbarDropdown&quot; role&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;dropdown&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot;&gt;</span><br><span class="line">          Dropdown</span><br><span class="line">        &lt;&#x2F;a&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;dropdown-menu&quot; aria-labelledby&#x3D;&quot;navbarDropdown&quot;&gt;</span><br><span class="line">          &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Action&lt;&#x2F;a&gt;</span><br><span class="line">          &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Another action&lt;&#x2F;a&gt;</span><br><span class="line">          &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">          &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Something else here&lt;&#x2F;a&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;&#x2F;li&gt;</span><br><span class="line">      &lt;li class&#x3D;&quot;nav-item&quot;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;nav-link disabled&quot; href&#x3D;&quot;#&quot; tabindex&#x3D;&quot;-1&quot; aria-disabled&#x3D;&quot;true&quot;&gt;Disabled&lt;&#x2F;a&gt;</span><br><span class="line">      &lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;form class&#x3D;&quot;form-inline my-2 my-lg-0&quot;&gt;</span><br><span class="line">      &lt;input class&#x3D;&quot;form-control mr-sm-2&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Search&quot; aria-label&#x3D;&quot;Search&quot;&gt;</span><br><span class="line">      &lt;button class&#x3D;&quot;btn btn-outline-success my-2 my-sm-0&quot; type&#x3D;&quot;submit&quot;&gt;Search&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;form&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;nav&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Carousel:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;carouselExampleControls&quot; class&#x3D;&quot;carousel slide&quot; data-ride&#x3D;&quot;carousel&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;carousel-inner&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;carousel-item active&quot;&gt;</span><br><span class="line">      &lt;img src&#x3D;&quot;...&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;carousel-item&quot;&gt;</span><br><span class="line">      &lt;img src&#x3D;&quot;...&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;carousel-item&quot;&gt;</span><br><span class="line">      &lt;img src&#x3D;&quot;...&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;carousel-control-prev&quot; href&#x3D;&quot;#carouselExampleControls&quot; role&#x3D;&quot;button&quot; data-slide&#x3D;&quot;prev&quot;&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;carousel-control-prev-icon&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;carousel-control-next&quot; href&#x3D;&quot;#carouselExampleControls&quot; role&#x3D;&quot;button&quot; data-slide&#x3D;&quot;next&quot;&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;carousel-control-next-icon&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-Javascript"><a href="#6-Javascript" class="headerlink" title="6. Javascript"></a>6. Javascript</h4><p>Use javascript to display the products more flexible, especially when we can not ensure the count of the products.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var div &#x3D; document.getElementById(&quot;products-div&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;create a new product card div</span><br><span class="line">var div_pro &#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">div_pro.setAttribute(&quot;class&quot;,&quot;row&quot;);</span><br><span class="line">div.appendChild(div_pro);</span><br><span class="line">var div_pro_col &#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">div_pro_col.setAttribute(&quot;class&quot;,&quot;def-col-sm-6&quot;);</span><br><span class="line">div_pro.appendChild(div_pro_col);</span><br><span class="line"> </span><br><span class="line">var div_pro_col_link &#x3D; document.createElement(&quot;a&quot;);</span><br><span class="line">div_pro_col_link.href &#x3D; &quot;&#x2F;product&#x2F;&quot; + product._id;</span><br><span class="line">var div_pro_col_img &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">div_pro_col_img.setAttribute(&quot;class&quot;,&quot;img w-50&quot;);</span><br><span class="line">div_pro_col_img.src &#x3D; product.imagePath;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-Decrypt-and-encrypt-force-user-to-login"><a href="#7-Decrypt-and-encrypt-force-user-to-login" class="headerlink" title="7. Decrypt and encrypt, force user to login"></a>7. Decrypt and encrypt, force user to login</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var LocalStrategy &#x3D; require(&#39;passport-local&#39;).Strategy;</span><br><span class="line">var &#123;check, validationResult&#125; &#x3D; require(&#39;express-validator&#39;);</span><br><span class="line"></span><br><span class="line">passport.serializeUser(function(user, done)&#123;</span><br><span class="line">    done(null, user.id);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">passport.deserializeUser(function(id, done)&#123;</span><br><span class="line">    User.findById(id, function(err, user)&#123;</span><br><span class="line">        done(err, user);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">passport.use(&#39;local.signup&#39;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#39;username&#39;,</span><br><span class="line">    passwordField: &#39;password&#39;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">       ......</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Feature-Work"><a href="#Feature-Work" class="headerlink" title="Feature Work"></a>Feature Work</h2><blockquote>
+<ul>
+<li>send email to admin mailbox</li>
+<li>collect user visit and input data</li>
+<li>analyse user data</li>
+<li>support Wechat, Taobao and google account Login</li>
+<li>add Wechatpay and Alipay Link</li>
+<li>add more new interest product</li>
+<li>provide prompt words in search input based on user history.</li>
+<li>prompt words are provided according to the background products.</li>
+<li>recommend products based on historical purchases and browsing history</li>
+<li>add user chat</li>
+<li>add a website and product reviews</li>
+<li>add shipping method</li>
+</ul>
+</blockquote>
+<ul>
+<li>Website: <a href="germanfamily.eu">germanfamily.eu</a></li>
+<li>Github: <a href="https://github.com/wang-yuhao/shopping-cart" target="_blank" rel="noopener">https://github.com/wang-yuhao/shopping-cart</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/09/8-Use-Hexo-Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog/" rel="prev" title="8-Use-Hexo+Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog">
+      <i class="fa fa-chevron-left"></i> 8-Use-Hexo+Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/" rel="next" title="10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum">
+      10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction-说明"><span class="nav-number">1.</span> <span class="nav-text">Introduction(说明):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Menu-菜单"><span class="nav-number">1.0.1.</span> <span class="nav-text">Menu(菜单):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#signup-注册"><span class="nav-number">1.0.2.</span> <span class="nav-text">signup(注册):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Products-商品"><span class="nav-number">1.0.3.</span> <span class="nav-text">Products(商品):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Shopping-cart-购物车"><span class="nav-number">1.0.4.</span> <span class="nav-text">Shopping cart(购物车):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Checkout-填写订单"><span class="nav-number">1.0.5.</span> <span class="nav-text">Checkout(填写订单):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Order-订单"><span class="nav-number">1.0.6.</span> <span class="nav-text">Order(订单):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Comment-建议"><span class="nav-number">1.0.7.</span> <span class="nav-text">Comment(建议):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Last-semester-did-a-Paktikum-in-a-german-company-the-main-job-was-independently-building-an-eCommerce-Platform-to-sell-german-products-to-China-customs-and-this-Website-is-the-outcome-It-should-have-more-functions-but-due-to-Corona-virus-the-plan-was-forced-to-be-interrupted-and-more-content-will-be-perfected-one-after-another"><span class="nav-number">1.0.8.</span> <span class="nav-text">Last semester did a Paktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customs, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#This-eCommerce-Platform-was-designed-primarily-for-a-mobile-device-Use-Express-structure-bootstrap-and-handlebars-for-frontend-Nodejs-control-the-backend-Mongodb-store-the-database-early-the-project-was-deployed-on-the-Azure-but-due-to-the-GFW-limits-the-network-speed-user-can-not-open-the-Website-fast-so-have-to-change-to-AliCloud-on-HongKong-this-server-is-efficiency-cheaper-and-doesn’t-need-to-register-in-the-government-department-it-is-an-excellent-choice-for-the-global-eCommerce-Platform"><span class="nav-number">1.0.9.</span> <span class="nav-text">This eCommerce Platform was designed primarily for a mobile device, Use Express structure, bootstrap, and handlebars for frontend, Nodejs control the backend, Mongodb store the database, early the project was deployed on the Azure, but due to the GFW limits the network speed, user can not open the Website fast, so have to change to AliCloud on HongKong, this server is efficiency, cheaper and doesn’t need to register in the government department, it is an excellent choice for the global eCommerce Platform.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Try-to-use-different-functionality-to-deconstruct-the-whole-project-and-review-the-development-process-again"><span class="nav-number">2.</span> <span class="nav-text">Try to use different functionality to deconstruct the whole project and review the development process again.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Structure"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.  Structure:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Router"><span class="nav-number">2.0.2.</span> <span class="nav-text">2. Router</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Use-Mongoose-to-operate-database"><span class="nav-number">2.0.3.</span> <span class="nav-text">3. Use Mongoose to operate database:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Pass-values-between-frontend-backend-and-database"><span class="nav-number">2.0.4.</span> <span class="nav-text">4. Pass values between frontend, backend, and database.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Handlebars"><span class="nav-number">2.0.5.</span> <span class="nav-text">5. Handlebars</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#if"><span class="nav-number"></span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#each"><span class="nav-number"></span> <span class="nav-text">each</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Bootstrap"><span class="nav-number">0.0.1.</span> <span class="nav-text">6. Bootstrap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Javascript"><span class="nav-number">0.0.2.</span> <span class="nav-text">6. Javascript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-Decrypt-and-encrypt-force-user-to-login"><span class="nav-number">0.0.3.</span> <span class="nav-text">7. Decrypt and encrypt, force user to login</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feature-Work"><span class="nav-number">1.</span> <span class="nav-text">Feature Work</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yuhao Wang"
+      src="/images/selfie.jpg">
+  <p class="site-author-name" itemprop="name">Yuhao Wang</p>
+  <div class="site-description" itemprop="description">Keep on going never give up.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wang-yuhao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wang-yuhao" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitlab.lrz.de/YuhaoWang" title="Gitlab → https:&#x2F;&#x2F;gitlab.lrz.de&#x2F;YuhaoWang" rel="noopener" target="_blank"><i class="fa fa-fw fa-gitlab"></i>Gitlab</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wang.yuhao@campus.lmu.de" title="E-Mail → mailto:wang.yuhao@campus.lmu.de" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/profile.php?id=100024612941908" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100024612941908" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/310835246" title="QQ → 310835246"><i class="fa fa-fw fa-qq"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/w942521" title="Wechat → w942521"><i class="fa fa-fw fa-wechat"></i>Wechat</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Friends
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://changkun.us/" title="https:&#x2F;&#x2F;changkun.us&#x2F;" rel="noopener" target="_blank">Changkun Ou</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-Yuhao Wang"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yuhao Wang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='100,100,100' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yuhao-de.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: {page: {
+            url: "http://yoursite.com/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/",
+            identifier: "2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/",
+            title: "9-Build-eCommerce-Platform-with-NodeJS/Express/Bootstrap/MongoDB/AliCloud"
+          }
+        }
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yuhao-de.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

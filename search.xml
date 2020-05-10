@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
+    <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
+    <content><![CDATA[<h2 id="Draft"><a href="#Draft" class="headerlink" title="(Draft)"></a>(Draft)</h2><a id="more"></a>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1   Introduction"></a>1   Introduction</h2><h4 id="1-1-Motivation"><a href="#1-1-Motivation" class="headerlink" title="1.1   Motivation"></a>1.1   Motivation</h4><p>The Leibniz Supercomputing Centre of the Bavarian Academy of Sciences and Humanities (LRZ) is the largest Supercomputing Center in Germany operates the Munich Scientific Network (MWN). In this network, including the Munich universities, many student dormitories, and some non-university facilities such as e.g., Bavarian State Library, museums, and the institutes of Max Planck Society and Fraunhofer Society.  A total of approximately 100,000 devices are connected. The MWN consists of a backbone network to which the networks of the facilities at the various locations are connected via routers and switches. The routers in the backbone area of the Cisco Nexus C7010 type. To connect buildings connected via DSL and smaller X-WiN locations, we operate some devices of the Cisco 1900 series (manufacturer information) and Cisco ISR 1100 (manufacturer information). For broadband connection of the computer clusters in the LRZ, a Leaf &amp; Spine infrastructure (Leaf &amp; Spine Design) based on Cisco Nexus 9364C (manufacturer information) is used. </p>
+<p>Hundred thousand scientific research and service equipment are connected per second in MWN. The efficiency, stability, and security of MWN are closely related to the daily teaching, researching, and work of every facility in the MWN. But the limitation of the update and modification for the massive data limit the competence of network management. On the other hand, the lack of an appropriate flow collector script and intuitive, reliable display web interface also restrict the efficiency of the work of the administrator. As an essential part of the program, the asset database has long been ignored by various flow collectors. Thus, the limitation of the asset database also raises the difficulty of network optimization. </p>
+<p>Botnets and other network attacks have always been a severe problem in the current network environment. The resulting network congestion, waste of network resources, and other network problems have undoubtedly caused substantial economic losses. With the rapid development of current machine learning and deep learning research, trying to use the latest data science technology to analyze the acquired flow data to predict future network usage, optimize the network structure and traffic, and explore the network potential reasonably and efficiently is also a significant challenge.</p>
+<h4 id="1-2-Problem-Statement"><a href="#1-2-Problem-Statement" class="headerlink" title="1.2   Problem Statement"></a>1.2   Problem Statement</h4><p>To improve the efficiency, stability, and security of MWN by managing the massive flow data per second, design an appropriate real-time NetFlow data collection and analysis script and an intuitive, simple, reliable display interface. Traditional NetFlow collectors are designed in many different situations, primarily their complicated functionality, insufficient asset databases, and other unsatisfied requirements of MWN, making them unsuitable for MWN. In this case, an independently designed and developed system integrated with MWN is what is urgently required.</p>
+<p>The detection against the Botnets, abnormal network usage, and other malicious cyberattacks in MWN is also possible in the future system automatic protection functionality. Besides, through the latest RNN or other state-of-the-art technology, analyze the steady flow data from MWN automatic generation to optimize the network structure. The utilization of the prediction functionality from the data science model also can improve the elasticity, maintainability, and expandability of the MWN. The administrator’s global control and deployment ability of the entire network routing situation can be significantly increased.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>0-Kick-off</title>
     <url>/2019/05/03/0-Kick-off/</url>
     <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
@@ -14,9 +25,14 @@
 ]]></content>
   </entry>
   <entry>
-    <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
-    <url>/2020/05/09/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
-    <content><![CDATA[]]></content>
+    <title>3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication</title>
+    <url>/2019/09/05/3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master" target="_blank" rel="noopener">https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master</a></p>
+<a id="more"></a>
+<object data="presentation-start_presentation.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
   </entry>
   <entry>
     <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
@@ -25,16 +41,6 @@
 <a id="more"></a>
 <object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
 </object>
-]]></content>
-  </entry>
-  <entry>
-    <title>3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication</title>
-    <url>/2019/09/05/3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication/</url>
-    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master" target="_blank" rel="noopener">https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master</a></p>
-<a id="more"></a>
-<object data="presentation-start_presentation.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-
 ]]></content>
   </entry>
   <entry>
@@ -63,23 +69,92 @@
 ]]></content>
   </entry>
   <entry>
+    <title>8-Use-Hexo+Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog</title>
+    <url>/2019/12/09/8-Use-Hexo-Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog/</url>
+    <content><![CDATA[<p>Recently the computer was broken, so all study resources were lost, and before I didn’t like backup files, I had to learn to build a personal blog with Hexo and Github. Write this file, so last time will not waste too much time to redo the same things as today.</p>
+<a id="more"></a>
+
+<h2 id="Important-How-to-reuse-GitHub-deploy-blog"><a href="#Important-How-to-reuse-GitHub-deploy-blog" class="headerlink" title="Important (How to reuse GitHub deploy blog):"></a>Important (How to reuse GitHub deploy blog):</h2><ol>
+<li><p>Download the source file from the <b>gh-pages</b> branch from <a href="https://github.com/wang-yuhao/wang-yuhao.github.io/tree/gh-pages" target="_blank" rel="noopener">github repository.</a></p>
+</li>
+<li><p>Generate a new Post with the command: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n post &lt;Here-is-post-name&gt;</span><br></pre></td></tr></table></figure>
+<p>then a .md file and a folder with the same name &lt;Here-is-post-name&gt; will be automatically generated.</p>
+</li>
+<li><p>Add relative pdfs or images in &lt;Here-is-post-name&gt; folder<br>and edit the &lt;Here-is-post-name&gt;.md file.</p>
+</li>
+<li><p>Git push local <b>gh-pages</b>repository to remote repository</p>
+</li>
+<li><p>Finally, run: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
+<h2 id="Important-If-you-met-Your-Connection-is-Not-Private-error-or-The-custom-domain-for-your-GitHub-Pages-site-is-pointed-at-an-outdated-IP-address-You-must-update-your-site’s-DNS-records-if-you’d-like-it-to-be-available-via-your-custom-domain-maybe-everything-are-right-you-just-need-to-wait-a-few-hours"><a href="#Important-If-you-met-Your-Connection-is-Not-Private-error-or-The-custom-domain-for-your-GitHub-Pages-site-is-pointed-at-an-outdated-IP-address-You-must-update-your-site’s-DNS-records-if-you’d-like-it-to-be-available-via-your-custom-domain-maybe-everything-are-right-you-just-need-to-wait-a-few-hours" class="headerlink" title="Important: If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site’s DNS records if you’d like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:"></a>Important: If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site’s DNS records if you’d like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:</h2></li>
+</ol>
+<h3 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="(On Ubuntu)"></a>(On Ubuntu)</h3><h4 id="Learn-Hexo-Blog-Framework"><a href="#Learn-Hexo-Blog-Framework" class="headerlink" title="Learn Hexo Blog Framework:"></a>Learn Hexo Blog Framework:</h4><p>1.1 install hexo: <code>npm install -g hexo</code><br>1.2 Initlize hexo: <code>hexo init</code><br>1.3 Install required packages: <code>npm install</code><br>1.4 Deploy Hexo:<code>hexo s</code><br>1.5 Open <code>localhost:4000</code> in browser.<br><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></p>
+<h4 id="Use-NEXT-Thema-in-Hexo"><a href="#Use-NEXT-Thema-in-Hexo" class="headerlink" title="Use NEXT Thema in Hexo:"></a>Use NEXT Thema in Hexo:</h4><p><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">Next Thema Website</a><br>ps: This blog is using Next-Gemini.</p>
+<ol>
+<li><p>Install Thema:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd hexo</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Set up the theme, in _config.yml change:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Set up the scheme, in themes/next/_config.yml change:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure></li>
+<li><p>Set up menu: user can directly use Font Awesome icon in <code>themes/next/_config.yml</code></p>
+</li>
+<li><p>Dynamic background, modify <code>themes/next/_config.yml</code>: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">canvas_nest:</span><br><span class="line">enable: true</span><br><span class="line">onmobile: true # Display on mobile or not</span><br><span class="line">color: &quot;100,100,100&quot; # RGB values, use &#96;,&#96; to separate</span><br><span class="line">opacity: 0.5 # The opacity of line: 0~1</span><br><span class="line">zIndex: -1 # z-index property of the background</span><br><span class="line">count: 99 # The number of lines</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add visitor comment, modify <code>themes/next/_config.yml</code>, first register a count in Disqus: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Multiple Comment System Support</span><br><span class="line">comments:</span><br><span class="line">  # Available values: tabs | buttons</span><br><span class="line">  style: tabs</span><br><span class="line">  # Choose a comment system to be displayed by default.</span><br><span class="line">  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine</span><br><span class="line">  active: disqus </span><br><span class="line">  # Setting &#96;true&#96; means remembering the comment system selected by the visitor.</span><br><span class="line">  storage: true</span><br><span class="line">  # Lazyload all comment systems.</span><br><span class="line">  lazyload: true</span><br><span class="line">  # Modify texts or order for any navs, here are some examples.</span><br><span class="line">  nav:</span><br><span class="line">    disqus:</span><br><span class="line"></span><br><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname: &lt;your-disqus-id&gt; #</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="Connect-Hexo-with-Github"><a href="#Connect-Hexo-with-Github" class="headerlink" title="Connect Hexo with Github"></a>Connect Hexo with Github</h4><ol>
+<li><p>deploy hexo on GitHub pages: build a new repository with the name: &lt;username.github.io&gt;, create a new branch <hexo></p>
+</li>
+<li><p>git clone this repository and copy hexo file into this folder</p>
+</li>
+<li><p>modify the <code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>when there is <code>Deploy error</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>generate and deploy</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Important: Use <hexo> store and update files, <master> store static pages, so always run command in hexo branch</p>
+</li>
+</ol>
+<h4 id="Achieve-Automated-Deployment"><a href="#Achieve-Automated-Deployment" class="headerlink" title="Achieve Automated Deployment:"></a>Achieve Automated Deployment:</h4><ol>
+<li><p>comment <code>repo</code> in _config.yml:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">#  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>In local blog directory create a folder with name <code>.travis.yml</code>, it exists in the same directory with <code>_config.yml</code>.</p>
+</li>
+<li><p>Input this command:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo: false</span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 12</span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">script:</span><br><span class="line">  - hexo generate</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: true</span><br><span class="line">  github-token: $GH_TOKEN</span><br><span class="line">  keep-history: true</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>Don’t need to change anything.</p>
+<ol start="4">
+<li><p>Get access token, have to write down this token and put it in <code>travis ci</code> environment variables. </p>
+</li>
+<li><p>Finally, run:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout hexo</span><br><span class="line">hexo new &quot;my first blog&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -am&quot;add a new blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p><code>Travis ci</code> will be called automatically and automatically finish the deployment.</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
     <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
     <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
 <a id="more"></a>
 <object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
 </object>]]></content>
-  </entry>
-  <entry>
-    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
-    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
-    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
-<a id="more"></a>
-
-<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-
-]]></content>
   </entry>
   <entry>
     <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
@@ -118,15 +193,120 @@
 ]]></content>
   </entry>
   <entry>
-    <title>8-Use-Hexo+Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog</title>
-    <url>/2019/12/09/8-Use-Hexo-Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog/</url>
-    <content><![CDATA[<p>Recently the computer was broken, so all study resources were lost, and before I didn’t like to backup files, I had to learn to build a personal blog with Hexo and Github. Write this file, so last time will not waste too much time to redo the same things as today.</p>
-<h4 id="Learn-Hexo-Blog-Framework-On-Ubuntu"><a href="#Learn-Hexo-Blog-Framework-On-Ubuntu" class="headerlink" title="Learn Hexo Blog Framework(On Ubuntu):"></a>Learn Hexo Blog Framework(On Ubuntu):</h4><p>1.1 install hexo: <code>npm install -g hexo</code><br>1.2 Initlize hexo: <code>hexo init</code><br>1.3 Install required packages: <code>npm install</code><br>1.4 Deploy Hexo:<code>hexo s</code><br>1.5 Open <code>localhost:4000</code> in browser.<br><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></p>
-<h4 id="Use-Thema-in-Blog"><a href="#Use-Thema-in-Blog" class="headerlink" title="Use Thema in Blog:"></a>Use Thema in Blog:</h4><h4 id="Achieve-Automated-Deployment"><a href="#Achieve-Automated-Deployment" class="headerlink" title="Achieve Automated Deployment:"></a>Achieve Automated Deployment:</h4>]]></content>
+    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
+    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
+<a id="more"></a>
+
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
   </entry>
   <entry>
     <title>9-Build-eCommerce-Platform-with-NodeJS/Express/Bootstrap/MongoDB/AliCloud</title>
-    <url>/2020/05/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/</url>
-    <content><![CDATA[]]></content>
+    <url>/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/</url>
+    <content><![CDATA[<h2 id="Introduction-说明"><a href="#Introduction-说明" class="headerlink" title="Introduction(说明):"></a>Introduction(说明):</h2><a id="more"></a>
+<h4 id="Menu-菜单"><a href="#Menu-菜单" class="headerlink" title="Menu(菜单):"></a>Menu(菜单):</h4><p><img src="menu.png" alt="menu.png"></p>
+<h4 id="signup-注册"><a href="#signup-注册" class="headerlink" title="signup(注册):"></a>signup(注册):</h4><p><img src="signup.png" alt="signup.png"></p>
+<h4 id="Products-商品"><a href="#Products-商品" class="headerlink" title="Products(商品):"></a>Products(商品):</h4><p><img src="products.png" alt="products.png"></p>
+<h4 id="Shopping-cart-购物车"><a href="#Shopping-cart-购物车" class="headerlink" title="Shopping cart(购物车):"></a>Shopping cart(购物车):</h4><p><img src="shoppingcart.png" alt="shoppingcart.png"></p>
+<h4 id="Checkout-填写订单"><a href="#Checkout-填写订单" class="headerlink" title="Checkout(填写订单):"></a>Checkout(填写订单):</h4><p><img src="checkout1.png" alt="checkout1.png"><br><img src="checkout2.png" alt="checkout2.png"></p>
+<h4 id="Order-订单"><a href="#Order-订单" class="headerlink" title="Order(订单):"></a>Order(订单):</h4><p><img src="order.png" alt="order.png"></p>
+<h4 id="Comment-建议"><a href="#Comment-建议" class="headerlink" title="Comment(建议):"></a>Comment(建议):</h4><p><img src="comments.png" alt="comment.png"></p>
+<h4 id="Last-semester-did-a-Paktikum-in-a-german-company-the-main-job-was-independently-building-an-eCommerce-Platform-to-sell-german-products-to-China-customs-and-this-Website-is-the-outcome-It-should-have-more-functions-but-due-to-Corona-virus-the-plan-was-forced-to-be-interrupted-and-more-content-will-be-perfected-one-after-another"><a href="#Last-semester-did-a-Paktikum-in-a-german-company-the-main-job-was-independently-building-an-eCommerce-Platform-to-sell-german-products-to-China-customs-and-this-Website-is-the-outcome-It-should-have-more-functions-but-due-to-Corona-virus-the-plan-was-forced-to-be-interrupted-and-more-content-will-be-perfected-one-after-another" class="headerlink" title="Last semester did a Paktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customs, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another."></a>Last semester did a Paktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customs, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another.</h4><h4 id="This-eCommerce-Platform-was-designed-primarily-for-a-mobile-device-Use-Express-structure-bootstrap-and-handlebars-for-frontend-Nodejs-control-the-backend-Mongodb-store-the-database-early-the-project-was-deployed-on-the-Azure-but-due-to-the-GFW-limits-the-network-speed-user-can-not-open-the-Website-fast-so-have-to-change-to-AliCloud-on-HongKong-this-server-is-efficiency-cheaper-and-doesn’t-need-to-register-in-the-government-department-it-is-an-excellent-choice-for-the-global-eCommerce-Platform"><a href="#This-eCommerce-Platform-was-designed-primarily-for-a-mobile-device-Use-Express-structure-bootstrap-and-handlebars-for-frontend-Nodejs-control-the-backend-Mongodb-store-the-database-early-the-project-was-deployed-on-the-Azure-but-due-to-the-GFW-limits-the-network-speed-user-can-not-open-the-Website-fast-so-have-to-change-to-AliCloud-on-HongKong-this-server-is-efficiency-cheaper-and-doesn’t-need-to-register-in-the-government-department-it-is-an-excellent-choice-for-the-global-eCommerce-Platform" class="headerlink" title="This eCommerce Platform was designed primarily for a mobile device, Use Express structure, bootstrap, and handlebars for frontend, Nodejs control the backend, Mongodb store the database, early the project was deployed on the Azure, but due to the GFW limits the network speed, user can not open the Website fast, so have to change to AliCloud on HongKong, this server is efficiency, cheaper and doesn’t need to register in the government department, it is an excellent choice for the global eCommerce Platform."></a>This eCommerce Platform was designed primarily for a mobile device, Use Express structure, bootstrap, and handlebars for frontend, Nodejs control the backend, Mongodb store the database, early the project was deployed on the Azure, but due to the GFW limits the network speed, user can not open the Website fast, so have to change to AliCloud on HongKong, this server is efficiency, cheaper and doesn’t need to register in the government department, it is an excellent choice for the global eCommerce Platform.</h4><h2 id="Try-to-use-different-functionality-to-deconstruct-the-whole-project-and-review-the-development-process-again"><a href="#Try-to-use-different-functionality-to-deconstruct-the-whole-project-and-review-the-development-process-again" class="headerlink" title="Try to use different functionality to deconstruct the whole project and review the development process again."></a>Try to use different functionality to deconstruct the whole project and review the development process again.</h2><h4 id="1-Structure"><a href="#1-Structure" class="headerlink" title="1.  Structure:"></a>1.  Structure:</h4><p>The first and most important part is to use npm install express framework for the eCommerce platform structure. </p>
+<ul>
+<li><p>You can set up middleware to respond to HTTP requests.</p>
+</li>
+<li><p>The routing table is defined to perform different HTTP request actions.</p>
+</li>
+<li><p>You can dynamically render HTML pages by passing parameters to the template.</p>
+</li>
+</ul>
+<h4 id="2-Router"><a href="#2-Router" class="headerlink" title="2. Router"></a>2. Router</h4><p>You can think of it as a “mini-application”, which can operate middleware and routing methods. Every Express program has a built-in app routing. You can use Router () to create a new router object.</p>
+<h4 id="3-Use-Mongoose-to-operate-database"><a href="#3-Use-Mongoose-to-operate-database" class="headerlink" title="3. Use Mongoose to operate database:"></a>3. Use Mongoose to operate database:</h4><p>create a user schema:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var mongoose &#x3D; require(&#39;mongoose&#39;);</span><br><span class="line">var Schema &#x3D; mongoose.Schema;</span><br><span class="line">var bcrypt &#x3D; require(&#39;bcrypt-nodejs&#39;);</span><br><span class="line"></span><br><span class="line">var userSchema &#x3D; new Schema(&#123;</span><br><span class="line">    username: &#123;type: String, required: true&#125;,</span><br><span class="line">    password: &#123;type: String, required: true&#125;,</span><br><span class="line">    searchHistory: [Object],</span><br><span class="line">    advice: [Object],</span><br><span class="line">    dreamList: [Object]</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">userSchema.methods.encryptPassword &#x3D; function(password)&#123;</span><br><span class="line">    return bcrypt.hashSync(password, bcrypt.genSaltSync(5), null);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">userSchema.methods.validPassword &#x3D; function(password)&#123;</span><br><span class="line">    return bcrypt.compareSync(password, this.password);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; mongoose.model(&#39;User&#39;,userSchema)</span><br></pre></td></tr></table></figure>
+
+<p>use a user schema</p>
+<h4 id="4-Pass-values-between-frontend-backend-and-database"><a href="#4-Pass-values-between-frontend-backend-and-database" class="headerlink" title="4. Pass values between frontend, backend, and database."></a>4. Pass values between frontend, backend, and database.</h4><p>4.1 Pass values from frontend to backend</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;form action&#x3D;&quot;&#x2F;user&#x2F;signup&quot; method&#x3D;&quot;post&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;form-group&quot;&gt;</span><br><span class="line">        &lt;label for&#x3D;&quot;username&quot;&gt; 用户名 &lt;&#x2F;label&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;username&quot; name&#x3D;&quot;username&quot; class&#x3D;&quot;form-control&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;form-group&quot;&gt;</span><br><span class="line">         &lt;label for&#x3D;&quot;password&quot;&gt;密码&lt;&#x2F;label&gt;</span><br><span class="line">         &lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;_csrf&quot; value&#x3D;&quot;&#123;&#123; csrfToken &#125;&#125;&quot;&gt;</span><br><span class="line">    &lt;button class&#x3D;&quot;btn btn-primary btn-center&quot; type&#x3D;&quot;submit&quot;&gt; 注册&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4.2 Router receive the value from the frontend</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">passport.use(&#39;local.signup&#39;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#39;username&#39;,</span><br><span class="line">    passwordField: &#39;password&#39;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">        const errors &#x3D; validationResult(req).array()</span><br><span class="line">        console.log(errors.length);</span><br><span class="line">        if (errors.length&gt;0) &#123;</span><br><span class="line">            var messages &#x3D; [];</span><br><span class="line">            for(i &#x3D; 0; i &lt; errors.length; i++)&#123;</span><br><span class="line">                console.log(errors[i].msg);</span><br><span class="line">                messages.push(errors[i].msg);</span><br><span class="line">            &#125;</span><br><span class="line">         console.log(messages);</span><br><span class="line">         return done(null, false, req.flash(&#39;error&#39;, messages));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        User.findOne(&#123;&#39;username&#39;: username&#125;, function(err, user)&#123;</span><br><span class="line">           if(err)&#123;</span><br><span class="line">               console.log(&quot;err:&quot;+err);</span><br><span class="line">               return done(err);  </span><br><span class="line">           &#125;</span><br><span class="line">           if(user)&#123;</span><br><span class="line">               return done(null, false, &#123;message: &#39;Email is already in use.&#39;&#125;);</span><br><span class="line">           &#125;</span><br><span class="line">           var newUser &#x3D; new User();</span><br><span class="line">           newUser.username &#x3D; username;</span><br><span class="line">           newUser.password &#x3D; newUser.encryptPassword(password);</span><br><span class="line">           newUser.save(function(err, result)&#123;</span><br><span class="line">               if(err)&#123;</span><br><span class="line">                   return done(err);</span><br><span class="line">               &#125;</span><br><span class="line">               return done(null, newUser);</span><br><span class="line">           &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+<p>4.3 Router store the data into database</p>
+<ul>
+<li><p>Router find and dave one record</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">passport.use(&#39;local.signup&#39;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#39;username&#39;,</span><br><span class="line">    passwordField: &#39;password&#39;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">        const errors &#x3D; validationResult(req).array()</span><br><span class="line">        console.log(errors.length);</span><br><span class="line">        if (errors.length&gt;0) &#123;</span><br><span class="line">            var messages &#x3D; [];</span><br><span class="line">            for(i &#x3D; 0; i &lt; errors.length; i++)&#123;</span><br><span class="line">                console.log(errors[i].msg);</span><br><span class="line">                messages.push(errors[i].msg);</span><br><span class="line">            &#125;</span><br><span class="line">         console.log(messages);</span><br><span class="line">         return done(null, false, req.flash(&#39;error&#39;, messages));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        User.findOne(&#123;&#39;username&#39;: username&#125;, function(err, user)&#123;</span><br><span class="line">           if(err)&#123;</span><br><span class="line">               console.log(&quot;err:&quot;+err);</span><br><span class="line">               return done(err);  </span><br><span class="line">           &#125;</span><br><span class="line">           if(user)&#123;</span><br><span class="line">               return done(null, false, &#123;message: &#39;Email is already in use.&#39;&#125;);</span><br><span class="line">           &#125;</span><br><span class="line">           var newUser &#x3D; new User();</span><br><span class="line">           newUser.username &#x3D; username;</span><br><span class="line">           newUser.password &#x3D; newUser.encryptPassword(password);</span><br><span class="line">           newUser.save(function(err, result)&#123;</span><br><span class="line">               if(err)&#123;</span><br><span class="line">                   return done(err);</span><br><span class="line">               &#125;</span><br><span class="line">               return done(null, newUser);</span><br><span class="line">           &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure></li>
+<li><p>Router update and push one record from database</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">router.post(&#39;&#x2F;dreamList&#39;, isLoggedIn, function(req, res, next)&#123;</span><br><span class="line">    var userId &#x3D; req.user.id;</span><br><span class="line">    var user&#x3D; req.user;</span><br><span class="line">    var name&#x3D; req.body.name;</span><br><span class="line">    var description&#x3D; req.body.description;</span><br><span class="line"></span><br><span class="line">    User.updateOne(&#123;&quot;_id&quot;: userId&#125;,&#123;$push: &#123;&quot;dreamList&quot;: &#123;&quot;name&quot;:name, &quot;description&quot;: description&#125;&#125;&#125;,&#123;multi:1&#125;, function(err)&#123;</span><br><span class="line">        if(err)&#123;</span><br><span class="line">            return res.write(&#39;Error!&#39;);</span><br><span class="line">        &#125;</span><br><span class="line">        res.redirect(&#39;&#x2F;dreamList&#39;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Router pass a record to frontend</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">router.post(&#39;&#x2F;search&#39;, function(req, res, next)&#123;</span><br><span class="line">    var replace &#x3D; req.body.searchItem;</span><br><span class="line">    var re &#x3D; new RegExp(replace);</span><br><span class="line">    Product.find(&#123;$or:[&#123;title: re&#125;,&#123;description: re&#125;]&#125;, function(err, products)&#123;</span><br><span class="line">        res.render(&#39;shop&#x2F;search-result&#39;, &#123;title: &#39;search result&#39;, products: products, searchItem: replace&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Javascript receive the data from the router</p>
+</li>
+</ul>
+<p>Js received two variables</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var category &#x3D; &quot;&#123;&#123;category&#125;&#125;&quot;;</span><br><span class="line">var products &#x3D; &#123;&#123;&#123;json products&#125;&#125;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Router passed two variables in different way</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* GET second level page. *&#x2F;</span><br><span class="line">router.get(&#39;&#x2F;second-level&#x2F;:category&#39;, function(req, res, next) &#123;</span><br><span class="line">  category &#x3D; req.params.category;</span><br><span class="line">  console.log(category);</span><br><span class="line">  Product.find(&#123;category: category&#125;, function(err, docs)&#123;</span><br><span class="line">&#x2F;*adjust the data sequence to fit the mobil interface by change productChunks to docs *&#x2F;</span><br><span class="line">    res.render(&#39;shop&#x2F;second-level&#39;, &#123; title: &#39;Shopping cart&#39;, products: docs, category: category &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>The second way have to install handlebars-helper.</p>
+<h4 id="5-Handlebars"><a href="#5-Handlebars" class="headerlink" title="5. Handlebars"></a>5. <a href="http://handlebarsjs.com/guide/#what-is-handlebars" target="_blank" rel="noopener">Handlebars</a></h4><p>Handlebars is a simple templating language.</p>
+<p>It uses a template and an input object to generate HTML or other text formats. Handlebars templates look like a regular text with embedded Handlebars expressions.</p>
+<h1 id="if"><a href="#if" class="headerlink" title="if"></a>if</h1><p>Use handlebars can simplify many steps</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;entry&quot;&gt;</span><br><span class="line">&#123;&#123;#if author&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">&#123;&#123;&#x2F;if&#125;&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Input:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  author: true,</span><br><span class="line">  firstName: &quot;Yehuda&quot;,</span><br><span class="line">  lastName: &quot;Katz&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;entry&quot;&gt;</span><br><span class="line">&lt;h1&gt;Yehuda Katz&lt;&#x2F;h1&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="each"><a href="#each" class="headerlink" title="each"></a>each</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ul class&#x3D;&quot;people_list&quot;&gt;</span><br><span class="line">  &#123;&#123;#each people&#125;&#125;</span><br><span class="line">    &lt;li&gt;&#123;&#123;this&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">  &#123;&#123;&#x2F;each&#125;&#125;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Input: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  people: [</span><br><span class="line">    &quot;Yehuda Katz&quot;,</span><br><span class="line">    &quot;Alan Johnson&quot;,</span><br><span class="line">    &quot;Charles Jolley&quot;,</span><br><span class="line">  ],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ul class&#x3D;&quot;people_list&quot;&gt;</span><br><span class="line">    &lt;li&gt;Yehuda Katz&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li&gt;Alan Johnson&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li&gt;Charles Jolley&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-Bootstrap"><a href="#6-Bootstrap" class="headerlink" title="6. Bootstrap"></a>6. <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank" rel="noopener">Bootstrap</a></h4><p>Bootstrap is an open-source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+<p>There are many beauty model, you can directly reference some model in you programm. Like:</p>
+<ul>
+<li><p>Navbar</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;nav class&#x3D;&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;navbar-brand&quot; href&#x3D;&quot;#&quot;&gt;Navbar&lt;&#x2F;a&gt;</span><br><span class="line">  &lt;button class&#x3D;&quot;navbar-toggler&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#navbarSupportedContent&quot; aria-controls&#x3D;&quot;navbarSupportedContent&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle navigation&quot;&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;navbar-toggler-icon&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;button&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;navbarSupportedContent&quot;&gt;</span><br><span class="line">    &lt;ul class&#x3D;&quot;navbar-nav mr-auto&quot;&gt;</span><br><span class="line">      &lt;li class&#x3D;&quot;nav-item active&quot;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;#&quot;&gt;Home &lt;span class&#x3D;&quot;sr-only&quot;&gt;(current)&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;</span><br><span class="line">      &lt;&#x2F;li&gt;</span><br><span class="line">      &lt;li class&#x3D;&quot;nav-item&quot;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;#&quot;&gt;Link&lt;&#x2F;a&gt;</span><br><span class="line">      &lt;&#x2F;li&gt;</span><br><span class="line">      &lt;li class&#x3D;&quot;nav-item dropdown&quot;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;nav-link dropdown-toggle&quot; href&#x3D;&quot;#&quot; id&#x3D;&quot;navbarDropdown&quot; role&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;dropdown&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot;&gt;</span><br><span class="line">          Dropdown</span><br><span class="line">        &lt;&#x2F;a&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;dropdown-menu&quot; aria-labelledby&#x3D;&quot;navbarDropdown&quot;&gt;</span><br><span class="line">          &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Action&lt;&#x2F;a&gt;</span><br><span class="line">          &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Another action&lt;&#x2F;a&gt;</span><br><span class="line">          &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">          &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Something else here&lt;&#x2F;a&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;&#x2F;li&gt;</span><br><span class="line">      &lt;li class&#x3D;&quot;nav-item&quot;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;nav-link disabled&quot; href&#x3D;&quot;#&quot; tabindex&#x3D;&quot;-1&quot; aria-disabled&#x3D;&quot;true&quot;&gt;Disabled&lt;&#x2F;a&gt;</span><br><span class="line">      &lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;form class&#x3D;&quot;form-inline my-2 my-lg-0&quot;&gt;</span><br><span class="line">      &lt;input class&#x3D;&quot;form-control mr-sm-2&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Search&quot; aria-label&#x3D;&quot;Search&quot;&gt;</span><br><span class="line">      &lt;button class&#x3D;&quot;btn btn-outline-success my-2 my-sm-0&quot; type&#x3D;&quot;submit&quot;&gt;Search&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;form&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;nav&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Carousel:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;carouselExampleControls&quot; class&#x3D;&quot;carousel slide&quot; data-ride&#x3D;&quot;carousel&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;carousel-inner&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;carousel-item active&quot;&gt;</span><br><span class="line">      &lt;img src&#x3D;&quot;...&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;carousel-item&quot;&gt;</span><br><span class="line">      &lt;img src&#x3D;&quot;...&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;carousel-item&quot;&gt;</span><br><span class="line">      &lt;img src&#x3D;&quot;...&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;carousel-control-prev&quot; href&#x3D;&quot;#carouselExampleControls&quot; role&#x3D;&quot;button&quot; data-slide&#x3D;&quot;prev&quot;&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;carousel-control-prev-icon&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;carousel-control-next&quot; href&#x3D;&quot;#carouselExampleControls&quot; role&#x3D;&quot;button&quot; data-slide&#x3D;&quot;next&quot;&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;carousel-control-next-icon&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-Javascript"><a href="#6-Javascript" class="headerlink" title="6. Javascript"></a>6. Javascript</h4><p>Use javascript to display the products more flexible, especially when we can not ensure the count of the products.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var div &#x3D; document.getElementById(&quot;products-div&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;create a new product card div</span><br><span class="line">var div_pro &#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">div_pro.setAttribute(&quot;class&quot;,&quot;row&quot;);</span><br><span class="line">div.appendChild(div_pro);</span><br><span class="line">var div_pro_col &#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">div_pro_col.setAttribute(&quot;class&quot;,&quot;def-col-sm-6&quot;);</span><br><span class="line">div_pro.appendChild(div_pro_col);</span><br><span class="line"> </span><br><span class="line">var div_pro_col_link &#x3D; document.createElement(&quot;a&quot;);</span><br><span class="line">div_pro_col_link.href &#x3D; &quot;&#x2F;product&#x2F;&quot; + product._id;</span><br><span class="line">var div_pro_col_img &#x3D; document.createElement(&quot;img&quot;);</span><br><span class="line">div_pro_col_img.setAttribute(&quot;class&quot;,&quot;img w-50&quot;);</span><br><span class="line">div_pro_col_img.src &#x3D; product.imagePath;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-Decrypt-and-encrypt-force-user-to-login"><a href="#7-Decrypt-and-encrypt-force-user-to-login" class="headerlink" title="7. Decrypt and encrypt, force user to login"></a>7. Decrypt and encrypt, force user to login</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var LocalStrategy &#x3D; require(&#39;passport-local&#39;).Strategy;</span><br><span class="line">var &#123;check, validationResult&#125; &#x3D; require(&#39;express-validator&#39;);</span><br><span class="line"></span><br><span class="line">passport.serializeUser(function(user, done)&#123;</span><br><span class="line">    done(null, user.id);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">passport.deserializeUser(function(id, done)&#123;</span><br><span class="line">    User.findById(id, function(err, user)&#123;</span><br><span class="line">        done(err, user);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">passport.use(&#39;local.signup&#39;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#39;username&#39;,</span><br><span class="line">    passwordField: &#39;password&#39;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">       ......</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Feature-Work"><a href="#Feature-Work" class="headerlink" title="Feature Work"></a>Feature Work</h2><blockquote>
+<ul>
+<li>send email to admin mailbox</li>
+<li>collect user visit and input data</li>
+<li>analyse user data</li>
+<li>support Wechat, Taobao and google account Login</li>
+<li>add Wechatpay and Alipay Link</li>
+<li>add more new interest product</li>
+<li>provide prompt words in search input based on user history.</li>
+<li>prompt words are provided according to the background products.</li>
+<li>recommend products based on historical purchases and browsing history</li>
+<li>add user chat</li>
+<li>add a website and product reviews</li>
+<li>add shipping method</li>
+</ul>
+</blockquote>
+<ul>
+<li>Website: <a href="germanfamily.eu">germanfamily.eu</a></li>
+<li>Github: <a href="https://github.com/wang-yuhao/shopping-cart" target="_blank" rel="noopener">https://github.com/wang-yuhao/shopping-cart</a></li>
+</ul>
+]]></content>
   </entry>
 </search>
