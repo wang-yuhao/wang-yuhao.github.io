@@ -30,7 +30,7 @@ tags:
 ![comment.png](comments.png)
 
 
-#### Last semester did a Paktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customs, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another.
+#### Last semester did a Praktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customers, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another.
 
 
 #### This eCommerce Platform was designed primarily for a mobile device, Use Express structure, bootstrap, and handlebars for frontend, Nodejs control the backend, Mongodb store the database, early the project was deployed on the Azure, but due to the GFW limits the network speed, user can not open the Website fast, so have to change to AliCloud on HongKong, this server is efficiency, cheaper and doesn't need to register in the government department, it is an excellent choice for the global eCommerce Platform.
