@@ -14,18 +14,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
-    <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
-    <content><![CDATA[<p>(Draft)</p>
-<a id="more"></a>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1   Introduction"></a>1   Introduction</h2><h4 id="1-1-Motivation"><a href="#1-1-Motivation" class="headerlink" title="1.1   Motivation"></a>1.1   Motivation</h4><p>The Leibniz Supercomputing Centre of the Bavarian Academy of Sciences and Humanities (LRZ) is the largest Supercomputing Center in Germany operates the Munich Scientific Network (MWN). In this network, including the Munich universities, many student dormitories, and some non-university facilities such as e.g., Bavarian State Library, museums, and the institutes of Max Planck Society and Fraunhofer Society.  A total of approximately 100,000 devices are connected. The MWN consists of a backbone network to which the networks of the facilities at the various locations are connected via routers and switches. The routers in the backbone area of the Cisco Nexus C7010 type. To connect buildings connected via DSL and smaller X-WiN locations, we operate some devices of the Cisco 1900 series (manufacturer information) and Cisco ISR 1100 (manufacturer information). For broadband connection of the computer clusters in the LRZ, a Leaf &amp; Spine infrastructure (Leaf &amp; Spine Design) based on Cisco Nexus 9364C (manufacturer information) is used. </p>
-<p>Hundred thousand scientific research and service equipment are connected per second in MWN. The efficiency, stability, and security of MWN are closely related to the daily teaching, researching, and work of every facility in the MWN. But the limitation of the update and modification for the massive data limit the competence of network management. On the other hand, the lack of an appropriate flow collector script and intuitive, reliable display web interface also restrict the efficiency of the work of the administrator. As an essential part of the program, the asset database has long been ignored by various flow collectors. Thus, the limitation of the asset database also raises the difficulty of network optimization. </p>
-<p>Botnets and other network attacks have always been a severe problem in the current network environment. The resulting network congestion, waste of network resources, and other network problems have undoubtedly caused substantial economic losses. With the rapid development of current machine learning and deep learning research, trying to use the latest data science technology to analyze the acquired flow data to predict future network usage, optimize the network structure and traffic, and explore the network potential reasonably and efficiently is also a significant challenge.</p>
-<h4 id="1-2-Problem-Statement"><a href="#1-2-Problem-Statement" class="headerlink" title="1.2   Problem Statement"></a>1.2   Problem Statement</h4><p>To improve the efficiency, stability, and security of MWN by managing the massive flow data per second, design an appropriate real-time NetFlow data collection and analysis script and an intuitive, simple, reliable display interface. Traditional NetFlow collectors are designed in many different situations, primarily their complicated functionality, insufficient asset databases, and other unsatisfied requirements of MWN, making them unsuitable for MWN. In this case, an independently designed and developed system integrated with MWN is what is urgently required.</p>
-<p>The detection against the Botnets, abnormal network usage, and other malicious cyberattacks in MWN is also possible in the future system automatic protection functionality. Besides, through the latest RNN or other state-of-the-art technology, analyze the steady flow data from MWN automatic generation to optimize the network structure. The utilization of the prediction functionality from the data science model also can improve the elasticity, maintainability, and expandability of the MWN. The administrator’s global control and deployment ability of the entire network routing situation can be significantly increased.</p>
-]]></content>
-  </entry>
-  <entry>
     <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
     <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
     <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
@@ -40,6 +28,37 @@
     <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master" target="_blank" rel="noopener">https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master</a></p>
 <a id="more"></a>
 <object data="presentation-start_presentation.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
+    <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
+    <content><![CDATA[<p>(Draft)</p>
+<a id="more"></a>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1   Introduction"></a>1   Introduction</h2><h4 id="1-1-Motivation"><a href="#1-1-Motivation" class="headerlink" title="1.1   Motivation"></a>1.1   Motivation</h4><p>The Leibniz Supercomputing Centre of the Bavarian Academy of Sciences and Humanities (LRZ) is the largest Supercomputing Center in Germany operates the Munich Scientific Network (MWN). In this network, including the Munich universities, many student dormitories, and some non-university facilities such as e.g., Bavarian State Library, museums, and the institutes of Max Planck Society and Fraunhofer Society.  A total of approximately 100,000 devices are connected. The MWN consists of a backbone network to which the networks of the facilities at the various locations are connected via routers and switches. The routers in the backbone area of the Cisco Nexus C7010 type. To connect buildings connected via DSL and smaller X-WiN locations, we operate some devices of the Cisco 1900 series (manufacturer information) and Cisco ISR 1100 (manufacturer information). For broadband connection of the computer clusters in the LRZ, a Leaf &amp; Spine infrastructure (Leaf &amp; Spine Design) based on Cisco Nexus 9364C (manufacturer information) is used. </p>
+<p>Hundred thousand scientific research and service equipment are connected per second in MWN. The efficiency, stability, and security of MWN are closely related to the daily teaching, researching, and work of every facility in the MWN. But the limitation of the update and modification for the massive data limit the competence of network management. On the other hand, the lack of an appropriate flow collector script and intuitive, reliable display web interface also restrict the efficiency of the work of the administrator. As an essential part of the program, the asset database has long been ignored by various flow collectors. Thus, the limitation of the asset database also raises the difficulty of network optimization. </p>
+<p>Botnets and other network attacks have always been a severe problem in the current network environment. The resulting network congestion, waste of network resources, and other network problems have undoubtedly caused substantial economic losses. With the rapid development of current machine learning and deep learning research, trying to use the latest data science technology to analyze the acquired flow data to predict future network usage, optimize the network structure and traffic, and explore the network potential reasonably and efficiently is also a significant challenge.</p>
+<h4 id="1-2-Problem-Statement"><a href="#1-2-Problem-Statement" class="headerlink" title="1.2   Problem Statement"></a>1.2   Problem Statement</h4><p>To improve the efficiency, stability, and security of MWN by managing the massive flow data per second, design an appropriate real-time NetFlow data collection and analysis script and an intuitive, simple, reliable display interface. Traditional NetFlow collectors are designed in many different situations, primarily their complicated functionality, insufficient asset databases, and other unsatisfied requirements of MWN, making them unsuitable for MWN. In this case, an independently designed and developed system integrated with MWN is what is urgently required.</p>
+<p>The detection against the Botnets, abnormal network usage, and other malicious cyberattacks in MWN is also possible in the future system automatic protection functionality. Besides, through the latest RNN or other state-of-the-art technology, analyze the steady flow data from MWN automatic generation to optimize the network structure. The utilization of the prediction functionality from the data science model also can improve the elasticity, maintainability, and expandability of the MWN. The administrator’s global control and deployment ability of the entire network routing situation can be significantly increased.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
+<a id="more"></a>
+<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
+</object>]]></content>
+  </entry>
+  <entry>
+    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
+    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
+<a id="more"></a>
+
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
 </object>
 
 ]]></content>
@@ -67,25 +86,6 @@
 <h2 id="About-the-R6-class-system-only-for-developers"><a href="#About-the-R6-class-system-only-for-developers" class="headerlink" title="About the R6 class system (only for developers):"></a>About the R6 class system (only for developers):</h2><p>Every learning process is considered as a class. Currently there are 6 classes. The base class is called “LearningProcess” and is meant as a base scheme with all required methods listed for all the other classes. The currently working classes are “ClassifLearningProcess” and “RegrLearningProcess”. Besides these “Classif3dLearningProcess”, “Regr3dLearningProcess” are not fully implemented and “ClusterLearningProcess” is implemented, but not working right now. All the plots should now be defined in each class, so tasks/datasets in the same class have the SAME predictions and plots. This hopefully makes everything a lot clearer and more uniform. The methods for these plots are already named and called everywhere (“getDataPlot” and “getPredPlot”), so no further methods should be introduced. Every plot should be defined in one of these methods in each class respectively. So whenever a plot is changed, only adapt the class, not any code anywhere else. To make the method “getPredPlot” work, one also has to implement the method “calculatePred”, which basically calculates the predictions on a bounded set of equidistant (and predefined) points. When defining methods, ALWAYS use isolate on reactive values. Otherwise calling the method elsewhere may lead to highly unintended behaviour, like infinite update loops or triggered observers in some totally different place - basically stuff making debugging feel totally like hell.</p>
 <h2 id="About-unit-tests-only-for-developers"><a href="#About-unit-tests-only-for-developers" class="headerlink" title="About unit tests (only for developers):"></a>About unit tests (only for developers):</h2><p>Because all the app files have to be placed in the inst/mlrPlayground folder, unit tests can’t be written for functions (and especially the R6 classes) defined there. Also the package shinytest meant for “interactive UI” testing seems to not work - every new execution of the same test suddenly changes some value in the overall state, thus throwing a test error.<br>Fortunately a different way was found to still do some potent testing.<br>shinytest allows to start the app, set input values and catch output values in a script without visiting the app. The current unit tests simply set the input to all different kinds of tasks and learners and checks if the dataset/prediction plot json data changed compared to the last input (this way we can make sure the plots are actually updated with the input instead of guessing that “not NULL” as a output condition for the plot may actually be enough).</p>
 <p>Github: <a href="https://github.com/SebGruber1996/mlrPlayground" target="_blank" rel="noopener">https://github.com/SebGruber1996/mlrPlayground</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
-    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
-    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
-<a id="more"></a>
-<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
-</object>]]></content>
-  </entry>
-  <entry>
-    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
-    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
-    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
-<a id="more"></a>
-
-<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-
 ]]></content>
   </entry>
   <entry>
@@ -151,11 +151,13 @@
 </li>
 </ol>
 <h4 id="Warning"><a href="#Warning" class="headerlink" title="Warning:"></a>Warning:</h4><p>If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site’s DNS records if you’d like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:</p>
-<h3 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu</h3><h4 id="1-Learn-Hexo-Blog-Framework"><a href="#1-Learn-Hexo-Blog-Framework" class="headerlink" title="1. Learn Hexo Blog Framework:"></a>1. Learn Hexo Blog Framework:</h4><pre><code>1.1. install hexo: `npm install -g hexo`
-1.2. Initlize hexo: `hexo init`
-1.3. Install required packages: `npm install`
-1.4. Deploy Hexo:`hexo s`
-1.5. Open `localhost:4000` in browser.</code></pre><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></p>
+<h3 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu</h3><h4 id="1-Learn-Hexo-Blog-Framework"><a href="#1-Learn-Hexo-Blog-Framework" class="headerlink" title="1. Learn Hexo Blog Framework:"></a>1. Learn Hexo Blog Framework:</h4><ol>
+<li>install hexo: <code>npm install -g hexo</code></li>
+<li>Initlize hexo: <code>hexo init</code></li>
+<li>Install required packages: <code>npm install</code></li>
+<li>Deploy Hexo:<code>hexo s</code></li>
+<li>Open <code>localhost:4000</code> in browser.<br><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></li>
+</ol>
 <h4 id="2-Use-NEXT-Thema-in-Hexo"><a href="#2-Use-NEXT-Thema-in-Hexo" class="headerlink" title="2. Use NEXT Thema in Hexo:"></a>2. Use NEXT Thema in Hexo:</h4><p><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">Next Thema Website</a><br>ps: This blog is using Next-Gemini.<br>            2.1. Install Thema:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd hexo</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
 
