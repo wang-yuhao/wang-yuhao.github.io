@@ -8,7 +8,8 @@ Recently the computer was broken, so all study resources were lost, and before I
 
 <!--more-->
 
-## Important (How to reuse GitHub deploy blog):
+#### Important 
+(How to use GitHub redeploy blog):
 1. Download the source file from the <b>gh-pages</b> branch from [github repository.](https://github.com/wang-yuhao/wang-yuhao.github.io/tree/gh-pages)
 
 2. Generate a new Post with the command: 
@@ -19,6 +20,15 @@ then a .md file and a folder with the same name \<Here-is-post-name\> will be au
 
 3. Add relative pdfs or images in \<Here-is-post-name\> folder
 and edit the \<Here-is-post-name\>.md file.
+3.1. Insert pdf files to post:
+```
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+```
+3.2. Insert images to post:
+```
+![comment.png](comments.png)
+```
 
 4. Git push local <b>gh-pages</b>repository to remote repository
 
@@ -26,9 +36,14 @@ and edit the \<Here-is-post-name\>.md file.
 ```
 $ hexo clean && hexo g -d
 ```
-## Important: If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site's DNS records if you'd like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:
 
-### (On Ubuntu)
+6. Reset the domain in your repository `Setting` on GitHub:
+
+
+#### Warning:
+If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site's DNS records if you'd like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:
+
+#### On Ubuntu
 #### Learn Hexo Blog Framework:
 1.1 install hexo: `npm install -g hexo`
 1.2 Initlize hexo: `hexo init`
@@ -92,6 +107,16 @@ disqus:
   shortname: <your-disqus-id> #
   count: true
 ```
+
+#### Delete a post in hexo
+ 1. Delete the post under source/_post folder 
+
+ 2. Run hexo clean to delete the database (db.json) and assets folder 
+
+ 3. Run hexo generateto generate the new blog without your deleted post 
+
+ 4. Run hexo deploy to deploy your blog
+
 
 #### Connect Hexo with Github
 1. deploy hexo on GitHub pages: build a new repository with the name: <username.github.io>, create a new branch <hexo>
@@ -164,3 +189,9 @@ git commit -am"add a new blog"
 git push
 ```
 `Travis ci` will be called automatically and automatically finish the deployment.
+
+
+Reference: 
+[#1 HEXO](https://hexo.io/)
+[#2](https://www.cnblogs.com/zyh1020/p/11129565.html)
+[#3](https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/)

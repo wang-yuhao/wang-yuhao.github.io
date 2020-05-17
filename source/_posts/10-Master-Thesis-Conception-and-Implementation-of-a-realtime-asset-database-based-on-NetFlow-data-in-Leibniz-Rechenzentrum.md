@@ -5,7 +5,7 @@ date: 2020-04-19 15:25:54
 tags:
 ---
 
-## (Draft)
+(Draft)
 <!--more-->
 ## 1   Introduction
 #### 1.1   Motivation
