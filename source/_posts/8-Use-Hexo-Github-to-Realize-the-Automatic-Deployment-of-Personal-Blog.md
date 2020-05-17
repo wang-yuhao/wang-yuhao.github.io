@@ -31,6 +31,11 @@ and edit the \<Here-is-post-name\>.md file.
 ```
 
 4. Git push local <b>gh-pages</b>repository to remote repository
+```
+$ git add .
+$ git commit -m "update information"
+$ git push
+```
 
 5. Finally, run: 
 ```
