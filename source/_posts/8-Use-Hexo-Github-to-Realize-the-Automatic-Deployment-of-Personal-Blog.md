@@ -20,12 +20,12 @@ then a .md file and a folder with the same name \<Here-is-post-name\> will be au
 
 3. Add relative pdfs or images in \<Here-is-post-name\> folder
 and edit the \<Here-is-post-name\>.md file.
-3.1. Insert pdf files to post:
++ Insert pdf files to post:
 ```
 <object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
 </object>
 ```
-3.2. Insert images to post:
++ Insert images to post:
 ```
 ![comment.png](comments.png)
 ```
@@ -43,30 +43,27 @@ $ hexo clean && hexo g -d
 #### Warning:
 If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site's DNS records if you'd like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:
 
-#### On Ubuntu
-#### Learn Hexo Blog Framework:
-1.1 install hexo: `npm install -g hexo`
-1.2 Initlize hexo: `hexo init`
-1.3 Install required packages: `npm install`
-1.4 Deploy Hexo:`hexo s`
-1.5 Open `localhost:4000` in browser.
+### On Ubuntu
+#### 1. Learn Hexo Blog Framework:
+1. install hexo: `npm install -g hexo`
+2. Initlize hexo: `hexo init`
+3. Install required packages: `npm install`
+4. Deploy Hexo:`hexo s`
+5. Open `localhost:4000` in browser.
 [Hexo](https://hexo.io/)
 
-#### Use NEXT Thema in Hexo: 
+#### 2. Use NEXT Thema in Hexo: 
 [Next Thema Website](https://theme-next.iissnan.com/)
 ps: This blog is using Next-Gemini.
-
 1. Install Thema:
 ```
 $ cd hexo
 $ git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```
-
 2. Set up the theme, in _config.yml change:
 ```
 theme: next
 ```
-
 3. Set up the scheme, in themes/next/_config.yml change:
 ```
 scheme: Gemini
@@ -83,8 +80,7 @@ opacity: 0.5 # The opacity of line: 0~1
 zIndex: -1 # z-index property of the background
 count: 99 # The number of lines
 ```
-
-5. Add visitor comment, modify `themes/next/_config.yml`, first register a count in Disqus: 
+6. Add visitor comment, modify `themes/next/_config.yml`, first register a count in Disqus: 
 ```
 # Multiple Comment System Support
 comments:
@@ -108,17 +104,17 @@ disqus:
   count: true
 ```
 
-#### Delete a post in hexo
- 1. Delete the post under source/_post folder 
+#### 3. Delete a post in hexo
+1. Delete the post under source/_post folder 
 
- 2. Run hexo clean to delete the database (db.json) and assets folder 
+2. Run hexo clean to delete the database (db.json) and assets folder 
 
- 3. Run hexo generateto generate the new blog without your deleted post 
+3. Run hexo generateto generate the new blog without your deleted post 
 
- 4. Run hexo deploy to deploy your blog
+4. Run hexo deploy to deploy your blog
 
 
-#### Connect Hexo with Github
+#### 4. Connect Hexo with Github
 1. deploy hexo on GitHub pages: build a new repository with the name: <username.github.io>, create a new branch <hexo>
 
 2. git clone this repository and copy hexo file into this folder
@@ -143,7 +139,7 @@ hexo deploy
 
 5. Important: Use <hexo> store and update files, <master> store static pages, so always run command in hexo branch
 
-#### Achieve Automated Deployment:
+#### 5. Achieve Automated Deployment:
 1. comment `repo` in _config.yml:
 ```
 deploy:
