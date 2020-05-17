@@ -3,7 +3,8 @@
   <entry>
     <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
     <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
-    <content><![CDATA[<h2 id="Draft"><a href="#Draft" class="headerlink" title="(Draft)"></a>(Draft)</h2><a id="more"></a>
+    <content><![CDATA[<p>(Draft)</p>
+<a id="more"></a>
 <h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1   Introduction"></a>1   Introduction</h2><h4 id="1-1-Motivation"><a href="#1-1-Motivation" class="headerlink" title="1.1   Motivation"></a>1.1   Motivation</h4><p>The Leibniz Supercomputing Centre of the Bavarian Academy of Sciences and Humanities (LRZ) is the largest Supercomputing Center in Germany operates the Munich Scientific Network (MWN). In this network, including the Munich universities, many student dormitories, and some non-university facilities such as e.g., Bavarian State Library, museums, and the institutes of Max Planck Society and Fraunhofer Society.  A total of approximately 100,000 devices are connected. The MWN consists of a backbone network to which the networks of the facilities at the various locations are connected via routers and switches. The routers in the backbone area of the Cisco Nexus C7010 type. To connect buildings connected via DSL and smaller X-WiN locations, we operate some devices of the Cisco 1900 series (manufacturer information) and Cisco ISR 1100 (manufacturer information). For broadband connection of the computer clusters in the LRZ, a Leaf &amp; Spine infrastructure (Leaf &amp; Spine Design) based on Cisco Nexus 9364C (manufacturer information) is used. </p>
 <p>Hundred thousand scientific research and service equipment are connected per second in MWN. The efficiency, stability, and security of MWN are closely related to the daily teaching, researching, and work of every facility in the MWN. But the limitation of the update and modification for the massive data limit the competence of network management. On the other hand, the lack of an appropriate flow collector script and intuitive, reliable display web interface also restrict the efficiency of the work of the administrator. As an essential part of the program, the asset database has long been ignored by various flow collectors. Thus, the limitation of the asset database also raises the difficulty of network optimization. </p>
 <p>Botnets and other network attacks have always been a severe problem in the current network environment. The resulting network congestion, waste of network resources, and other network problems have undoubtedly caused substantial economic losses. With the rapid development of current machine learning and deep learning research, trying to use the latest data science technology to analyze the acquired flow data to predict future network usage, optimize the network structure and traffic, and explore the network potential reasonably and efficiently is also a significant challenge.</p>
@@ -74,7 +75,7 @@
     <content><![CDATA[<p>Recently the computer was broken, so all study resources were lost, and before I didn’t like backup files, I had to learn to build a personal blog with Hexo and Github. Write this file, so last time will not waste too much time to redo the same things as today.</p>
 <a id="more"></a>
 
-<h2 id="Important-How-to-reuse-GitHub-deploy-blog"><a href="#Important-How-to-reuse-GitHub-deploy-blog" class="headerlink" title="Important (How to reuse GitHub deploy blog):"></a>Important (How to reuse GitHub deploy blog):</h2><ol>
+<h4 id="Important-How-to-use-GitHub-redeploy-blog"><a href="#Important-How-to-use-GitHub-redeploy-blog" class="headerlink" title="Important (How to use GitHub redeploy blog):"></a>Important (How to use GitHub redeploy blog):</h4><ol>
 <li><p>Download the source file from the <b>gh-pages</b> branch from <a href="https://github.com/wang-yuhao/wang-yuhao.github.io/tree/gh-pages" target="_blank" rel="noopener">github repository.</a></p>
 </li>
 <li><p>Generate a new Post with the command: </p>
@@ -83,6 +84,17 @@
 </li>
 <li><p>Add relative pdfs or images in &lt;Here-is-post-name&gt; folder<br>and edit the &lt;Here-is-post-name&gt;.md file.</p>
 </li>
+</ol>
+<blockquote>
+<p>3.1. Insert pdf files to post:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;object data&#x3D;&quot;.&#x2F;Poster_ADL-AI_final.pdf&quot; type&#x3D;&quot;application&#x2F;pdf&quot; width&#x3D;&quot;100%&quot; height&#x3D;&quot;877px&quot;&gt;</span><br><span class="line">&lt;&#x2F;object&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3.2. Insert images to post:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![comment.png](comments.png)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
 <li><p>Git push local <b>gh-pages</b>repository to remote repository</p>
 </li>
 <li><p>Finally, run: </p>
@@ -206,7 +218,8 @@
   <entry>
     <title>9-Build-eCommerce-Platform-with-NodeJS/Express/Bootstrap/MongoDB/AliCloud</title>
     <url>/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/</url>
-    <content><![CDATA[<h2 id="Introduction-说明"><a href="#Introduction-说明" class="headerlink" title="Introduction(说明):"></a>Introduction(说明):</h2><a id="more"></a>
+    <content><![CDATA[<p>Introduction(说明):</p>
+<a id="more"></a>
 <h4 id="Menu-菜单"><a href="#Menu-菜单" class="headerlink" title="Menu(菜单):"></a>Menu(菜单):</h4><p><img src="menu.png" alt="menu.png"></p>
 <h4 id="signup-注册"><a href="#signup-注册" class="headerlink" title="signup(注册):"></a>signup(注册):</h4><p><img src="signup.png" alt="signup.png"></p>
 <h4 id="Products-商品"><a href="#Products-商品" class="headerlink" title="Products(商品):"></a>Products(商品):</h4><p><img src="products.png" alt="products.png"></p>
@@ -308,5 +321,10 @@
 <li>Github: <a href="https://github.com/wang-yuhao/shopping-cart" target="_blank" rel="noopener">https://github.com/wang-yuhao/shopping-cart</a></li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Accepted</title>
+    <url>/2020/05/17/Accepted/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
