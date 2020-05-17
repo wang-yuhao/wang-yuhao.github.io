@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>0-Kick-off</title>
-    <url>/2019/05/03/0-Kick-off/</url>
-    <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
-]]></content>
-  </entry>
-  <entry>
     <title>1-First-story</title>
     <url>/2019/05/16/1-First-story/</url>
     <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4><a id="more"></a>
 <p><img src="1-First-story.png" alt="first story.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
-    <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
-    <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
-<a id="more"></a>
-<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
-</object>
 ]]></content>
   </entry>
   <entry>
@@ -35,6 +20,12 @@
 ]]></content>
   </entry>
   <entry>
+    <title>0-Kick-off</title>
+    <url>/2019/05/03/0-Kick-off/</url>
+    <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
+]]></content>
+  </entry>
+  <entry>
     <title>3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication</title>
     <url>/2019/09/05/3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication/</url>
     <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master" target="_blank" rel="noopener">https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master</a></p>
@@ -45,22 +36,12 @@
 ]]></content>
   </entry>
   <entry>
-    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
-    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
-    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
+    <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
+    <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
+    <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
 <a id="more"></a>
-<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
-</object>]]></content>
-  </entry>
-  <entry>
-    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
-    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
-    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
-<a id="more"></a>
-
-<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
 </object>
-
 ]]></content>
   </entry>
   <entry>
@@ -89,42 +70,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
-    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
-    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
-<a id="more"></a>
-
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
-<li><p>download the aria2 with instruction:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure></li>
-<li><p>create a configuration file:<br>aria2.conf</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user&#x3D;user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd&#x3D;passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret&#x3D;token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc&#x3D;true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all&#x3D;true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all&#x3D;true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port&#x3D;6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads&#x3D;5</span><br><span class="line">#resume from break point</span><br><span class="line">continue&#x3D;true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server&#x3D;5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size&#x3D;10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split&#x3D;10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit&#x3D;0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit&#x3D;0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit&#x3D;0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit&#x3D;0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit&#x3D;0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer&#x3D;*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir&#x3D;&#x2F;home&#x2F;yuhao&#x2F;Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#39;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache&#x3D;0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap&#x3D;true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation&#x3D;prealloc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>start configuration file:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path&#x3D;&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
-<p>Like:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
-<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
-</li>
-<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc" target="_blank" rel="noopener">http://localhost:6800/jsonrpc</a></p>
-</li>
-<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
-</li>
-<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
-</li>
-<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
-</li>
-<li><p>The download information will be displayed on the terminal.</p>
-</li>
-</ol>
-<p>Reference:</p>
-<ul>
-<li>Download Baidunetdisk and 115 resources using Aria2</li>
-<li>Install and use aria2 to download Baidunetdisk content</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>8-Use-Hexo+Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog</title>
     <url>/2019/12/09/8-Use-Hexo-Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog/</url>
     <content><![CDATA[<p>Recently the computer was broken, so all study resources were lost, and before I didn’t like backup files, I had to learn to build a personal blog with Hexo and Github. Write this file, so last time will not waste too much time to redo the same things as today.</p>
@@ -139,11 +84,8 @@
 <p>then a .md file and a folder with the same name &lt;Here-is-post-name&gt; will be automatically generated.</p>
 </li>
 <li><p>Add relative pdfs or images in &lt;Here-is-post-name&gt; folder<br>and edit the &lt;Here-is-post-name&gt;.md file.</p>
-<ol>
-<li>Insert pdf files to post:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;object data&#x3D;&quot;.&#x2F;Poster_ADL-AI_final.pdf&quot; type&#x3D;&quot;application&#x2F;pdf&quot; width&#x3D;&quot;100%&quot; height&#x3D;&quot;877px&quot;&gt;</span><br><span class="line">&lt;&#x2F;object&gt;</span><br></pre></td></tr></table></figure></li>
-<li>Insert images to post:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![comment.png](comments.png)</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<pre><code>1. Insert pdf files to post:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;object data&#x3D;&quot;.&#x2F;Poster_ADL-AI_final.pdf&quot; type&#x3D;&quot;application&#x2F;pdf&quot; width&#x3D;&quot;100%&quot; height&#x3D;&quot;877px&quot;&gt;</span><br><span class="line">&lt;&#x2F;object&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>2. Insert images to post:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![comment.png](comments.png)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Git push local <b>gh-pages</b>repository to remote repository</p>
 </li>
@@ -260,6 +202,61 @@ when there is <code>Deploy error</code>:<figure class="highlight plain"><table><
 </li>
 </ol>
 <p>Reference:<br><a href="https://hexo.io/" target="_blank" rel="noopener">#1 HEXO</a><br><a href="https://www.cnblogs.com/zyh1020/p/11129565.html" target="_blank" rel="noopener">#2</a><br><a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/" target="_blank" rel="noopener">#3</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
+<a id="more"></a>
+<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
+</object>]]></content>
+  </entry>
+  <entry>
+    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
+    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
+<a id="more"></a>
+
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
+    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
+    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
+<a id="more"></a>
+
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
+<li><p>download the aria2 with instruction:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure></li>
+<li><p>create a configuration file:<br>aria2.conf</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user&#x3D;user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd&#x3D;passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret&#x3D;token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc&#x3D;true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all&#x3D;true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all&#x3D;true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port&#x3D;6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads&#x3D;5</span><br><span class="line">#resume from break point</span><br><span class="line">continue&#x3D;true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server&#x3D;5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size&#x3D;10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split&#x3D;10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit&#x3D;0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit&#x3D;0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit&#x3D;0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit&#x3D;0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit&#x3D;0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer&#x3D;*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir&#x3D;&#x2F;home&#x2F;yuhao&#x2F;Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#39;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache&#x3D;0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap&#x3D;true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation&#x3D;prealloc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>start configuration file:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path&#x3D;&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Like:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
+</li>
+<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc" target="_blank" rel="noopener">http://localhost:6800/jsonrpc</a></p>
+</li>
+<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
+</li>
+<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
+</li>
+<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
+</li>
+<li><p>The download information will be displayed on the terminal.</p>
+</li>
+</ol>
+<p>Reference:</p>
+<ul>
+<li>Download Baidunetdisk and 115 resources using Aria2</li>
+<li>Install and use aria2 to download Baidunetdisk content</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
