@@ -33,6 +33,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
+<a id="more"></a>
+<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
+</object>]]></content>
+  </entry>
+  <entry>
     <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
     <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
     <content><![CDATA[<p>(Draft)</p>
@@ -45,12 +53,15 @@
 ]]></content>
   </entry>
   <entry>
-    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
-    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
-    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
+    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
+    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
 <a id="more"></a>
-<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
-</object>]]></content>
+
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
   </entry>
   <entry>
     <title>4-mlrPlayground</title>
@@ -75,17 +86,6 @@
 <h2 id="About-the-R6-class-system-only-for-developers"><a href="#About-the-R6-class-system-only-for-developers" class="headerlink" title="About the R6 class system (only for developers):"></a>About the R6 class system (only for developers):</h2><p>Every learning process is considered as a class. Currently there are 6 classes. The base class is called “LearningProcess” and is meant as a base scheme with all required methods listed for all the other classes. The currently working classes are “ClassifLearningProcess” and “RegrLearningProcess”. Besides these “Classif3dLearningProcess”, “Regr3dLearningProcess” are not fully implemented and “ClusterLearningProcess” is implemented, but not working right now. All the plots should now be defined in each class, so tasks/datasets in the same class have the SAME predictions and plots. This hopefully makes everything a lot clearer and more uniform. The methods for these plots are already named and called everywhere (“getDataPlot” and “getPredPlot”), so no further methods should be introduced. Every plot should be defined in one of these methods in each class respectively. So whenever a plot is changed, only adapt the class, not any code anywhere else. To make the method “getPredPlot” work, one also has to implement the method “calculatePred”, which basically calculates the predictions on a bounded set of equidistant (and predefined) points. When defining methods, ALWAYS use isolate on reactive values. Otherwise calling the method elsewhere may lead to highly unintended behaviour, like infinite update loops or triggered observers in some totally different place - basically stuff making debugging feel totally like hell.</p>
 <h2 id="About-unit-tests-only-for-developers"><a href="#About-unit-tests-only-for-developers" class="headerlink" title="About unit tests (only for developers):"></a>About unit tests (only for developers):</h2><p>Because all the app files have to be placed in the inst/mlrPlayground folder, unit tests can’t be written for functions (and especially the R6 classes) defined there. Also the package shinytest meant for “interactive UI” testing seems to not work - every new execution of the same test suddenly changes some value in the overall state, thus throwing a test error.<br>Fortunately a different way was found to still do some potent testing.<br>shinytest allows to start the app, set input values and catch output values in a script without visiting the app. The current unit tests simply set the input to all different kinds of tasks and learners and checks if the dataset/prediction plot json data changed compared to the last input (this way we can make sure the plots are actually updated with the input instead of guessing that “not NULL” as a output condition for the plot may actually be enough).</p>
 <p>Github: <a href="https://github.com/SebGruber1996/mlrPlayground" target="_blank" rel="noopener">https://github.com/SebGruber1996/mlrPlayground</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
-    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
-    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
-<a id="more"></a>
-
-<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-
 ]]></content>
   </entry>
   <entry>
@@ -122,6 +122,125 @@
 <li>Download Baidunetdisk and 115 resources using Aria2</li>
 <li>Install and use aria2 to download Baidunetdisk content</li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>8-Use-Hexo+Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog</title>
+    <url>/2019/12/09/8-Use-Hexo-Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog/</url>
+    <content><![CDATA[<p>Recently the computer was broken, so all study resources were lost, and before I didn’t like backup files, I had to learn to build a personal blog with Hexo and Github. Write this file, so last time will not waste too much time to redo the same things as today.</p>
+<a id="more"></a>
+
+<h4 id="Important"><a href="#Important" class="headerlink" title="Important"></a>Important</h4><p>(How to use GitHub redeploy blog):</p>
+<ol>
+<li><p>Download the source file from the <b>gh-pages</b> branch from <a href="https://github.com/wang-yuhao/wang-yuhao.github.io/tree/gh-pages" target="_blank" rel="noopener">github repository.</a></p>
+</li>
+<li><p>Generate a new Post with the command: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n post &lt;Here-is-post-name&gt;</span><br></pre></td></tr></table></figure>
+<p>then a .md file and a folder with the same name &lt;Here-is-post-name&gt; will be automatically generated.</p>
+</li>
+<li><p>Add relative pdfs or images in &lt;Here-is-post-name&gt; folder<br>and edit the &lt;Here-is-post-name&gt;.md file.</p>
+<pre><code>3.1. Insert pdf files to post:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;object data&#x3D;&quot;.&#x2F;Poster_ADL-AI_final.pdf&quot; type&#x3D;&quot;application&#x2F;pdf&quot; width&#x3D;&quot;100%&quot; height&#x3D;&quot;877px&quot;&gt;</span><br><span class="line">&lt;&#x2F;object&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>3.2. Insert images to post:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![comment.png](comments.png)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Git push local <b>gh-pages</b>repository to remote repository</p>
+</li>
+<li><p>Finally, run: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Reset the domain in your repository <code>Setting</code> on GitHub:</p>
+</li>
+</ol>
+<h4 id="Warning"><a href="#Warning" class="headerlink" title="Warning:"></a>Warning:</h4><p>If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site’s DNS records if you’d like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:</p>
+<h3 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu</h3><h4 id="1-Learn-Hexo-Blog-Framework"><a href="#1-Learn-Hexo-Blog-Framework" class="headerlink" title="1. Learn Hexo Blog Framework:"></a>1. Learn Hexo Blog Framework:</h4><pre><code>1.1 install hexo: `npm install -g hexo`
+1.2 Initlize hexo: `hexo init`
+1.3 Install required packages: `npm install`
+1.4 Deploy Hexo:`hexo s`
+1.5 Open `localhost:4000` in browser.</code></pre><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></p>
+<h4 id="2-Use-NEXT-Thema-in-Hexo"><a href="#2-Use-NEXT-Thema-in-Hexo" class="headerlink" title="2. Use NEXT Thema in Hexo:"></a>2. Use NEXT Thema in Hexo:</h4><p><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">Next Thema Website</a><br>ps: This blog is using Next-Gemini.<br>            2.1. Install Thema:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd hexo</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<pre><code>2.2. Set up the theme, in _config.yml change:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<pre><code>2.3. Set up the scheme, in themes/next/_config.yml change:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+<pre><code>2.4. Set up menu: user can directly use Font Awesome icon in `themes/next/_config.yml`
+
+2.5. Dynamic background, modify `themes/next/_config.yml`: </code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">canvas_nest:</span><br><span class="line">enable: true</span><br><span class="line">onmobile: true # Display on mobile or not</span><br><span class="line">color: &quot;100,100,100&quot; # RGB values, use &#96;,&#96; to separate</span><br><span class="line">opacity: 0.5 # The opacity of line: 0~1</span><br><span class="line">zIndex: -1 # z-index property of the background</span><br><span class="line">count: 99 # The number of lines</span><br></pre></td></tr></table></figure>
+
+<pre><code>2.6. Add visitor comment, modify `themes/next/_config.yml`, first register a count in Disqus: </code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Multiple Comment System Support</span><br><span class="line">comments:</span><br><span class="line">  # Available values: tabs | buttons</span><br><span class="line">  style: tabs</span><br><span class="line">  # Choose a comment system to be displayed by default.</span><br><span class="line">  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine</span><br><span class="line">  active: disqus </span><br><span class="line">  # Setting &#96;true&#96; means remembering the comment system selected by the visitor.</span><br><span class="line">  storage: true</span><br><span class="line">  # Lazyload all comment systems.</span><br><span class="line">  lazyload: true</span><br><span class="line">  # Modify texts or order for any navs, here are some examples.</span><br><span class="line">  nav:</span><br><span class="line">    disqus:</span><br><span class="line"></span><br><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname: &lt;your-disqus-id&gt; #</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Delete-a-post-in-hexo"><a href="#3-Delete-a-post-in-hexo" class="headerlink" title="3. Delete a post in hexo"></a>3. Delete a post in hexo</h4><ol start="3">
+<li><ol>
+<li>Delete the post under source/_post folder </li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Run hexo clean to delete the database (db.json) and assets folder </li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Run hexo generateto generate the new blog without your deleted post </li>
+</ol>
+</li>
+<li><ol start="4">
+<li>Run hexo deploy to deploy your blog</li>
+</ol>
+</li>
+</ol>
+<h4 id="4-Connect-Hexo-with-Github"><a href="#4-Connect-Hexo-with-Github" class="headerlink" title="4. Connect Hexo with Github"></a>4. Connect Hexo with Github</h4><ol start="4">
+<li><ol>
+<li>deploy hexo on GitHub pages: build a new repository with the name: &lt;username.github.io&gt;, create a new branch <hexo></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>git clone this repository and copy hexo file into this folder</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>modify the <code>_config.yml</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+when there is <code>Deploy error</code>:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>generate and deploy<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Important: Use <hexo> store and update files, <master> store static pages, so always run command in hexo branch</li>
+</ol>
+</li>
+</ol>
+<h4 id="5-Achieve-Automated-Deployment"><a href="#5-Achieve-Automated-Deployment" class="headerlink" title="5. Achieve Automated Deployment:"></a>5. Achieve Automated Deployment:</h4><ol start="5">
+<li><ol>
+<li>comment <code>repo</code> in _config.yml:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">#  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>In local blog directory create a folder with name <code>.travis.yml</code>, it exists in the same directory with <code>_config.yml</code>.</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Input this command:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo: false</span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 12</span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">script:</span><br><span class="line">  - hexo generate</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: true</span><br><span class="line">  github-token: $GH_TOKEN</span><br><span class="line">  keep-history: true</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+<p>Don’t need to change anything.</p>
+<ol start="5">
+<li><ol start="4">
+<li>Get access token, have to write down this token and put it in <code>travis ci</code> environment variables. </li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Finally, run:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout hexo</span><br><span class="line">hexo new &quot;my first blog&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -am&quot;add a new blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<code>Travis ci</code> will be called automatically and automatically finish the deployment.</li>
+</ol>
+</li>
+</ol>
+<p>Reference:<br><a href="https://hexo.io/" target="_blank" rel="noopener">#1 HEXO</a><br><a href="https://www.cnblogs.com/zyh1020/p/11129565.html" target="_blank" rel="noopener">#2</a><br><a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/" target="_blank" rel="noopener">#3</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -229,125 +348,6 @@
 <li>Website: <a href="germanfamily.eu">germanfamily.eu</a></li>
 <li>Github: <a href="https://github.com/wang-yuhao/shopping-cart" target="_blank" rel="noopener">https://github.com/wang-yuhao/shopping-cart</a></li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>8-Use-Hexo+Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog</title>
-    <url>/2019/12/09/8-Use-Hexo-Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog/</url>
-    <content><![CDATA[<p>Recently the computer was broken, so all study resources were lost, and before I didn’t like backup files, I had to learn to build a personal blog with Hexo and Github. Write this file, so last time will not waste too much time to redo the same things as today.</p>
-<a id="more"></a>
-
-<h4 id="Important"><a href="#Important" class="headerlink" title="Important"></a>Important</h4><p>(How to use GitHub redeploy blog):</p>
-<ol>
-<li><p>Download the source file from the <b>gh-pages</b> branch from <a href="https://github.com/wang-yuhao/wang-yuhao.github.io/tree/gh-pages" target="_blank" rel="noopener">github repository.</a></p>
-</li>
-<li><p>Generate a new Post with the command: </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n post &lt;Here-is-post-name&gt;</span><br></pre></td></tr></table></figure>
-<p>then a .md file and a folder with the same name &lt;Here-is-post-name&gt; will be automatically generated.</p>
-</li>
-<li><p>Add relative pdfs or images in &lt;Here-is-post-name&gt; folder<br>and edit the &lt;Here-is-post-name&gt;.md file.</p>
-<pre><code>3.1. Insert pdf files to post:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;object data&#x3D;&quot;.&#x2F;Poster_ADL-AI_final.pdf&quot; type&#x3D;&quot;application&#x2F;pdf&quot; width&#x3D;&quot;100%&quot; height&#x3D;&quot;877px&quot;&gt;</span><br><span class="line">&lt;&#x2F;object&gt;</span><br></pre></td></tr></table></figure>
-<pre><code>3.2. Insert images to post:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![comment.png](comments.png)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Git push local <b>gh-pages</b>repository to remote repository</p>
-</li>
-<li><p>Finally, run: </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Reset the domain in your repository <code>Setting</code> on GitHub:</p>
-</li>
-</ol>
-<h4 id="Warning"><a href="#Warning" class="headerlink" title="Warning:"></a>Warning:</h4><p>If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site’s DNS records if you’d like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:</p>
-<h3 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu</h3><h4 id="1-Learn-Hexo-Blog-Framework"><a href="#1-Learn-Hexo-Blog-Framework" class="headerlink" title="1. Learn Hexo Blog Framework:"></a>1. Learn Hexo Blog Framework:</h4><pre><code>1.1 install hexo: `npm install -g hexo`
-1.2 Initlize hexo: `hexo init`
-1.3 Install required packages: `npm install`
-1.4 Deploy Hexo:`hexo s`
-1.5 Open `localhost:4000` in browser.</code></pre><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></p>
-<h4 id="2-Use-NEXT-Thema-in-Hexo"><a href="#2-Use-NEXT-Thema-in-Hexo" class="headerlink" title="2. Use NEXT Thema in Hexo:"></a>2. Use NEXT Thema in Hexo:</h4><p><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">Next Thema Website</a><br>ps: This blog is using Next-Gemini.</p>
-<pre><code>2.1. Install Thema:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd hexo</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<pre><code>2.2. Set up the theme, in _config.yml change:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<pre><code>2.3. Set up the scheme, in themes/next/_config.yml change:</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-<pre><code>2.4. Set up menu: user can directly use Font Awesome icon in `themes/next/_config.yml`
-
-2.5. Dynamic background, modify `themes/next/_config.yml`: </code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">canvas_nest:</span><br><span class="line">enable: true</span><br><span class="line">onmobile: true # Display on mobile or not</span><br><span class="line">color: &quot;100,100,100&quot; # RGB values, use &#96;,&#96; to separate</span><br><span class="line">opacity: 0.5 # The opacity of line: 0~1</span><br><span class="line">zIndex: -1 # z-index property of the background</span><br><span class="line">count: 99 # The number of lines</span><br></pre></td></tr></table></figure>
-
-<pre><code>2.6. Add visitor comment, modify `themes/next/_config.yml`, first register a count in Disqus: </code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Multiple Comment System Support</span><br><span class="line">comments:</span><br><span class="line">  # Available values: tabs | buttons</span><br><span class="line">  style: tabs</span><br><span class="line">  # Choose a comment system to be displayed by default.</span><br><span class="line">  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine</span><br><span class="line">  active: disqus </span><br><span class="line">  # Setting &#96;true&#96; means remembering the comment system selected by the visitor.</span><br><span class="line">  storage: true</span><br><span class="line">  # Lazyload all comment systems.</span><br><span class="line">  lazyload: true</span><br><span class="line">  # Modify texts or order for any navs, here are some examples.</span><br><span class="line">  nav:</span><br><span class="line">    disqus:</span><br><span class="line"></span><br><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname: &lt;your-disqus-id&gt; #</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Delete-a-post-in-hexo"><a href="#3-Delete-a-post-in-hexo" class="headerlink" title="3. Delete a post in hexo"></a>3. Delete a post in hexo</h4><ol start="3">
-<li><ol>
-<li>Delete the post under source/_post folder </li>
-</ol>
-</li>
-<li><ol start="2">
-<li>Run hexo clean to delete the database (db.json) and assets folder </li>
-</ol>
-</li>
-<li><ol start="3">
-<li>Run hexo generateto generate the new blog without your deleted post </li>
-</ol>
-</li>
-<li><ol start="4">
-<li>Run hexo deploy to deploy your blog</li>
-</ol>
-</li>
-</ol>
-<h4 id="4-Connect-Hexo-with-Github"><a href="#4-Connect-Hexo-with-Github" class="headerlink" title="4. Connect Hexo with Github"></a>4. Connect Hexo with Github</h4><ol start="4">
-<li><ol>
-<li>deploy hexo on GitHub pages: build a new repository with the name: &lt;username.github.io&gt;, create a new branch <hexo></li>
-</ol>
-</li>
-<li><ol start="2">
-<li>git clone this repository and copy hexo file into this folder</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>modify the <code>_config.yml</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-when there is <code>Deploy error</code>:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><ol start="4">
-<li>generate and deploy<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><ol start="5">
-<li>Important: Use <hexo> store and update files, <master> store static pages, so always run command in hexo branch</li>
-</ol>
-</li>
-</ol>
-<h4 id="5-Achieve-Automated-Deployment"><a href="#5-Achieve-Automated-Deployment" class="headerlink" title="5. Achieve Automated Deployment:"></a>5. Achieve Automated Deployment:</h4><ol start="5">
-<li><ol>
-<li>comment <code>repo</code> in _config.yml:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">#  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>In local blog directory create a folder with name <code>.travis.yml</code>, it exists in the same directory with <code>_config.yml</code>.</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>Input this command:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo: false</span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 12</span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">script:</span><br><span class="line">  - hexo generate</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: true</span><br><span class="line">  github-token: $GH_TOKEN</span><br><span class="line">  keep-history: true</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-</li>
-</ol>
-<p>Don’t need to change anything.</p>
-<ol start="5">
-<li><ol start="4">
-<li>Get access token, have to write down this token and put it in <code>travis ci</code> environment variables. </li>
-</ol>
-</li>
-<li><ol start="5">
-<li>Finally, run:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout hexo</span><br><span class="line">hexo new &quot;my first blog&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -am&quot;add a new blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<code>Travis ci</code> will be called automatically and automatically finish the deployment.</li>
-</ol>
-</li>
-</ol>
-<p>Reference:<br><a href="https://hexo.io/" target="_blank" rel="noopener">#1 HEXO</a><br><a href="https://www.cnblogs.com/zyh1020/p/11129565.html" target="_blank" rel="noopener">#2</a><br><a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/" target="_blank" rel="noopener">#3</a></p>
 ]]></content>
   </entry>
 </search>
