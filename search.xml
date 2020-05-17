@@ -158,71 +158,109 @@
 </li>
 </ol>
 <h4 id="Warning"><a href="#Warning" class="headerlink" title="Warning:"></a>Warning:</h4><p>If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site’s DNS records if you’d like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:</p>
-<h4 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu</h4><h4 id="Learn-Hexo-Blog-Framework"><a href="#Learn-Hexo-Blog-Framework" class="headerlink" title="Learn Hexo Blog Framework:"></a>Learn Hexo Blog Framework:</h4><p>1.1 install hexo: <code>npm install -g hexo</code><br>1.2 Initlize hexo: <code>hexo init</code><br>1.3 Install required packages: <code>npm install</code><br>1.4 Deploy Hexo:<code>hexo s</code><br>1.5 Open <code>localhost:4000</code> in browser.<br><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></p>
-<h4 id="Use-NEXT-Thema-in-Hexo"><a href="#Use-NEXT-Thema-in-Hexo" class="headerlink" title="Use NEXT Thema in Hexo:"></a>Use NEXT Thema in Hexo:</h4><p><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">Next Thema Website</a><br>ps: This blog is using Next-Gemini.</p>
-<ol>
-<li><p>Install Thema:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd hexo</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<h3 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu</h3><h4 id="1-Learn-Hexo-Blog-Framework"><a href="#1-Learn-Hexo-Blog-Framework" class="headerlink" title="1. Learn Hexo Blog Framework:"></a>1. Learn Hexo Blog Framework:</h4><p>1.1 install hexo: <code>npm install -g hexo</code><br>1.2 Initlize hexo: <code>hexo init</code><br>1.3 Install required packages: <code>npm install</code><br>1.4 Deploy Hexo:<code>hexo s</code><br>1.5 Open <code>localhost:4000</code> in browser.<br><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></p>
+<h4 id="2-Use-NEXT-Thema-in-Hexo"><a href="#2-Use-NEXT-Thema-in-Hexo" class="headerlink" title="2. Use NEXT Thema in Hexo:"></a>2. Use NEXT Thema in Hexo:</h4><p><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">Next Thema Website</a><br>ps: This blog is using Next-Gemini.</p>
+<ol start="2">
+<li><ol>
+<li>Install Thema:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd hexo</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Set up the theme, in _config.yml change:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+</ol>
 </li>
-<li><p>Set up the scheme, in themes/next/_config.yml change:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure></li>
-<li><p>Set up menu: user can directly use Font Awesome icon in <code>themes/next/_config.yml</code></p>
+<li><ol start="2">
+<li>Set up the theme, in _config.yml change:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Dynamic background, modify <code>themes/next/_config.yml</code>: </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">canvas_nest:</span><br><span class="line">enable: true</span><br><span class="line">onmobile: true # Display on mobile or not</span><br><span class="line">color: &quot;100,100,100&quot; # RGB values, use &#96;,&#96; to separate</span><br><span class="line">opacity: 0.5 # The opacity of line: 0~1</span><br><span class="line">zIndex: -1 # z-index property of the background</span><br><span class="line">count: 99 # The number of lines</span><br></pre></td></tr></table></figure>
+</ol>
 </li>
-<li><p>Add visitor comment, modify <code>themes/next/_config.yml</code>, first register a count in Disqus: </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Multiple Comment System Support</span><br><span class="line">comments:</span><br><span class="line">  # Available values: tabs | buttons</span><br><span class="line">  style: tabs</span><br><span class="line">  # Choose a comment system to be displayed by default.</span><br><span class="line">  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine</span><br><span class="line">  active: disqus </span><br><span class="line">  # Setting &#96;true&#96; means remembering the comment system selected by the visitor.</span><br><span class="line">  storage: true</span><br><span class="line">  # Lazyload all comment systems.</span><br><span class="line">  lazyload: true</span><br><span class="line">  # Modify texts or order for any navs, here are some examples.</span><br><span class="line">  nav:</span><br><span class="line">    disqus:</span><br><span class="line"></span><br><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname: &lt;your-disqus-id&gt; #</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
+<li><ol start="3">
+<li>Set up the scheme, in themes/next/_config.yml change:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="4">
+<li>Set up menu: user can directly use Font Awesome icon in <code>themes/next/_config.yml</code></li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Dynamic background, modify <code>themes/next/_config.yml</code>: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">canvas_nest:</span><br><span class="line">enable: true</span><br><span class="line">onmobile: true # Display on mobile or not</span><br><span class="line">color: &quot;100,100,100&quot; # RGB values, use &#96;,&#96; to separate</span><br><span class="line">opacity: 0.5 # The opacity of line: 0~1</span><br><span class="line">zIndex: -1 # z-index property of the background</span><br><span class="line">count: 99 # The number of lines</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>Add visitor comment, modify <code>themes/next/_config.yml</code>, first register a count in Disqus: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Multiple Comment System Support</span><br><span class="line">comments:</span><br><span class="line">  # Available values: tabs | buttons</span><br><span class="line">  style: tabs</span><br><span class="line">  # Choose a comment system to be displayed by default.</span><br><span class="line">  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine</span><br><span class="line">  active: disqus </span><br><span class="line">  # Setting &#96;true&#96; means remembering the comment system selected by the visitor.</span><br><span class="line">  storage: true</span><br><span class="line">  # Lazyload all comment systems.</span><br><span class="line">  lazyload: true</span><br><span class="line">  # Modify texts or order for any navs, here are some examples.</span><br><span class="line">  nav:</span><br><span class="line">    disqus:</span><br><span class="line"></span><br><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname: &lt;your-disqus-id&gt; #</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<h4 id="Delete-a-post-in-hexo"><a href="#Delete-a-post-in-hexo" class="headerlink" title="Delete a post in hexo"></a>Delete a post in hexo</h4><ol>
-<li><p>Delete the post under source/_post folder </p>
-</li>
-<li><p>Run hexo clean to delete the database (db.json) and assets folder </p>
-</li>
-<li><p>Run hexo generateto generate the new blog without your deleted post </p>
-</li>
-<li><p>Run hexo deploy to deploy your blog</p>
 </li>
 </ol>
-<h4 id="Connect-Hexo-with-Github"><a href="#Connect-Hexo-with-Github" class="headerlink" title="Connect Hexo with Github"></a>Connect Hexo with Github</h4><ol>
-<li><p>deploy hexo on GitHub pages: build a new repository with the name: &lt;username.github.io&gt;, create a new branch <hexo></p>
+<h4 id="3-Delete-a-post-in-hexo"><a href="#3-Delete-a-post-in-hexo" class="headerlink" title="3. Delete a post in hexo"></a>3. Delete a post in hexo</h4><ol start="3">
+<li><ol>
+<li>Delete the post under source/_post folder </li>
+</ol>
 </li>
-<li><p>git clone this repository and copy hexo file into this folder</p>
+<li><ol start="2">
+<li>Run hexo clean to delete the database (db.json) and assets folder </li>
+</ol>
 </li>
-<li><p>modify the <code>_config.yml</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>when there is <code>Deploy error</code>:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<li><ol start="3">
+<li>Run hexo generateto generate the new blog without your deleted post </li>
+</ol>
 </li>
-<li><p>generate and deploy</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Important: Use <hexo> store and update files, <master> store static pages, so always run command in hexo branch</p>
+<li><ol start="4">
+<li>Run hexo deploy to deploy your blog</li>
+</ol>
 </li>
 </ol>
-<h4 id="Achieve-Automated-Deployment"><a href="#Achieve-Automated-Deployment" class="headerlink" title="Achieve Automated Deployment:"></a>Achieve Automated Deployment:</h4><ol>
-<li><p>comment <code>repo</code> in _config.yml:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">#  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+<h4 id="4-Connect-Hexo-with-Github"><a href="#4-Connect-Hexo-with-Github" class="headerlink" title="4. Connect Hexo with Github"></a>4. Connect Hexo with Github</h4><ol start="4">
+<li><ol>
+<li>deploy hexo on GitHub pages: build a new repository with the name: &lt;username.github.io&gt;, create a new branch <hexo></li>
+</ol>
 </li>
-<li><p>In local blog directory create a folder with name <code>.travis.yml</code>, it exists in the same directory with <code>_config.yml</code>.</p>
+<li><ol start="2">
+<li>git clone this repository and copy hexo file into this folder</li>
+</ol>
 </li>
-<li><p>Input this command:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo: false</span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 12</span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">script:</span><br><span class="line">  - hexo generate</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: true</span><br><span class="line">  github-token: $GH_TOKEN</span><br><span class="line">  keep-history: true</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure>
+<li><ol start="3">
+<li>modify the <code>_config.yml</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+when there is <code>Deploy error</code>:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>generate and deploy<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Important: Use <hexo> store and update files, <master> store static pages, so always run command in hexo branch</li>
+</ol>
+</li>
+</ol>
+<h4 id="5-Achieve-Automated-Deployment"><a href="#5-Achieve-Automated-Deployment" class="headerlink" title="5. Achieve Automated Deployment:"></a>5. Achieve Automated Deployment:</h4><ol start="5">
+<li><ol>
+<li>comment <code>repo</code> in _config.yml:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">#  repo: git@github.com:wang-yuhao&#x2F;wang-yuhao.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>In local blog directory create a folder with name <code>.travis.yml</code>, it exists in the same directory with <code>_config.yml</code>.</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Input this command:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo: false</span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 12</span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">script:</span><br><span class="line">  - hexo generate</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: true</span><br><span class="line">  github-token: $GH_TOKEN</span><br><span class="line">  keep-history: true</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
 </li>
 </ol>
 <p>Don’t need to change anything.</p>
-<ol start="4">
-<li><p>Get access token, have to write down this token and put it in <code>travis ci</code> environment variables. </p>
+<ol start="5">
+<li><ol start="4">
+<li>Get access token, have to write down this token and put it in <code>travis ci</code> environment variables. </li>
+</ol>
 </li>
-<li><p>Finally, run:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout hexo</span><br><span class="line">hexo new &quot;my first blog&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -am&quot;add a new blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p><code>Travis ci</code> will be called automatically and automatically finish the deployment.</p>
+<li><ol start="5">
+<li>Finally, run:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout hexo</span><br><span class="line">hexo new &quot;my first blog&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -am&quot;add a new blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<code>Travis ci</code> will be called automatically and automatically finish the deployment.</li>
+</ol>
 </li>
 </ol>
 <p>Reference:<br><a href="https://hexo.io/" target="_blank" rel="noopener">#1 HEXO</a><br><a href="https://www.cnblogs.com/zyh1020/p/11129565.html" target="_blank" rel="noopener">#2</a><br><a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/" target="_blank" rel="noopener">#3</a></p>
