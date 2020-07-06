@@ -12,5 +12,6 @@ save `alphadin.bst` file from [here](https://ctan.org/tex-archive/biblio/bibtex/
 	\bibliography{Bib/stud77.bib}
 ```
 
-Or you can change the file path in `\bibliographystyle\{%.bst file path\%}`.
+Or you can change the file path in `\bibliographystyle{%.bst 
+file path %}`.
 
