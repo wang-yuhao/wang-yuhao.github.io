@@ -20,3 +20,17 @@ Botnets and other network attacks have always been a severe problem in the curre
 To improve the efficiency, stability, and security of MWN by managing the massive flow data per second, design an appropriate real-time NetFlow data collection and analysis script and an intuitive, simple, reliable display interface. Traditional NetFlow collectors are designed in many different situations, primarily their complicated functionality, insufficient asset databases, and other unsatisfied requirements of MWN, making them unsuitable for MWN. In this case, an independently designed and developed system integrated with MWN is what is urgently required.
 
 The detection against the Botnets, abnormal network usage, and other malicious cyberattacks in MWN is also possible in the future system automatic protection functionality. Besides, through the latest RNN or other state-of-the-art technology, analyze the steady flow data from MWN automatic generation to optimize the network structure. The utilization of the prediction functionality from the data science model also can improve the elasticity, maintainability, and expandability of the MWN. The administrator's global control and deployment ability of the entire network routing situation can be significantly increased.
+
+
+#### Plan:
+1. compute the network traffic, set a script to automaticly generate network situation data.
+1. Comparsion with different data base engine
+2. Plot the Trend graph of different data base engine write, search, and sort result when the data base once 1 million record increase.
+3. Research use different search algotithm to optimize the efficiency.
+4. Use RNN to build a model, train the model with currently data,predict the future network traffic situation.
+5. Read more state-of-the-art data science technogy to handel the data.
+6. Use RDD, redis
+
+
+#### Question: 
+1. Can I cite the words from other website?
