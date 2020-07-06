@@ -54,7 +54,7 @@
 <meta property="og:description" content="1. updatedb.collection.update(criteria, objNew, upset, multi)    criteria: The search condition of update,    objNew: The object or operator of update, like $set, $inc, $setOnInsert    upsert: If the">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-04T01:07:47.000Z">
-<meta property="article:modified_time" content="2020-07-06T22:03:50.527Z">
+<meta property="article:modified_time" content="2020-07-06T22:29:26.117Z">
 <meta property="article:author" content="Yuhao Wang">
 <meta name="twitter:card" content="summary">
 
@@ -252,7 +252,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-07 00:03:50" itemprop="dateModified" datetime="2020-07-07T00:03:50+02:00">2020-07-07</time>
+                <time title="Modified: 2020-07-07 00:29:26" itemprop="dateModified" datetime="2020-07-07T00:29:26+02:00">2020-07-07</time>
               </span>
 
           
@@ -288,6 +288,8 @@
 
       
         <h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
+<a id="more"></a>
+
 <p>Example:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#39;srcaddr&#39;:&#39;10.0.0.4&#39;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#39;last&#39;: &#39;0256&#39;&#125;,</span><br><span class="line">        $inc:&#123;&#39;packets&#39;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#39;srcaddr&#39;:&#39;10.0.0.4&#39;,&#39;first&#39;: &#39;0221&#39;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
 

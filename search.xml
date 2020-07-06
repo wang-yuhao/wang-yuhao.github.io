@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>0-Kick-off</title>
-    <url>/2019/05/03/0-Kick-off/</url>
-    <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
-<p>There are always many people who think they are very special, unique and important. I am very happy to be able to visit many places in the world, meet many people from different cultures and different classes, and also absorb some professional knowledge or common sense from books, courses or the Internet.</p>
-<p>With these, I can understand the world more clearly. It also makes it harder to try to fool or control me.</p>
-<p>But most importantly, as I grew up, I became more and more convinced:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Everyone is equal.</span><br><span class="line">Time and freedom are most important.</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>1-First-story</title>
-    <url>/2019/05/16/1-First-story/</url>
-    <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4><a id="more"></a>
-<p><img src="1-First-story.png" alt="first story.png"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
     <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
     <content><![CDATA[<p>(Draft)</p>
@@ -46,12 +28,14 @@
     <title>11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation</title>
     <url>/2020/06/01/11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation/</url>
     <content><![CDATA[<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Due to the recent interview at the Sony research department in Stuttgart,  so have to explore deeper in GAN. This blog will introduce more details of adversarial examples resarch and more state-of-the-art solutions.</p>
-]]></content>
+<a id="more"></a> ]]></content>
   </entry>
   <entry>
     <title>12-Mongodb-Operations</title>
     <url>/2020/06/04/12-Mongodb-Operations/</url>
     <content><![CDATA[<h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
+<a id="more"></a>
+
 <p>Example:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#39;srcaddr&#39;:&#39;10.0.0.4&#39;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#39;last&#39;: &#39;0256&#39;&#125;,</span><br><span class="line">        $inc:&#123;&#39;packets&#39;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#39;srcaddr&#39;:&#39;10.0.0.4&#39;,&#39;first&#39;: &#39;0221&#39;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
 
@@ -62,18 +46,10 @@
 <h4 id="Solution-Remove-all-repeat-field-in-objNew"><a href="#Solution-Remove-all-repeat-field-in-objNew" class="headerlink" title="Solution: Remove all repeat field in objNew"></a>Solution: Remove all repeat field in objNew</h4>]]></content>
   </entry>
   <entry>
-    <title>14-Latex</title>
-    <url>/2020/06/22/14-Latex/</url>
-    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505" target="_blank" rel="noopener">here</a> to your local device, and keep it with the same file with your .tex file.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib&#x2F;stud77.bib&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Or you can change the file path in <code>\bibliographystyle{ %.bst file path % }</code>.<br>Delete the space between { and %. </p>
-]]></content>
-  </entry>
-  <entry>
     <title>13-Python-MySQL-Operation</title>
     <url>/2020/06/08/13-Python-MySQL-Operation/</url>
     <content><![CDATA[<h2 id="1-Install-mysql-on-Ubuntu-18-04"><a href="#1-Install-mysql-on-Ubuntu-18-04" class="headerlink" title="1. Install mysql on Ubuntu 18.04"></a>1. Install mysql on Ubuntu 18.04</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install mysql-server</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
 <p>check mysql status, stop, start, and restart mysql server</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo systemctl status mysql </span><br><span class="line">$ sudo systemctl stop mysql</span><br><span class="line">$ sudo systemctl start mysql</span><br><span class="line">$ sudo systemctl restart mysql</span><br></pre></td></tr></table></figure>
@@ -124,9 +100,68 @@
 ]]></content>
   </entry>
   <entry>
+    <title>14-Latex</title>
+    <url>/2020/06/22/14-Latex/</url>
+    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505" target="_blank" rel="noopener">here</a> to your local device, and keep it with the same file with your .tex file.</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib&#x2F;stud77.bib&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Or you can change the file path in <code>\bibliographystyle{ %.bst file path % }</code>.<br>Delete the space between { and %. </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>15-InfluxDB</title>
+    <url>/2020/06/29/15-InfluxDB/</url>
+    <content><![CDATA[<h2 id="InfluxDB"><a href="#InfluxDB" class="headerlink" title="InfluxDB"></a>InfluxDB</h2><h4 id="Attention"><a href="#Attention" class="headerlink" title="Attention:"></a>Attention:</h4><ol>
+<li><p>How to use DataFrame Client</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client &#x3D; DataFrameClient(&#39;localhost&#39;, 8086, user, password, dbname)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+</li>
+<li><p>When we want to insert a DataFrame in InfluxDB, the DataFrame must have a time format index, for example:</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># open test_data.json as record </span><br><span class="line">with open(&#39;data&#x2F;test data&#x2F;&#39; + &#39;test_data.json&#39;) as record:</span><br><span class="line">        # load json data as list</span><br><span class="line">        new_record &#x3D; json.load(record)</span><br><span class="line">        # convert list to DataFrame, and get columns &#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;.</span><br><span class="line">        new_record &#x3D; pd.DataFrame(data&#x3D;new_record,                       </span><br><span class="line">                                  columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;])</span><br><span class="line">        # convert the format of &quot;new_record[&#39;First&#39;]&quot; to datetime</span><br><span class="line">        new_record[&#39;First&#39;] &#x3D; pd.to_datetime(new_record[&#39;First&#39;], format&#x3D;&#39;%Y%m%d%H%M%S&#39;)</span><br><span class="line">        # set column &quot;First&quot; as index</span><br><span class="line">        new_record.set_index(&#39;First&#39;, inplace&#x3D;True)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>InfluxDB writes points with the same timestamp but different measured values, otherwise InfluxDB will only insert a newest timestamp record.</li>
+</ol>
+<p>Solve:<br>    write_points use argument ‘tags’ or ‘tag_columns’(recommand)</p>
+<p>Example:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;], protocol&#x3D;protocol)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p><a href="https://influxdb-python.readthedocs.io/en/latest/api-documentation.html" target="_blank" rel="noopener">InfluxDB API Documentation and Examples</a></p>
+</li>
+<li><p>Complete example of InfluxDB using DataFrameClient.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user &#x3D; &#39;root&#39;</span><br><span class="line">    password &#x3D; &#39;0318&#39;</span><br><span class="line">    dbname &#x3D; &#39;assetdb_ts&#39;</span><br><span class="line">    protocol &#x3D; &#39;line&#39;</span><br><span class="line"></span><br><span class="line">    client &#x3D; DataFrameClient(&#39;localhost&#39;, 8086, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    with open(&#39;data&#x2F;test data&#x2F;&#39; + &#39;test_data.json&#39;) as record:</span><br><span class="line">        new_record &#x3D; json.load(record)</span><br><span class="line">        new_record &#x3D; pd.DataFrame(data&#x3D;new_record,                       </span><br><span class="line">                                  columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;])</span><br><span class="line">        new_record[&#39;First&#39;] &#x3D; pd.to_datetime(new_record[&#39;First&#39;], format&#x3D;&#39;%Y%m%d%H%M%S&#39;)</span><br><span class="line">        new_record.set_index(&#39;First&#39;, inplace&#x3D;True)</span><br><span class="line"></span><br><span class="line">        print(&quot;Create database: &quot; + dbname)</span><br><span class="line">        client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">        print(&quot;Write DataFrame&quot;)</span><br><span class="line">        client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;], protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">        print(&quot;Read DataFrame&quot;)</span><br><span class="line">        result &#x3D; client.query(&quot;select * from demo&quot;)</span><br><span class="line">        print(&quot;Result: &#123;0&#125;&quot;.format(result))</span><br><span class="line"></span><br><span class="line">        print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">        client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line"></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><a href="https://influxdb-python.readthedocs.io/en/latest/examples.html#tutorials-pandas" target="_blank" rel="noopener">Original example:</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(host&#x3D;&#39;localhost&#39;, port&#x3D;8086):</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user &#x3D; &#39;root&#39;</span><br><span class="line">    password &#x3D; &#39;root&#39;</span><br><span class="line">    dbname &#x3D; &#39;demo&#39;</span><br><span class="line">    protocol &#x3D; &#39;line&#39;</span><br><span class="line"></span><br><span class="line">    client &#x3D; DataFrameClient(host, port, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    df &#x3D; pd.DataFrame(data&#x3D;list(range(30)),</span><br><span class="line">                      index&#x3D;pd.date_range(start&#x3D;&#39;2014-11-16&#39;,</span><br><span class="line">                                          periods&#x3D;30, freq&#x3D;&#39;H&#39;), columns&#x3D;[&#39;0&#39;])</span><br><span class="line"></span><br><span class="line">    print(&quot;Create database: &quot; + dbname)</span><br><span class="line">    client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame&quot;)</span><br><span class="line">    client.write_points(df, &#39;demo&#39;, protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame with Tags&quot;)</span><br><span class="line">    client.write_points(df, &#39;demo&#39;,</span><br><span class="line">                        &#123;&#39;k1&#39;: &#39;v1&#39;, &#39;k2&#39;: &#39;v2&#39;&#125;, protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Read DataFrame&quot;)</span><br><span class="line">    client.query(&quot;select * from demo&quot;)</span><br><span class="line"></span><br><span class="line">    print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">    client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def parse_args():</span><br><span class="line">    &quot;&quot;&quot;Parse the args from main.&quot;&quot;&quot;</span><br><span class="line">    parser &#x3D; argparse.ArgumentParser(</span><br><span class="line">        description&#x3D;&#39;example code to play with InfluxDB&#39;)</span><br><span class="line">    parser.add_argument(&#39;--host&#39;, type&#x3D;str, required&#x3D;False,</span><br><span class="line">                        default&#x3D;&#39;localhost&#39;,</span><br><span class="line">                        help&#x3D;&#39;hostname of InfluxDB http API&#39;)</span><br><span class="line">    parser.add_argument(&#39;--port&#39;, type&#x3D;int, required&#x3D;False, default&#x3D;8086,</span><br><span class="line">                        help&#x3D;&#39;port of InfluxDB http API&#39;)</span><br><span class="line">    return parser.parse_args()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    args &#x3D; parse_args()</span><br><span class="line">    main(host&#x3D;args.host, port&#x3D;args.port)</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>‘field’ is the neccessary part of the influxDB data structure.<br>but ‘tag’ is not the neccessary part of the influxDB data structure, every ‘tag’ is a index, so the query of ‘tag’ is faster.</li>
+</ol>
+<p><a href="https://jasper-zhang1.gitbooks.io/influxdb/content/Concepts/key_concepts.html" target="_blank" rel="noopener">More information about ‘field’ and ‘tag’</a></p>
+<ol start="7">
+<li><p>How to add tags or tag_columns into influxDB DataFrameClient.<br> tags:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tags &#x3D; &#123; &quot;srcaddr&quot;: new_record[[&quot;srcaddr&quot;]],  &quot;srcport&quot;: new_record[[&quot;srcport&quot;]]&#125;</span><br><span class="line">client.write_points(new_record, &#39;demo&#39;, tags &#x3D; tags, protocol&#x3D;&quot;json&quot;)</span><br></pre></td></tr></table></figure>
+
+<p> tag_columns:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;], protocol&#x3D;protocol)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/influxdata/influxdb-python" target="_blank" rel="noopener">1. Influxdb-python</a><br><a href="https://github.com/influxdata/influxdb-python/issues/576" target="_blank" rel="noopener">2. Helpful tag_columns answer</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>16-ImportError:-attempted-relative-import-with-no-known-parent-package</title>
     <url>/2020/07/06/16-ImportError-attempted-relative-import-with-no-known-parent-package/</url>
     <content><![CDATA[<p>You are trying to use relative imports in python, but you encounter one of the exceptions ImportError: attempted relative import with no known parent package. Yes, relative imports can be confusing from time to time. In this article, we see the method used by python interpreter to resolve the relative imports and how we can fix this issue.</p>
+<a id="more"></a>
+
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Example for ImportError: attempted relative import with no known parent package</span><br></pre></td></tr></table></figure>
 
 <p>Let’s see an example of how we get those exceptions. Suppose your project have the following directory structure:</p>
@@ -186,48 +221,21 @@
 ]]></content>
   </entry>
   <entry>
-    <title>15-InfluxDB</title>
-    <url>/2020/06/29/15-InfluxDB/</url>
-    <content><![CDATA[<h2 id="InfluxDB"><a href="#InfluxDB" class="headerlink" title="InfluxDB"></a>InfluxDB</h2><h4 id="Attention"><a href="#Attention" class="headerlink" title="Attention:"></a>Attention:</h4><ol>
-<li><p>How to use DataFrame Client</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client &#x3D; DataFrameClient(&#39;localhost&#39;, 8086, user, password, dbname)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>When we want to insert a DataFrame in InfluxDB, the DataFrame must have a time format index, for example:</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># open test_data.json as record </span><br><span class="line">with open(&#39;data&#x2F;test data&#x2F;&#39; + &#39;test_data.json&#39;) as record:</span><br><span class="line">        # load json data as list</span><br><span class="line">        new_record &#x3D; json.load(record)</span><br><span class="line">        # convert list to DataFrame, and get columns &#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;.</span><br><span class="line">        new_record &#x3D; pd.DataFrame(data&#x3D;new_record,                       </span><br><span class="line">                                  columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;])</span><br><span class="line">        # convert the format of &quot;new_record[&#39;First&#39;]&quot; to datetime</span><br><span class="line">        new_record[&#39;First&#39;] &#x3D; pd.to_datetime(new_record[&#39;First&#39;], format&#x3D;&#39;%Y%m%d%H%M%S&#39;)</span><br><span class="line">        # set column &quot;First&quot; as index</span><br><span class="line">        new_record.set_index(&#39;First&#39;, inplace&#x3D;True)</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>InfluxDB writes points with the same timestamp but different measured values, otherwise InfluxDB will only insert a newest timestamp record.</li>
-</ol>
-<p>Solve:<br>    write_points use argument ‘tags’ or ‘tag_columns’(recommand)</p>
-<p>Example:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;], protocol&#x3D;protocol)</span><br></pre></td></tr></table></figure>
+    <title>0-Kick-off</title>
+    <url>/2019/05/03/0-Kick-off/</url>
+    <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
+<p>There are always many people who think they are very special, unique and important. I am very happy to be able to visit many places in the world, meet many people from different cultures and different classes, and also absorb some professional knowledge or common sense from books, courses or the Internet.</p>
+<p>With these, I can understand the world more clearly. It also makes it harder to try to fool or control me.</p>
+<p>But most importantly, as I grew up, I became more and more convinced:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Everyone is equal.</span><br><span class="line">Time and freedom are most important.</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
-<li><p><a href="https://influxdb-python.readthedocs.io/en/latest/api-documentation.html" target="_blank" rel="noopener">InfluxDB API Documentation and Examples</a></p>
-</li>
-<li><p>Complete example of InfluxDB using DataFrameClient.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user &#x3D; &#39;root&#39;</span><br><span class="line">    password &#x3D; &#39;0318&#39;</span><br><span class="line">    dbname &#x3D; &#39;assetdb_ts&#39;</span><br><span class="line">    protocol &#x3D; &#39;line&#39;</span><br><span class="line"></span><br><span class="line">    client &#x3D; DataFrameClient(&#39;localhost&#39;, 8086, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    with open(&#39;data&#x2F;test data&#x2F;&#39; + &#39;test_data.json&#39;) as record:</span><br><span class="line">        new_record &#x3D; json.load(record)</span><br><span class="line">        new_record &#x3D; pd.DataFrame(data&#x3D;new_record,                       </span><br><span class="line">                                  columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;])</span><br><span class="line">        new_record[&#39;First&#39;] &#x3D; pd.to_datetime(new_record[&#39;First&#39;], format&#x3D;&#39;%Y%m%d%H%M%S&#39;)</span><br><span class="line">        new_record.set_index(&#39;First&#39;, inplace&#x3D;True)</span><br><span class="line"></span><br><span class="line">        print(&quot;Create database: &quot; + dbname)</span><br><span class="line">        client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">        print(&quot;Write DataFrame&quot;)</span><br><span class="line">        client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;], protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">        print(&quot;Read DataFrame&quot;)</span><br><span class="line">        result &#x3D; client.query(&quot;select * from demo&quot;)</span><br><span class="line">        print(&quot;Result: &#123;0&#125;&quot;.format(result))</span><br><span class="line"></span><br><span class="line">        print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">        client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line"></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p><a href="https://influxdb-python.readthedocs.io/en/latest/examples.html#tutorials-pandas" target="_blank" rel="noopener">Original example:</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(host&#x3D;&#39;localhost&#39;, port&#x3D;8086):</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user &#x3D; &#39;root&#39;</span><br><span class="line">    password &#x3D; &#39;root&#39;</span><br><span class="line">    dbname &#x3D; &#39;demo&#39;</span><br><span class="line">    protocol &#x3D; &#39;line&#39;</span><br><span class="line"></span><br><span class="line">    client &#x3D; DataFrameClient(host, port, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    df &#x3D; pd.DataFrame(data&#x3D;list(range(30)),</span><br><span class="line">                      index&#x3D;pd.date_range(start&#x3D;&#39;2014-11-16&#39;,</span><br><span class="line">                                          periods&#x3D;30, freq&#x3D;&#39;H&#39;), columns&#x3D;[&#39;0&#39;])</span><br><span class="line"></span><br><span class="line">    print(&quot;Create database: &quot; + dbname)</span><br><span class="line">    client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame&quot;)</span><br><span class="line">    client.write_points(df, &#39;demo&#39;, protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame with Tags&quot;)</span><br><span class="line">    client.write_points(df, &#39;demo&#39;,</span><br><span class="line">                        &#123;&#39;k1&#39;: &#39;v1&#39;, &#39;k2&#39;: &#39;v2&#39;&#125;, protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Read DataFrame&quot;)</span><br><span class="line">    client.query(&quot;select * from demo&quot;)</span><br><span class="line"></span><br><span class="line">    print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">    client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def parse_args():</span><br><span class="line">    &quot;&quot;&quot;Parse the args from main.&quot;&quot;&quot;</span><br><span class="line">    parser &#x3D; argparse.ArgumentParser(</span><br><span class="line">        description&#x3D;&#39;example code to play with InfluxDB&#39;)</span><br><span class="line">    parser.add_argument(&#39;--host&#39;, type&#x3D;str, required&#x3D;False,</span><br><span class="line">                        default&#x3D;&#39;localhost&#39;,</span><br><span class="line">                        help&#x3D;&#39;hostname of InfluxDB http API&#39;)</span><br><span class="line">    parser.add_argument(&#39;--port&#39;, type&#x3D;int, required&#x3D;False, default&#x3D;8086,</span><br><span class="line">                        help&#x3D;&#39;port of InfluxDB http API&#39;)</span><br><span class="line">    return parser.parse_args()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    args &#x3D; parse_args()</span><br><span class="line">    main(host&#x3D;args.host, port&#x3D;args.port)</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>‘field’ is the neccessary part of the influxDB data structure.<br>but ‘tag’ is not the neccessary part of the influxDB data structure, every ‘tag’ is a index, so the query of ‘tag’ is faster.</li>
-</ol>
-<p><a href="https://jasper-zhang1.gitbooks.io/influxdb/content/Concepts/key_concepts.html" target="_blank" rel="noopener">More information about ‘field’ and ‘tag’</a></p>
-<ol start="7">
-<li><p>How to add tags or tag_columns into influxDB DataFrameClient.<br> tags:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tags &#x3D; &#123; &quot;srcaddr&quot;: new_record[[&quot;srcaddr&quot;]],  &quot;srcport&quot;: new_record[[&quot;srcport&quot;]]&#125;</span><br><span class="line">client.write_points(new_record, &#39;demo&#39;, tags &#x3D; tags, protocol&#x3D;&quot;json&quot;)</span><br></pre></td></tr></table></figure>
-
-<p> tag_columns:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;], protocol&#x3D;protocol)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/influxdata/influxdb-python" target="_blank" rel="noopener">1. Influxdb-python</a><br><a href="https://github.com/influxdata/influxdb-python/issues/576" target="_blank" rel="noopener">2. Helpful tag_columns answer</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>1-First-story</title>
+    <url>/2019/05/16/1-First-story/</url>
+    <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4><a id="more"></a>
+<p><img src="1-First-story.png" alt="first story.png"></p>
 ]]></content>
   </entry>
   <entry>
@@ -272,61 +280,6 @@
 <h2 id="About-the-R6-class-system-only-for-developers"><a href="#About-the-R6-class-system-only-for-developers" class="headerlink" title="About the R6 class system (only for developers):"></a>About the R6 class system (only for developers):</h2><p>Every learning process is considered as a class. Currently there are 6 classes. The base class is called “LearningProcess” and is meant as a base scheme with all required methods listed for all the other classes. The currently working classes are “ClassifLearningProcess” and “RegrLearningProcess”. Besides these “Classif3dLearningProcess”, “Regr3dLearningProcess” are not fully implemented and “ClusterLearningProcess” is implemented, but not working right now. All the plots should now be defined in each class, so tasks/datasets in the same class have the SAME predictions and plots. This hopefully makes everything a lot clearer and more uniform. The methods for these plots are already named and called everywhere (“getDataPlot” and “getPredPlot”), so no further methods should be introduced. Every plot should be defined in one of these methods in each class respectively. So whenever a plot is changed, only adapt the class, not any code anywhere else. To make the method “getPredPlot” work, one also has to implement the method “calculatePred”, which basically calculates the predictions on a bounded set of equidistant (and predefined) points. When defining methods, ALWAYS use isolate on reactive values. Otherwise calling the method elsewhere may lead to highly unintended behaviour, like infinite update loops or triggered observers in some totally different place - basically stuff making debugging feel totally like hell.</p>
 <h2 id="About-unit-tests-only-for-developers"><a href="#About-unit-tests-only-for-developers" class="headerlink" title="About unit tests (only for developers):"></a>About unit tests (only for developers):</h2><p>Because all the app files have to be placed in the inst/mlrPlayground folder, unit tests can’t be written for functions (and especially the R6 classes) defined there. Also the package shinytest meant for “interactive UI” testing seems to not work - every new execution of the same test suddenly changes some value in the overall state, thus throwing a test error.<br>Fortunately a different way was found to still do some potent testing.<br>shinytest allows to start the app, set input values and catch output values in a script without visiting the app. The current unit tests simply set the input to all different kinds of tasks and learners and checks if the dataset/prediction plot json data changed compared to the last input (this way we can make sure the plots are actually updated with the input instead of guessing that “not NULL” as a output condition for the plot may actually be enough).</p>
 <p>Github: <a href="https://github.com/SebGruber1996/mlrPlayground" target="_blank" rel="noopener">https://github.com/SebGruber1996/mlrPlayground</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
-    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
-    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
-<a id="more"></a>
-<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
-</object>]]></content>
-  </entry>
-  <entry>
-    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
-    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
-    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
-<a id="more"></a>
-
-<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
-    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
-    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
-<a id="more"></a>
-
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
-<li><p>download the aria2 with instruction:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure></li>
-<li><p>create a configuration file:<br>aria2.conf</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user&#x3D;user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd&#x3D;passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret&#x3D;token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc&#x3D;true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all&#x3D;true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all&#x3D;true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port&#x3D;6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads&#x3D;5</span><br><span class="line">#resume from break point</span><br><span class="line">continue&#x3D;true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server&#x3D;5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size&#x3D;10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split&#x3D;10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit&#x3D;0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit&#x3D;0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit&#x3D;0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit&#x3D;0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit&#x3D;0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer&#x3D;*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir&#x3D;&#x2F;home&#x2F;yuhao&#x2F;Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#39;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache&#x3D;0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap&#x3D;true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation&#x3D;prealloc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>start configuration file:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path&#x3D;&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
-<p>Like:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
-<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
-</li>
-<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc" target="_blank" rel="noopener">http://localhost:6800/jsonrpc</a></p>
-</li>
-<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
-</li>
-<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
-</li>
-<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
-</li>
-<li><p>The download information will be displayed on the terminal.</p>
-</li>
-</ol>
-<p>Reference:</p>
-<ul>
-<li>Download Baidunetdisk and 115 resources using Aria2</li>
-<li>Install and use aria2 to download Baidunetdisk content</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
@@ -540,6 +493,61 @@
 <li>Website: <a href="germanfamily.eu">germanfamily.eu</a></li>
 <li>Github: <a href="https://github.com/wang-yuhao/shopping-cart" target="_blank" rel="noopener">https://github.com/wang-yuhao/shopping-cart</a></li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
+<a id="more"></a>
+<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
+</object>]]></content>
+  </entry>
+  <entry>
+    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
+    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
+    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
+<a id="more"></a>
+
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
+<li><p>download the aria2 with instruction:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure></li>
+<li><p>create a configuration file:<br>aria2.conf</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user&#x3D;user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd&#x3D;passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret&#x3D;token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc&#x3D;true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all&#x3D;true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all&#x3D;true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port&#x3D;6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads&#x3D;5</span><br><span class="line">#resume from break point</span><br><span class="line">continue&#x3D;true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server&#x3D;5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size&#x3D;10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split&#x3D;10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit&#x3D;0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit&#x3D;0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit&#x3D;0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit&#x3D;0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit&#x3D;0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer&#x3D;*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir&#x3D;&#x2F;home&#x2F;yuhao&#x2F;Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#39;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache&#x3D;0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap&#x3D;true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation&#x3D;prealloc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>start configuration file:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path&#x3D;&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Like:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
+</li>
+<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc" target="_blank" rel="noopener">http://localhost:6800/jsonrpc</a></p>
+</li>
+<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
+</li>
+<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
+</li>
+<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
+</li>
+<li><p>The download information will be displayed on the terminal.</p>
+</li>
+</ol>
+<p>Reference:</p>
+<ul>
+<li>Download Baidunetdisk and 115 resources using Aria2</li>
+<li>Install and use aria2 to download Baidunetdisk content</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
+    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
+<a id="more"></a>
+
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
 ]]></content>
   </entry>
 </search>
