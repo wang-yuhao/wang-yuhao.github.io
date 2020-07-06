@@ -12,6 +12,8 @@ db.collection.update(criteria, objNew, upset, multi)
     upsert: If the criteria doesn't exist, if insert objNew, true is insert, default[false], not insert.
     multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.
 
+<!--more-->
+
 Example:
 ```
 db.test.update(

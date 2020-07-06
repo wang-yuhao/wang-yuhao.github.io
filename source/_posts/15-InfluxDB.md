@@ -11,6 +11,7 @@ tags:
 ```
 client = DataFrameClient('localhost', 8086, user, password, dbname)
 ```
+<!--more-->
 
 2. When we want to insert a DataFrame in InfluxDB, the DataFrame must have a time format index, for example:
 

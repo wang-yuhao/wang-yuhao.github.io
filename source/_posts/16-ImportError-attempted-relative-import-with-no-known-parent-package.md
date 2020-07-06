@@ -6,6 +6,8 @@ tags:
 
 You are trying to use relative imports in python, but you encounter one of the exceptions ImportError: attempted relative import with no known parent package. Yes, relative imports can be confusing from time to time. In this article, we see the method used by python interpreter to resolve the relative imports and how we can fix this issue.
 
+<!--more-->
+
 ```
 Example for ImportError: attempted relative import with no known parent package
 ```

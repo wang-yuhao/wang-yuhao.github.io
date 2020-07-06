@@ -10,6 +10,7 @@ tags:
 $ sudo apt update
 $ sudo apt install mysql-server 
 ```
+<!--more-->
 
 check mysql status, stop, start, and restart mysql server
 
