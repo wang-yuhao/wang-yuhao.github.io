@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
+    <title>10-Master-Thesis:</title>
     <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
     <content><![CDATA[<p>(Draft)</p>
 <a id="more"></a>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1   Introduction"></a>1   Introduction</h2><h4 id="1-1-Motivation"><a href="#1-1-Motivation" class="headerlink" title="1.1   Motivation"></a>1.1   Motivation</h4><p>The Leibniz Supercomputing Centre of the Bavarian Academy of Sciences and Humanities (LRZ) is the largest Supercomputing Center in Germany operates the Munich Scientific Network (MWN). In this network, including the Munich universities, many student dormitories, and some non-university facilities such as e.g., Bavarian State Library, museums, and the institutes of Max Planck Society and Fraunhofer Society.  A total of approximately 100,000 devices are connected. The MWN consists of a backbone network to which the networks of the facilities at the various locations are connected via routers and switches. The routers in the backbone area of the Cisco Nexus C7010 type. To connect buildings connected via DSL and smaller X-WiN locations, we operate some devices of the Cisco 1900 series (manufacturer information) and Cisco ISR 1100 (manufacturer information). For broadband connection of the computer clusters in the LRZ, a Leaf &amp; Spine infrastructure (Leaf &amp; Spine Design) based on Cisco Nexus 9364C (manufacturer information) is used. </p>
-<p>Hundred thousand scientific research and service equipment are connected per second in MWN. The efficiency, stability, and security of MWN are closely related to the daily teaching, researching, and work of every facility in the MWN. But the limitation of the update and modification for the massive data limit the competence of network management. On the other hand, the lack of an appropriate flow collector script and intuitive, reliable display web interface also restrict the efficiency of the work of the administrator. As an essential part of the program, the asset database has long been ignored by various flow collectors. Thus, the limitation of the asset database also raises the difficulty of network optimization. </p>
-<p>Botnets and other network attacks have always been a severe problem in the current network environment. The resulting network congestion, waste of network resources, and other network problems have undoubtedly caused substantial economic losses. With the rapid development of current machine learning and deep learning research, trying to use the latest data science technology to analyze the acquired flow data to predict future network usage, optimize the network structure and traffic, and explore the network potential reasonably and efficiently is also a significant challenge.</p>
-<h4 id="1-2-Problem-Statement"><a href="#1-2-Problem-Statement" class="headerlink" title="1.2   Problem Statement"></a>1.2   Problem Statement</h4><p>To improve the efficiency, stability, and security of MWN by managing the massive flow data per second, design an appropriate real-time NetFlow data collection and analysis script and an intuitive, simple, reliable display interface. Traditional NetFlow collectors are designed in many different situations, primarily their complicated functionality, insufficient asset databases, and other unsatisfied requirements of MWN, making them unsuitable for MWN. In this case, an independently designed and developed system integrated with MWN is what is urgently required.</p>
-<p>The detection against the Botnets, abnormal network usage, and other malicious cyberattacks in MWN is also possible in the future system automatic protection functionality. Besides, through the latest RNN or other state-of-the-art technology, analyze the steady flow data from MWN automatic generation to optimize the network structure. The utilization of the prediction functionality from the data science model also can improve the elasticity, maintainability, and expandability of the MWN. The administrator’s global control and deployment ability of the entire network routing situation can be significantly increased.</p>
-<h4 id="Plan"><a href="#Plan" class="headerlink" title="Plan:"></a>Plan:</h4><ol>
-<li>compute the network traffic, set a script to automaticly generate network situation data.</li>
-<li>Comparsion with different data base engine</li>
-<li>Plot the Trend graph of different data base engine write, search, and sort result when the data base once 1 million record increase.</li>
-<li>Research use different search algotithm to optimize the efficiency.</li>
-<li>Use RNN to build a model, train the model with currently data,predict the future network traffic situation.</li>
-<li>Read more state-of-the-art data science technogy to handel the data.</li>
-<li>Use RDD, redis</li>
-</ol>
-<h4 id="Question"><a href="#Question" class="headerlink" title="Question:"></a>Question:</h4><ol>
-<li>Can I cite the words from other website?</li>
-</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>0-Kick-off</title>
+    <url>/2019/05/03/0-Kick-off/</url>
+    <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
+<p>There are always many people who think they are very special, unique and important. I am very happy to be able to visit many places in the world, meet many people from different cultures and different classes, and also absorb some professional knowledge or common sense from books, courses or the Internet.</p>
+<p>With these, I can understand the world more clearly. It also makes it harder to try to fool or control me.</p>
+<p>But most importantly, as I grew up, I became more and more convinced:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Everyone is equal.</span><br><span class="line">Time and freedom are most important.</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
@@ -29,21 +23,6 @@
     <url>/2020/06/01/11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation/</url>
     <content><![CDATA[<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Due to the recent interview at the Sony research department in Stuttgart,  so have to explore deeper in GAN. This blog will introduce more details of adversarial examples resarch and more state-of-the-art solutions.</p>
 <a id="more"></a> ]]></content>
-  </entry>
-  <entry>
-    <title>12-Mongodb-Operations</title>
-    <url>/2020/06/04/12-Mongodb-Operations/</url>
-    <content><![CDATA[<h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
-<a id="more"></a>
-
-<p>Example:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#39;srcaddr&#39;:&#39;10.0.0.4&#39;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#39;last&#39;: &#39;0256&#39;&#125;,</span><br><span class="line">        $inc:&#123;&#39;packets&#39;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#39;srcaddr&#39;:&#39;10.0.0.4&#39;,&#39;first&#39;: &#39;0221&#39;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>Error: “errmsg” : “Updating the path ‘last’ would create a conflict at ‘last’”</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#39;srcaddr&#39;:&#39;10.0.0.2&#39;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#39;last&#39;: 0226&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#39;srcaddr&#39;:&#39;10.0.0.2&#39;,&#39;first&#39;: 221,&#39;last&#39;:26, &#39;packets&#39;: 17&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>Reason: There is already $set ‘last’, second time $setOnInsert ‘last’ make a conflict.</p>
-<h4 id="Solution-Remove-all-repeat-field-in-objNew"><a href="#Solution-Remove-all-repeat-field-in-objNew" class="headerlink" title="Solution: Remove all repeat field in objNew"></a>Solution: Remove all repeat field in objNew</h4>]]></content>
   </entry>
   <entry>
     <title>13-Python-MySQL-Operation</title>
@@ -100,61 +79,19 @@
 ]]></content>
   </entry>
   <entry>
-    <title>14-Latex</title>
-    <url>/2020/06/22/14-Latex/</url>
-    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505" target="_blank" rel="noopener">here</a> to your local device, and keep it with the same file with your .tex file.</p>
+    <title>12-Mongodb-Operations</title>
+    <url>/2020/06/04/12-Mongodb-Operations/</url>
+    <content><![CDATA[<h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib&#x2F;stud77.bib&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Or you can change the file path in <code>\bibliographystyle{ %.bst file path % }</code>.<br>Delete the space between { and %. </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>15-InfluxDB</title>
-    <url>/2020/06/29/15-InfluxDB/</url>
-    <content><![CDATA[<h2 id="InfluxDB"><a href="#InfluxDB" class="headerlink" title="InfluxDB"></a>InfluxDB</h2><h4 id="Attention"><a href="#Attention" class="headerlink" title="Attention:"></a>Attention:</h4><ol>
-<li><p>How to use DataFrame Client</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client &#x3D; DataFrameClient(&#39;localhost&#39;, 8086, user, password, dbname)</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-</li>
-<li><p>When we want to insert a DataFrame in InfluxDB, the DataFrame must have a time format index, for example:</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># open test_data.json as record </span><br><span class="line">with open(&#39;data&#x2F;test data&#x2F;&#39; + &#39;test_data.json&#39;) as record:</span><br><span class="line">        # load json data as list</span><br><span class="line">        new_record &#x3D; json.load(record)</span><br><span class="line">        # convert list to DataFrame, and get columns &#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;.</span><br><span class="line">        new_record &#x3D; pd.DataFrame(data&#x3D;new_record,                       </span><br><span class="line">                                  columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;])</span><br><span class="line">        # convert the format of &quot;new_record[&#39;First&#39;]&quot; to datetime</span><br><span class="line">        new_record[&#39;First&#39;] &#x3D; pd.to_datetime(new_record[&#39;First&#39;], format&#x3D;&#39;%Y%m%d%H%M%S&#39;)</span><br><span class="line">        # set column &quot;First&quot; as index</span><br><span class="line">        new_record.set_index(&#39;First&#39;, inplace&#x3D;True)</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>InfluxDB writes points with the same timestamp but different measured values, otherwise InfluxDB will only insert a newest timestamp record.</li>
-</ol>
-<p>Solve:<br>    write_points use argument ‘tags’ or ‘tag_columns’(recommand)</p>
 <p>Example:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;], protocol&#x3D;protocol)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#39;srcaddr&#39;:&#39;10.0.0.4&#39;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#39;last&#39;: &#39;0256&#39;&#125;,</span><br><span class="line">        $inc:&#123;&#39;packets&#39;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#39;srcaddr&#39;:&#39;10.0.0.4&#39;,&#39;first&#39;: &#39;0221&#39;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
-<li><p><a href="https://influxdb-python.readthedocs.io/en/latest/api-documentation.html" target="_blank" rel="noopener">InfluxDB API Documentation and Examples</a></p>
-</li>
-<li><p>Complete example of InfluxDB using DataFrameClient.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user &#x3D; &#39;root&#39;</span><br><span class="line">    password &#x3D; &#39;0318&#39;</span><br><span class="line">    dbname &#x3D; &#39;assetdb_ts&#39;</span><br><span class="line">    protocol &#x3D; &#39;line&#39;</span><br><span class="line"></span><br><span class="line">    client &#x3D; DataFrameClient(&#39;localhost&#39;, 8086, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    with open(&#39;data&#x2F;test data&#x2F;&#39; + &#39;test_data.json&#39;) as record:</span><br><span class="line">        new_record &#x3D; json.load(record)</span><br><span class="line">        new_record &#x3D; pd.DataFrame(data&#x3D;new_record,                       </span><br><span class="line">                                  columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;])</span><br><span class="line">        new_record[&#39;First&#39;] &#x3D; pd.to_datetime(new_record[&#39;First&#39;], format&#x3D;&#39;%Y%m%d%H%M%S&#39;)</span><br><span class="line">        new_record.set_index(&#39;First&#39;, inplace&#x3D;True)</span><br><span class="line"></span><br><span class="line">        print(&quot;Create database: &quot; + dbname)</span><br><span class="line">        client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">        print(&quot;Write DataFrame&quot;)</span><br><span class="line">        client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;], protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">        print(&quot;Read DataFrame&quot;)</span><br><span class="line">        result &#x3D; client.query(&quot;select * from demo&quot;)</span><br><span class="line">        print(&quot;Result: &#123;0&#125;&quot;.format(result))</span><br><span class="line"></span><br><span class="line">        print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">        client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line"></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>Error: “errmsg” : “Updating the path ‘last’ would create a conflict at ‘last’”</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#39;srcaddr&#39;:&#39;10.0.0.2&#39;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#39;last&#39;: 0226&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#39;srcaddr&#39;:&#39;10.0.0.2&#39;,&#39;first&#39;: 221,&#39;last&#39;:26, &#39;packets&#39;: 17&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
-<p><a href="https://influxdb-python.readthedocs.io/en/latest/examples.html#tutorials-pandas" target="_blank" rel="noopener">Original example:</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(host&#x3D;&#39;localhost&#39;, port&#x3D;8086):</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user &#x3D; &#39;root&#39;</span><br><span class="line">    password &#x3D; &#39;root&#39;</span><br><span class="line">    dbname &#x3D; &#39;demo&#39;</span><br><span class="line">    protocol &#x3D; &#39;line&#39;</span><br><span class="line"></span><br><span class="line">    client &#x3D; DataFrameClient(host, port, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    df &#x3D; pd.DataFrame(data&#x3D;list(range(30)),</span><br><span class="line">                      index&#x3D;pd.date_range(start&#x3D;&#39;2014-11-16&#39;,</span><br><span class="line">                                          periods&#x3D;30, freq&#x3D;&#39;H&#39;), columns&#x3D;[&#39;0&#39;])</span><br><span class="line"></span><br><span class="line">    print(&quot;Create database: &quot; + dbname)</span><br><span class="line">    client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame&quot;)</span><br><span class="line">    client.write_points(df, &#39;demo&#39;, protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame with Tags&quot;)</span><br><span class="line">    client.write_points(df, &#39;demo&#39;,</span><br><span class="line">                        &#123;&#39;k1&#39;: &#39;v1&#39;, &#39;k2&#39;: &#39;v2&#39;&#125;, protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Read DataFrame&quot;)</span><br><span class="line">    client.query(&quot;select * from demo&quot;)</span><br><span class="line"></span><br><span class="line">    print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">    client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def parse_args():</span><br><span class="line">    &quot;&quot;&quot;Parse the args from main.&quot;&quot;&quot;</span><br><span class="line">    parser &#x3D; argparse.ArgumentParser(</span><br><span class="line">        description&#x3D;&#39;example code to play with InfluxDB&#39;)</span><br><span class="line">    parser.add_argument(&#39;--host&#39;, type&#x3D;str, required&#x3D;False,</span><br><span class="line">                        default&#x3D;&#39;localhost&#39;,</span><br><span class="line">                        help&#x3D;&#39;hostname of InfluxDB http API&#39;)</span><br><span class="line">    parser.add_argument(&#39;--port&#39;, type&#x3D;int, required&#x3D;False, default&#x3D;8086,</span><br><span class="line">                        help&#x3D;&#39;port of InfluxDB http API&#39;)</span><br><span class="line">    return parser.parse_args()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    args &#x3D; parse_args()</span><br><span class="line">    main(host&#x3D;args.host, port&#x3D;args.port)</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>‘field’ is the neccessary part of the influxDB data structure.<br>but ‘tag’ is not the neccessary part of the influxDB data structure, every ‘tag’ is a index, so the query of ‘tag’ is faster.</li>
-</ol>
-<p><a href="https://jasper-zhang1.gitbooks.io/influxdb/content/Concepts/key_concepts.html" target="_blank" rel="noopener">More information about ‘field’ and ‘tag’</a></p>
-<ol start="7">
-<li><p>How to add tags or tag_columns into influxDB DataFrameClient.<br> tags:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tags &#x3D; &#123; &quot;srcaddr&quot;: new_record[[&quot;srcaddr&quot;]],  &quot;srcport&quot;: new_record[[&quot;srcport&quot;]]&#125;</span><br><span class="line">client.write_points(new_record, &#39;demo&#39;, tags &#x3D; tags, protocol&#x3D;&quot;json&quot;)</span><br></pre></td></tr></table></figure>
-
-<p> tag_columns:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;], protocol&#x3D;protocol)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/influxdata/influxdb-python" target="_blank" rel="noopener">1. Influxdb-python</a><br><a href="https://github.com/influxdata/influxdb-python/issues/576" target="_blank" rel="noopener">2. Helpful tag_columns answer</a></p>
-]]></content>
+<p>Reason: There is already $set ‘last’, second time $setOnInsert ‘last’ make a conflict.</p>
+<h4 id="Solution-Remove-all-repeat-field-in-objNew"><a href="#Solution-Remove-all-repeat-field-in-objNew" class="headerlink" title="Solution: Remove all repeat field in objNew"></a>Solution: Remove all repeat field in objNew</h4>]]></content>
   </entry>
   <entry>
     <title>16-ImportError:-attempted-relative-import-with-no-known-parent-package</title>
@@ -221,14 +158,60 @@
 ]]></content>
   </entry>
   <entry>
-    <title>0-Kick-off</title>
-    <url>/2019/05/03/0-Kick-off/</url>
-    <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
-<p>There are always many people who think they are very special, unique and important. I am very happy to be able to visit many places in the world, meet many people from different cultures and different classes, and also absorb some professional knowledge or common sense from books, courses or the Internet.</p>
-<p>With these, I can understand the world more clearly. It also makes it harder to try to fool or control me.</p>
-<p>But most importantly, as I grew up, I became more and more convinced:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Everyone is equal.</span><br><span class="line">Time and freedom are most important.</span><br></pre></td></tr></table></figure>
+    <title>14-Latex</title>
+    <url>/2020/06/22/14-Latex/</url>
+    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505" target="_blank" rel="noopener">here</a> to your local device, and keep it with the same file with your .tex file.</p>
+<a id="more"></a>
 
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib&#x2F;stud77.bib&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Or you can change the file path in <code>\bibliographystyle{ %.bst file path % }</code>.<br>Delete the space between { and %. </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>15-InfluxDB</title>
+    <url>/2020/06/29/15-InfluxDB/</url>
+    <content><![CDATA[<h2 id="InfluxDB"><a href="#InfluxDB" class="headerlink" title="InfluxDB"></a>InfluxDB</h2><h4 id="Attention"><a href="#Attention" class="headerlink" title="Attention:"></a>Attention:</h4><ol>
+<li><p>How to use DataFrame Client</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client &#x3D; DataFrameClient(&#39;localhost&#39;, 8086, user, password, dbname)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+</li>
+<li><p>When we want to insert a DataFrame in InfluxDB, the DataFrame must have a time format index, for example:</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># open test_data.json as record </span><br><span class="line">with open(&#39;data&#x2F;test data&#x2F;&#39; + &#39;test_data.json&#39;) as record:</span><br><span class="line">        # load json data as list</span><br><span class="line">        new_record &#x3D; json.load(record)</span><br><span class="line">        # convert list to DataFrame, and get columns &#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;.</span><br><span class="line">        new_record &#x3D; pd.DataFrame(data&#x3D;new_record,                       </span><br><span class="line">                                  columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;])</span><br><span class="line">        # convert the format of &quot;new_record[&#39;First&#39;]&quot; to datetime</span><br><span class="line">        new_record[&#39;First&#39;] &#x3D; pd.to_datetime(new_record[&#39;First&#39;], format&#x3D;&#39;%Y%m%d%H%M%S&#39;)</span><br><span class="line">        # set column &quot;First&quot; as index</span><br><span class="line">        new_record.set_index(&#39;First&#39;, inplace&#x3D;True)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>InfluxDB writes points with the same timestamp but different measured values, otherwise InfluxDB will only insert a newest timestamp record.</li>
+</ol>
+<p>Solve:<br>    write_points use argument ‘tags’ or ‘tag_columns’(recommand)</p>
+<p>Example:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;], protocol&#x3D;protocol)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p><a href="https://influxdb-python.readthedocs.io/en/latest/api-documentation.html" target="_blank" rel="noopener">InfluxDB API Documentation and Examples</a></p>
+</li>
+<li><p>Complete example of InfluxDB using DataFrameClient.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user &#x3D; &#39;root&#39;</span><br><span class="line">    password &#x3D; &#39;0318&#39;</span><br><span class="line">    dbname &#x3D; &#39;assetdb_ts&#39;</span><br><span class="line">    protocol &#x3D; &#39;line&#39;</span><br><span class="line"></span><br><span class="line">    client &#x3D; DataFrameClient(&#39;localhost&#39;, 8086, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    with open(&#39;data&#x2F;test data&#x2F;&#39; + &#39;test_data.json&#39;) as record:</span><br><span class="line">        new_record &#x3D; json.load(record)</span><br><span class="line">        new_record &#x3D; pd.DataFrame(data&#x3D;new_record,                       </span><br><span class="line">                                  columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;,&#39;First&#39;])</span><br><span class="line">        new_record[&#39;First&#39;] &#x3D; pd.to_datetime(new_record[&#39;First&#39;], format&#x3D;&#39;%Y%m%d%H%M%S&#39;)</span><br><span class="line">        new_record.set_index(&#39;First&#39;, inplace&#x3D;True)</span><br><span class="line"></span><br><span class="line">        print(&quot;Create database: &quot; + dbname)</span><br><span class="line">        client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">        print(&quot;Write DataFrame&quot;)</span><br><span class="line">        client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;], protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">        print(&quot;Read DataFrame&quot;)</span><br><span class="line">        result &#x3D; client.query(&quot;select * from demo&quot;)</span><br><span class="line">        print(&quot;Result: &#123;0&#125;&quot;.format(result))</span><br><span class="line"></span><br><span class="line">        print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">        client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line"></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><a href="https://influxdb-python.readthedocs.io/en/latest/examples.html#tutorials-pandas" target="_blank" rel="noopener">Original example:</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(host&#x3D;&#39;localhost&#39;, port&#x3D;8086):</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user &#x3D; &#39;root&#39;</span><br><span class="line">    password &#x3D; &#39;root&#39;</span><br><span class="line">    dbname &#x3D; &#39;demo&#39;</span><br><span class="line">    protocol &#x3D; &#39;line&#39;</span><br><span class="line"></span><br><span class="line">    client &#x3D; DataFrameClient(host, port, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    df &#x3D; pd.DataFrame(data&#x3D;list(range(30)),</span><br><span class="line">                      index&#x3D;pd.date_range(start&#x3D;&#39;2014-11-16&#39;,</span><br><span class="line">                                          periods&#x3D;30, freq&#x3D;&#39;H&#39;), columns&#x3D;[&#39;0&#39;])</span><br><span class="line"></span><br><span class="line">    print(&quot;Create database: &quot; + dbname)</span><br><span class="line">    client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame&quot;)</span><br><span class="line">    client.write_points(df, &#39;demo&#39;, protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame with Tags&quot;)</span><br><span class="line">    client.write_points(df, &#39;demo&#39;,</span><br><span class="line">                        &#123;&#39;k1&#39;: &#39;v1&#39;, &#39;k2&#39;: &#39;v2&#39;&#125;, protocol&#x3D;protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Read DataFrame&quot;)</span><br><span class="line">    client.query(&quot;select * from demo&quot;)</span><br><span class="line"></span><br><span class="line">    print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">    client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def parse_args():</span><br><span class="line">    &quot;&quot;&quot;Parse the args from main.&quot;&quot;&quot;</span><br><span class="line">    parser &#x3D; argparse.ArgumentParser(</span><br><span class="line">        description&#x3D;&#39;example code to play with InfluxDB&#39;)</span><br><span class="line">    parser.add_argument(&#39;--host&#39;, type&#x3D;str, required&#x3D;False,</span><br><span class="line">                        default&#x3D;&#39;localhost&#39;,</span><br><span class="line">                        help&#x3D;&#39;hostname of InfluxDB http API&#39;)</span><br><span class="line">    parser.add_argument(&#39;--port&#39;, type&#x3D;int, required&#x3D;False, default&#x3D;8086,</span><br><span class="line">                        help&#x3D;&#39;port of InfluxDB http API&#39;)</span><br><span class="line">    return parser.parse_args()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    args &#x3D; parse_args()</span><br><span class="line">    main(host&#x3D;args.host, port&#x3D;args.port)</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>‘field’ is the neccessary part of the influxDB data structure.<br>but ‘tag’ is not the neccessary part of the influxDB data structure, every ‘tag’ is a index, so the query of ‘tag’ is faster.</li>
+</ol>
+<p><a href="https://jasper-zhang1.gitbooks.io/influxdb/content/Concepts/key_concepts.html" target="_blank" rel="noopener">More information about ‘field’ and ‘tag’</a></p>
+<ol start="7">
+<li><p>How to add tags or tag_columns into influxDB DataFrameClient.<br> tags:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tags &#x3D; &#123; &quot;srcaddr&quot;: new_record[[&quot;srcaddr&quot;]],  &quot;srcport&quot;: new_record[[&quot;srcport&quot;]]&#125;</span><br><span class="line">client.write_points(new_record, &#39;demo&#39;, tags &#x3D; tags, protocol&#x3D;&quot;json&quot;)</span><br></pre></td></tr></table></figure>
+
+<p> tag_columns:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#39;demo&#39;, tag_columns&#x3D;[&#39;srcaddr&#39;,&#39;srcport&#39;], protocol&#x3D;protocol)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/influxdata/influxdb-python" target="_blank" rel="noopener">1. Influxdb-python</a><br><a href="https://github.com/influxdata/influxdb-python/issues/576" target="_blank" rel="noopener">2. Helpful tag_columns answer</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -239,15 +222,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
-    <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
-    <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
-<a id="more"></a>
-<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-]]></content>
-  </entry>
-  <entry>
     <title>3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication</title>
     <url>/2019/09/05/3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication/</url>
     <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master" target="_blank" rel="noopener">https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master</a></p>
@@ -255,6 +229,15 @@
 <object data="presentation-start_presentation.pdf" type="application/pdf" width="100%" height="877px">
 </object>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
+    <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
+    <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
+<a id="more"></a>
+<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
+</object>
 ]]></content>
   </entry>
   <entry>
@@ -389,6 +372,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
+<a id="more"></a>
+<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
+</object>]]></content>
+  </entry>
+  <entry>
+    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
+    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
+<a id="more"></a>
+
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
+  </entry>
+  <entry>
     <title>9-Build-eCommerce-Platform-with-NodeJS/Express/Bootstrap/MongoDB/AliCloud</title>
     <url>/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/</url>
     <content><![CDATA[<p>Introduction(说明):</p>
@@ -496,14 +498,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
-    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
-    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
-<a id="more"></a>
-<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
-</object>]]></content>
-  </entry>
-  <entry>
     <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
     <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
     <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
@@ -537,17 +531,6 @@
 <li>Download Baidunetdisk and 115 resources using Aria2</li>
 <li>Install and use aria2 to download Baidunetdisk content</li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
-    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
-    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai" target="_blank" rel="noopener">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
-<a id="more"></a>
-
-<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-
 ]]></content>
   </entry>
 </search>
