@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>0-Kick-off</title>
+    <url>/2019/05/03/0-Kick-off/</url>
+    <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
+<p>There are always many people who think they are very special, unique and important. I am very happy to be able to visit many places in the world, meet many people from different cultures and different classes, and also absorb some professional knowledge or common sense from books, courses or the Internet.</p>
+<p>With these, I can understand the world more clearly. It also makes it harder to try to fool or control me.</p>
+<p>But most importantly, as I grew up, I became more and more convinced:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Everyone is equal.</span><br><span class="line">Time and freedom are most important.</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>1-First-story</title>
     <url>/2019/05/16/1-First-story/</url>
     <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4><span id="more"></span>
@@ -8,12 +19,27 @@
 ]]></content>
   </entry>
   <entry>
-    <title>10-Master-Thesis:</title>
-    <url>/2025/04/14/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
-    <content><![CDATA[<span id="more"></span>
-<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-
+    <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
+    <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
+    <content><![CDATA[<p>(Draft)</p>
+<span id="more"></span>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1   Introduction"></a>1   Introduction</h2><h4 id="1-1-Motivation"><a href="#1-1-Motivation" class="headerlink" title="1.1   Motivation"></a>1.1   Motivation</h4><p>The Leibniz Supercomputing Centre of the Bavarian Academy of Sciences and Humanities (LRZ) is the largest Supercomputing Center in Germany operates the Munich Scientific Network (MWN). In this network, including the Munich universities, many student dormitories, and some non-university facilities such as e.g., Bavarian State Library, museums, and the institutes of Max Planck Society and Fraunhofer Society.  A total of approximately 100,000 devices are connected. The MWN consists of a backbone network to which the networks of the facilities at the various locations are connected via routers and switches. The routers in the backbone area of the Cisco Nexus C7010 type. To connect buildings connected via DSL and smaller X-WiN locations, we operate some devices of the Cisco 1900 series (manufacturer information) and Cisco ISR 1100 (manufacturer information). For broadband connection of the computer clusters in the LRZ, a Leaf &amp; Spine infrastructure (Leaf &amp; Spine Design) based on Cisco Nexus 9364C (manufacturer information) is used. </p>
+<p>Hundred thousand scientific research and service equipment are connected per second in MWN. The efficiency, stability, and security of MWN are closely related to the daily teaching, researching, and work of every facility in the MWN. But the limitation of the update and modification for the massive data limit the competence of network management. On the other hand, the lack of an appropriate flow collector script and intuitive, reliable display web interface also restrict the efficiency of the work of the administrator. As an essential part of the program, the asset database has long been ignored by various flow collectors. Thus, the limitation of the asset database also raises the difficulty of network optimization. </p>
+<p>Botnets and other network attacks have always been a severe problem in the current network environment. The resulting network congestion, waste of network resources, and other network problems have undoubtedly caused substantial economic losses. With the rapid development of current machine learning and deep learning research, trying to use the latest data science technology to analyze the acquired flow data to predict future network usage, optimize the network structure and traffic, and explore the network potential reasonably and efficiently is also a significant challenge.</p>
+<h4 id="1-2-Problem-Statement"><a href="#1-2-Problem-Statement" class="headerlink" title="1.2   Problem Statement"></a>1.2   Problem Statement</h4><p>To improve the efficiency, stability, and security of MWN by managing the massive flow data per second, design an appropriate real-time NetFlow data collection and analysis script and an intuitive, simple, reliable display interface. Traditional NetFlow collectors are designed in many different situations, primarily their complicated functionality, insufficient asset databases, and other unsatisfied requirements of MWN, making them unsuitable for MWN. In this case, an independently designed and developed system integrated with MWN is what is urgently required.</p>
+<p>The detection against the Botnets, abnormal network usage, and other malicious cyberattacks in MWN is also possible in the future system automatic protection functionality. Besides, through the latest RNN or other state-of-the-art technology, analyze the steady flow data from MWN automatic generation to optimize the network structure. The utilization of the prediction functionality from the data science model also can improve the elasticity, maintainability, and expandability of the MWN. The administrator’s global control and deployment ability of the entire network routing situation can be significantly increased.</p>
+<h4 id="Plan"><a href="#Plan" class="headerlink" title="Plan:"></a>Plan:</h4><ol>
+<li>compute the network traffic, set a script to automaticly generate network situation data.</li>
+<li>Comparsion with different data base engine</li>
+<li>Plot the Trend graph of different data base engine write, search, and sort result when the data base once 1 million record increase.</li>
+<li>Research use different search algotithm to optimize the efficiency.</li>
+<li>Use RNN to build a model, train the model with currently data,predict the future network traffic situation.</li>
+<li>Read more state-of-the-art data science technogy to handel the data.</li>
+<li>Use RDD, redis</li>
+</ol>
+<h4 id="Question"><a href="#Question" class="headerlink" title="Question:"></a>Question:</h4><ol>
+<li>Can I cite the words from other website?</li>
+</ol>
 ]]></content>
   </entry>
   <entry>
@@ -103,6 +129,53 @@
 ]]></content>
   </entry>
   <entry>
+    <title>15-InfluxDB</title>
+    <url>/2020/06/29/15-InfluxDB/</url>
+    <content><![CDATA[<h2 id="InfluxDB"><a href="#InfluxDB" class="headerlink" title="InfluxDB"></a>InfluxDB</h2><h4 id="Attention"><a href="#Attention" class="headerlink" title="Attention:"></a>Attention:</h4><ol>
+<li>How to use DataFrame Client</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client = DataFrameClient(&#x27;localhost&#x27;, 8086, user, password, dbname)</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<ol start="2">
+<li>When we want to insert a DataFrame in InfluxDB, the DataFrame must have a time format index, for example:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># open test_data.json as record </span><br><span class="line">with open(&#x27;data/test data/&#x27; + &#x27;test_data.json&#x27;) as record:</span><br><span class="line">        # load json data as list</span><br><span class="line">        new_record = json.load(record)</span><br><span class="line">        # convert list to DataFrame, and get columns &#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;.</span><br><span class="line">        new_record = pd.DataFrame(data=new_record,                       </span><br><span class="line">                                  columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;])</span><br><span class="line">        # convert the format of &quot;new_record[&#x27;First&#x27;]&quot; to datetime</span><br><span class="line">        new_record[&#x27;First&#x27;] = pd.to_datetime(new_record[&#x27;First&#x27;], format=&#x27;%Y%m%d%H%M%S&#x27;)</span><br><span class="line">        # set column &quot;First&quot; as index</span><br><span class="line">        new_record.set_index(&#x27;First&#x27;, inplace=True)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>InfluxDB writes points with the same timestamp but different measured values, otherwise InfluxDB will only insert a newest timestamp record.</li>
+</ol>
+<p>Solve:<br>    write_points use argument ‘tags’ or ‘tag_columns’(recommand)</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;], protocol=protocol)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p><a href="https://influxdb-python.readthedocs.io/en/latest/api-documentation.html">InfluxDB API Documentation and Examples</a></p>
+</li>
+<li><p>Complete example of InfluxDB using DataFrameClient.</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user = &#x27;root&#x27;</span><br><span class="line">    password = &#x27;0318&#x27;</span><br><span class="line">    dbname = &#x27;assetdb_ts&#x27;</span><br><span class="line">    protocol = &#x27;line&#x27;</span><br><span class="line"></span><br><span class="line">    client = DataFrameClient(&#x27;localhost&#x27;, 8086, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    with open(&#x27;data/test data/&#x27; + &#x27;test_data.json&#x27;) as record:</span><br><span class="line">        new_record = json.load(record)</span><br><span class="line">        new_record = pd.DataFrame(data=new_record,                       </span><br><span class="line">                                  columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;])</span><br><span class="line">        new_record[&#x27;First&#x27;] = pd.to_datetime(new_record[&#x27;First&#x27;], format=&#x27;%Y%m%d%H%M%S&#x27;)</span><br><span class="line">        new_record.set_index(&#x27;First&#x27;, inplace=True)</span><br><span class="line"></span><br><span class="line">        print(&quot;Create database: &quot; + dbname)</span><br><span class="line">        client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">        print(&quot;Write DataFrame&quot;)</span><br><span class="line">        client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;], protocol=protocol)</span><br><span class="line"></span><br><span class="line">        print(&quot;Read DataFrame&quot;)</span><br><span class="line">        result = client.query(&quot;select * from demo&quot;)</span><br><span class="line">        print(&quot;Result: &#123;0&#125;&quot;.format(result))</span><br><span class="line"></span><br><span class="line">        print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">        client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line"></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://influxdb-python.readthedocs.io/en/latest/examples.html#tutorials-pandas">Original example:</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(host=&#x27;localhost&#x27;, port=8086):</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user = &#x27;root&#x27;</span><br><span class="line">    password = &#x27;root&#x27;</span><br><span class="line">    dbname = &#x27;demo&#x27;</span><br><span class="line">    protocol = &#x27;line&#x27;</span><br><span class="line"></span><br><span class="line">    client = DataFrameClient(host, port, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    df = pd.DataFrame(data=list(range(30)),</span><br><span class="line">                      index=pd.date_range(start=&#x27;2014-11-16&#x27;,</span><br><span class="line">                                          periods=30, freq=&#x27;H&#x27;), columns=[&#x27;0&#x27;])</span><br><span class="line"></span><br><span class="line">    print(&quot;Create database: &quot; + dbname)</span><br><span class="line">    client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame&quot;)</span><br><span class="line">    client.write_points(df, &#x27;demo&#x27;, protocol=protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame with Tags&quot;)</span><br><span class="line">    client.write_points(df, &#x27;demo&#x27;,</span><br><span class="line">                        &#123;&#x27;k1&#x27;: &#x27;v1&#x27;, &#x27;k2&#x27;: &#x27;v2&#x27;&#125;, protocol=protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Read DataFrame&quot;)</span><br><span class="line">    client.query(&quot;select * from demo&quot;)</span><br><span class="line"></span><br><span class="line">    print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">    client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def parse_args():</span><br><span class="line">    &quot;&quot;&quot;Parse the args from main.&quot;&quot;&quot;</span><br><span class="line">    parser = argparse.ArgumentParser(</span><br><span class="line">        description=&#x27;example code to play with InfluxDB&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--host&#x27;, type=str, required=False,</span><br><span class="line">                        default=&#x27;localhost&#x27;,</span><br><span class="line">                        help=&#x27;hostname of InfluxDB http API&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--port&#x27;, type=int, required=False, default=8086,</span><br><span class="line">                        help=&#x27;port of InfluxDB http API&#x27;)</span><br><span class="line">    return parser.parse_args()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    args = parse_args()</span><br><span class="line">    main(host=args.host, port=args.port)</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>‘field’ is the neccessary part of the influxDB data structure.<br>but ‘tag’ is not the neccessary part of the influxDB data structure, every ‘tag’ is a index, so the query of ‘tag’ is faster.</li>
+</ol>
+<p><a href="https://jasper-zhang1.gitbooks.io/influxdb/content/Concepts/key_concepts.html">More information about ‘field’ and ‘tag’</a></p>
+<ol start="7">
+<li>How to add tags or tag_columns into influxDB DataFrameClient.<br> tags:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tags = &#123; &quot;srcaddr&quot;: new_record[[&quot;srcaddr&quot;]],  &quot;srcport&quot;: new_record[[&quot;srcport&quot;]]&#125;</span><br><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tags = tags, protocol=&quot;json&quot;)</span><br></pre></td></tr></table></figure>
+
+<pre><code>tag_columns:
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;], protocol=protocol)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/influxdata/influxdb-python">1. Influxdb-python</a><br><a href="https://github.com/influxdata/influxdb-python/issues/576">2. Helpful tag_columns answer</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>16-ImportError:-attempted-relative-import-with-no-known-parent-package</title>
     <url>/2020/07/06/16-ImportError-attempted-relative-import-with-no-known-parent-package/</url>
     <content><![CDATA[<p>You are trying to use relative imports in python, but you encounter one of the exceptions ImportError: attempted relative import with no known parent package. Yes, relative imports can be confusing from time to time. In this article, we see the method used by python interpreter to resolve the relative imports and how we can fix this issue.</p>
@@ -167,53 +240,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>15-InfluxDB</title>
-    <url>/2020/06/29/15-InfluxDB/</url>
-    <content><![CDATA[<h2 id="InfluxDB"><a href="#InfluxDB" class="headerlink" title="InfluxDB"></a>InfluxDB</h2><h4 id="Attention"><a href="#Attention" class="headerlink" title="Attention:"></a>Attention:</h4><ol>
-<li>How to use DataFrame Client</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client = DataFrameClient(&#x27;localhost&#x27;, 8086, user, password, dbname)</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-
-<ol start="2">
-<li>When we want to insert a DataFrame in InfluxDB, the DataFrame must have a time format index, for example:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># open test_data.json as record </span><br><span class="line">with open(&#x27;data/test data/&#x27; + &#x27;test_data.json&#x27;) as record:</span><br><span class="line">        # load json data as list</span><br><span class="line">        new_record = json.load(record)</span><br><span class="line">        # convert list to DataFrame, and get columns &#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;.</span><br><span class="line">        new_record = pd.DataFrame(data=new_record,                       </span><br><span class="line">                                  columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;])</span><br><span class="line">        # convert the format of &quot;new_record[&#x27;First&#x27;]&quot; to datetime</span><br><span class="line">        new_record[&#x27;First&#x27;] = pd.to_datetime(new_record[&#x27;First&#x27;], format=&#x27;%Y%m%d%H%M%S&#x27;)</span><br><span class="line">        # set column &quot;First&quot; as index</span><br><span class="line">        new_record.set_index(&#x27;First&#x27;, inplace=True)</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>InfluxDB writes points with the same timestamp but different measured values, otherwise InfluxDB will only insert a newest timestamp record.</li>
-</ol>
-<p>Solve:<br>    write_points use argument ‘tags’ or ‘tag_columns’(recommand)</p>
-<p>Example:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;], protocol=protocol)</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><p><a href="https://influxdb-python.readthedocs.io/en/latest/api-documentation.html">InfluxDB API Documentation and Examples</a></p>
-</li>
-<li><p>Complete example of InfluxDB using DataFrameClient.</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user = &#x27;root&#x27;</span><br><span class="line">    password = &#x27;0318&#x27;</span><br><span class="line">    dbname = &#x27;assetdb_ts&#x27;</span><br><span class="line">    protocol = &#x27;line&#x27;</span><br><span class="line"></span><br><span class="line">    client = DataFrameClient(&#x27;localhost&#x27;, 8086, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    with open(&#x27;data/test data/&#x27; + &#x27;test_data.json&#x27;) as record:</span><br><span class="line">        new_record = json.load(record)</span><br><span class="line">        new_record = pd.DataFrame(data=new_record,                       </span><br><span class="line">                                  columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;])</span><br><span class="line">        new_record[&#x27;First&#x27;] = pd.to_datetime(new_record[&#x27;First&#x27;], format=&#x27;%Y%m%d%H%M%S&#x27;)</span><br><span class="line">        new_record.set_index(&#x27;First&#x27;, inplace=True)</span><br><span class="line"></span><br><span class="line">        print(&quot;Create database: &quot; + dbname)</span><br><span class="line">        client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">        print(&quot;Write DataFrame&quot;)</span><br><span class="line">        client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;], protocol=protocol)</span><br><span class="line"></span><br><span class="line">        print(&quot;Read DataFrame&quot;)</span><br><span class="line">        result = client.query(&quot;select * from demo&quot;)</span><br><span class="line">        print(&quot;Result: &#123;0&#125;&quot;.format(result))</span><br><span class="line"></span><br><span class="line">        print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">        client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line"></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://influxdb-python.readthedocs.io/en/latest/examples.html#tutorials-pandas">Original example:</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(host=&#x27;localhost&#x27;, port=8086):</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user = &#x27;root&#x27;</span><br><span class="line">    password = &#x27;root&#x27;</span><br><span class="line">    dbname = &#x27;demo&#x27;</span><br><span class="line">    protocol = &#x27;line&#x27;</span><br><span class="line"></span><br><span class="line">    client = DataFrameClient(host, port, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    df = pd.DataFrame(data=list(range(30)),</span><br><span class="line">                      index=pd.date_range(start=&#x27;2014-11-16&#x27;,</span><br><span class="line">                                          periods=30, freq=&#x27;H&#x27;), columns=[&#x27;0&#x27;])</span><br><span class="line"></span><br><span class="line">    print(&quot;Create database: &quot; + dbname)</span><br><span class="line">    client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame&quot;)</span><br><span class="line">    client.write_points(df, &#x27;demo&#x27;, protocol=protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame with Tags&quot;)</span><br><span class="line">    client.write_points(df, &#x27;demo&#x27;,</span><br><span class="line">                        &#123;&#x27;k1&#x27;: &#x27;v1&#x27;, &#x27;k2&#x27;: &#x27;v2&#x27;&#125;, protocol=protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Read DataFrame&quot;)</span><br><span class="line">    client.query(&quot;select * from demo&quot;)</span><br><span class="line"></span><br><span class="line">    print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">    client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def parse_args():</span><br><span class="line">    &quot;&quot;&quot;Parse the args from main.&quot;&quot;&quot;</span><br><span class="line">    parser = argparse.ArgumentParser(</span><br><span class="line">        description=&#x27;example code to play with InfluxDB&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--host&#x27;, type=str, required=False,</span><br><span class="line">                        default=&#x27;localhost&#x27;,</span><br><span class="line">                        help=&#x27;hostname of InfluxDB http API&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--port&#x27;, type=int, required=False, default=8086,</span><br><span class="line">                        help=&#x27;port of InfluxDB http API&#x27;)</span><br><span class="line">    return parser.parse_args()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    args = parse_args()</span><br><span class="line">    main(host=args.host, port=args.port)</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>‘field’ is the neccessary part of the influxDB data structure.<br>but ‘tag’ is not the neccessary part of the influxDB data structure, every ‘tag’ is a index, so the query of ‘tag’ is faster.</li>
-</ol>
-<p><a href="https://jasper-zhang1.gitbooks.io/influxdb/content/Concepts/key_concepts.html">More information about ‘field’ and ‘tag’</a></p>
-<ol start="7">
-<li>How to add tags or tag_columns into influxDB DataFrameClient.<br> tags:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tags = &#123; &quot;srcaddr&quot;: new_record[[&quot;srcaddr&quot;]],  &quot;srcport&quot;: new_record[[&quot;srcport&quot;]]&#125;</span><br><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tags = tags, protocol=&quot;json&quot;)</span><br></pre></td></tr></table></figure>
-
-<pre><code>tag_columns:
-</code></pre>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;], protocol=protocol)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/influxdata/influxdb-python">1. Influxdb-python</a><br><a href="https://github.com/influxdata/influxdb-python/issues/576">2. Helpful tag_columns answer</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
     <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
     <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
@@ -223,27 +249,11 @@
 ]]></content>
   </entry>
   <entry>
-    <title>17-Master-Thesis-On-the-topological-property-of-dynamic-transaction-graph</title>
-    <url>/2025/04/15/17-Master-Thesis-On-the-topological-property-of-dynamic-transaction-graph/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication</title>
     <url>/2019/09/05/3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication/</url>
     <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master">https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master</a></p>
 <span id="more"></span>
 <object data="presentation-start_presentation.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
-    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
-    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
-<span id="more"></span>
-
-<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
 </object>
 
 ]]></content>
@@ -282,44 +292,14 @@
 </object>]]></content>
   </entry>
   <entry>
-    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
-    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
-    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
+    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
+    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
 <span id="more"></span>
 
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
-<li>download the aria2 with instruction:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>create a configuration file:<br>aria2.conf</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user=user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd=passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret=token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc=true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all=true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all=true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port=6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads=5</span><br><span class="line">#resume from break point</span><br><span class="line">continue=true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server=5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size=10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split=10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit=0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit=0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit=0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit=0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit=0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer=*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir=/home/yuhao/Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#x27;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache=0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap=true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation=prealloc</span><br></pre></td></tr></table></figure>
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+</object>
 
-<ol start="3">
-<li>start configuration file:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path=&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
-<p>Like:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
-<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
-<ol start="4">
-<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc">http://localhost:6800/jsonrpc</a></p>
-</li>
-<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
-</li>
-<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
-</li>
-<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
-</li>
-<li><p>The download information will be displayed on the terminal.</p>
-</li>
-</ol>
-<p>Reference:</p>
-<ul>
-<li>Download Baidunetdisk and 115 resources using Aria2</li>
-<li>Install and use aria2 to download Baidunetdisk content</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
@@ -448,6 +428,47 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout hexo</span><br><span class="line">hexo new &quot;my first blog&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -am&quot;add a new blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
 <p><code>Travis ci</code> will be called automatically and automatically finish the deployment.</p>
 <p>Reference:<br><a href="https://hexo.io/">#1 HEXO</a><br><a href="https://www.cnblogs.com/zyh1020/p/11129565.html">#2</a><br><a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">#3</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
+    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
+    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
+<span id="more"></span>
+
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
+<li>download the aria2 with instruction:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>create a configuration file:<br>aria2.conf</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user=user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd=passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret=token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc=true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all=true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all=true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port=6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads=5</span><br><span class="line">#resume from break point</span><br><span class="line">continue=true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server=5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size=10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split=10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit=0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit=0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit=0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit=0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit=0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer=*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir=/home/yuhao/Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#x27;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache=0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap=true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation=prealloc</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>start configuration file:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path=&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Like:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
+<ol start="4">
+<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc">http://localhost:6800/jsonrpc</a></p>
+</li>
+<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
+</li>
+<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
+</li>
+<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
+</li>
+<li><p>The download information will be displayed on the terminal.</p>
+</li>
+</ol>
+<p>Reference:</p>
+<ul>
+<li>Download Baidunetdisk and 115 resources using Aria2</li>
+<li>Install and use aria2 to download Baidunetdisk content</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
