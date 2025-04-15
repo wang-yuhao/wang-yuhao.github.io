@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>1-First-story</title>
+    <url>/2019/05/16/1-First-story/</url>
+    <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4><span id="more"></span>
+<p><img src="/1-First-story.png" alt="first story.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2020/06/01/11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Due to the recent interview at the Sony research department in Stuttgart,  so have to explore deeper in GAN. This blog will introduce more details of adversarial examples resarch and more state-of-the-art solutions.</p>
+<span id="more"></span> ]]></content>
+  </entry>
+  <entry>
+    <title>12-Mongodb-Operations</title>
+    <url>/2020/06/04/12-Mongodb-Operations/</url>
+    <content><![CDATA[<h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
+<span id="more"></span>
+
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: &#x27;0256&#x27;&#125;,</span><br><span class="line">        $inc:&#123;&#x27;packets&#x27;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;,&#x27;first&#x27;: &#x27;0221&#x27;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Error: “errmsg” : “Updating the path ‘last’ would create a conflict at ‘last’”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: 0226&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;,&#x27;first&#x27;: 221,&#x27;last&#x27;:26, &#x27;packets&#x27;: 17&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Reason: There is already $set ‘last’, second time $setOnInsert ‘last’ make a conflict.</p>
+<h4 id="Solution-Remove-all-repeat-field-in-objNew"><a href="#Solution-Remove-all-repeat-field-in-objNew" class="headerlink" title="Solution: Remove all repeat field in objNew"></a>Solution: Remove all repeat field in objNew</h4>]]></content>
+  </entry>
+  <entry>
+    <title>10-Master-Thesis:</title>
+    <url>/2025/04/14/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
+    <content><![CDATA[<span id="more"></span>
+<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>14-Latex</title>
+    <url>/2020/06/22/14-Latex/</url>
+    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505">here</a> to your local device, and keep it with the same file with your .tex file.</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib/stud77.bib&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Or you can change the file path in <code>\bibliographystyle&#123; %.bst file path % &#125;</code>.<br>Delete the space between { and %. </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>16-ImportError:-attempted-relative-import-with-no-known-parent-package</title>
+    <url>/2020/07/06/16-ImportError-attempted-relative-import-with-no-known-parent-package/</url>
+    <content><![CDATA[<p>You are trying to use relative imports in python, but you encounter one of the exceptions ImportError: attempted relative import with no known parent package. Yes, relative imports can be confusing from time to time. In this article, we see the method used by python interpreter to resolve the relative imports and how we can fix this issue.</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Example for ImportError: attempted relative import with no known parent package</span><br></pre></td></tr></table></figure>
+
+<p>Let’s see an example of how we get those exceptions. Suppose your project have the following directory structure:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;&gt; Project Directory</span><br><span class="line"> project</span><br><span class="line"> ├── config.py</span><br><span class="line"> └── package</span><br><span class="line">     ├── __init__.py</span><br><span class="line">     └── demo.py</span><br></pre></td></tr></table></figure>
+
+<p>The config.py contains some variables which want to access in demo.py. You decide to use relative import to achieve this simple task.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># project/config.py</span><br><span class="line"> count = 5</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># project/package/demo.py</span><br><span class="line"> from .. import config</span><br><span class="line"> print(&quot;The value of config.count is &#123;0&#125;&quot;.format(config.count))</span><br></pre></td></tr></table></figure>
+
+<p>When we invoke the demo script, we encounter the following error:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Exception</span><br><span class="line"> Y:/project&gt;python package/demo.py</span><br><span class="line"> Traceback (most recent call last):</span><br><span class="line">   File &quot;package/demo.py&quot;, line 1, in &lt;module&gt;</span><br><span class="line">     from .. import config</span><br><span class="line"> ImportError: attempted relative import with no known parent package</span><br></pre></td></tr></table></figure>
+
+<p> In the next parts, we see how python interpreter resolve relative imports and how to fix this annoying issue.</p>
+<h2 id="How-the-python-interpreter-resolve-relative-imports"><a href="#How-the-python-interpreter-resolve-relative-imports" class="headerlink" title="How the python interpreter resolve relative imports?"></a>How the python interpreter resolve relative imports?</h2><p> Let’s see how python interpreter resolve relative module. From PEP 328 – Imports: Multi-Line and Absolute&#x2F;Relative which introduce the relative imports we found that:</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Relative imports use a module&#x27;s __name__ attribute to determine that module&#x27;s position in the package hierarchy.</span><br></pre></td></tr></table></figure>
+
+<p> In other words, the algorithm to resolve the module is based on the values of <strong>name</strong> and <strong>package</strong> variables.</p>
+<p>Sometimes , as in our example case, those variables does not contain any package information - the value of <strong>package</strong> is None and the value of <strong>name</strong> is <strong>main</strong>. let’s see how relative imports are resolved in this case:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">If the module&#x27;s name does not contain any package information (e.g., it is set to __main__), then relative imports are resolved as if the module were a top-level module, regardless of where the module is actually located on the file system.</span><br></pre></td></tr></table></figure>
+
+<p>Let’s add some logging to our example to demonstrate this particular case</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># project/config.py with logs</span><br><span class="line"> print(&#x27;__file__=&#123;0:&lt;35&#125; | __name__=&#123;1:&lt;20&#125; | __package__=&#123;2:&lt;20&#125;&#x27;.format(__file__,__name__,str(__package__)))</span><br><span class="line"></span><br><span class="line"> count = 5</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># project/package/demo.py with logs</span><br><span class="line"> print(&#x27;__file__=&#123;0:&lt;35&#125; | __name__=&#123;1:&lt;20&#125; | __package__=&#123;2:&lt;20&#125;&#x27;.format(__file__,__name__,str(__package__)))</span><br><span class="line"></span><br><span class="line"> from .. import config</span><br><span class="line"> print(&quot;The value of config.count is &#123;0&#125;&quot;.format(config.count))</span><br></pre></td></tr></table></figure>
+
+<p>When we try to run the script demo.py, we encounter the following output:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Error with logs</span><br><span class="line"> Y:/project&gt;python package/demo.py</span><br><span class="line"> __file__=package/demo.py                     | __name__=__main__                  | __package__=None</span><br><span class="line"> Traceback (most recent call last):</span><br><span class="line">   File &quot;package/demo.py&quot;, line 3, in &lt;module&gt;</span><br><span class="line">     from .. import config</span><br><span class="line"> ImportError: attempted relative import with no known parent package</span><br></pre></td></tr></table></figure>
+
+<p>As we can see, <strong>name</strong> is <strong>main</strong> and <strong>package</strong> is None. In other words, the python interpreter does not have any information about the package the module belong. Therefore it complains that it can not find the parent package. Let’s see how can we resolve this issue</p>
+<h2 id="Solution-1-changing-directory-structure-and-new-script"><a href="#Solution-1-changing-directory-structure-and-new-script" class="headerlink" title="Solution 1 - changing directory structure and new script"></a>Solution 1 - changing directory structure and new script</h2><ol>
+<li>First, create a new directory named new_project</li>
+<li>Move the project directory to new_project</li>
+<li>Create a new empty <strong>init</strong>.py inside the root directory - this will make the directory to a package.</li>
+<li>Create main.py in new_project directory</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># The project directory - solution 1</span><br><span class="line"> new_project</span><br><span class="line"> ├── main.py</span><br><span class="line"> └── project</span><br><span class="line">     ├── __init__.py</span><br><span class="line">     ├── config.py</span><br><span class="line">     └── package</span><br><span class="line">         ├── __init__.py</span><br><span class="line">         └── demo.py</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Updating new_project/main.py</span><br><span class="line"> print(&#x27;__file__=&#123;0:&lt;35&#125; | __name__=&#123;1:&lt;20&#125; | __package__=&#123;2:&lt;20&#125;&#x27;.format(__file__,__name__,str(__package__)))</span><br><span class="line"></span><br><span class="line"> import project.package.demo</span><br></pre></td></tr></table></figure>
+
+<p>When we run the demo, we get the following output:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Invoking Solution 1</span><br><span class="line"> Y:/new_project&gt;python main.py</span><br><span class="line"> __file__=main.py                                | __name__=__main__                  | __package__=None</span><br><span class="line"> __file__=Y:/new_project/project/package/demo.py | __name__=project.package.demo      | __package__=project.package</span><br><span class="line"> __file__=Y:/new_project/project/config.py       | __name__=project.config            | __package__=project</span><br><span class="line"> The value of config.count is 5</span><br></pre></td></tr></table></figure>
+
+<p> As we can see, importing project.package.demo in main.py will set the package information (<strong>name</strong> and <strong>package</strong> variables). Now, the python interpreter can resolve the relative import in project&#x2F;demos&#x2F;demo.py successfully.</p>
+<p>In the next part, we will see another solution which use the -m option of python</p>
+<h2 id="Solution-2-create-a-package-and-use-m-option"><a href="#Solution-2-create-a-package-and-use-m-option" class="headerlink" title="Solution 2 - create a package and use -m option"></a>Solution 2 - create a package and use -m option</h2><ol>
+<li>First, create a new directory named new_project</li>
+<li>Move the project directory to new_project</li>
+<li>Create a new empty <strong>init</strong>.py inside the root directory - this will make the directory to a package.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># The project directory - solution 2</span><br><span class="line"> new_project</span><br><span class="line"> └── project</span><br><span class="line">     ├── __init__.py</span><br><span class="line">     ├── config.py</span><br><span class="line">     └── package</span><br><span class="line">         ├── __init__.py</span><br><span class="line">         └── demo.py</span><br></pre></td></tr></table></figure>
+
+<p>Now, we invoke the demo.py with the -m option. As the following output demonstrate , the python -m option allows modules to be located using the Python module namespace for execution as scripts.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Invoking demo.py</span><br><span class="line"> Y:/new_project&gt;python -m project.package.demo</span><br><span class="line"> __file__=Y:/new_project/project/package/demo.py | __name__=__main__                  | __package__=project.package</span><br><span class="line"> __file__=Y:/new_project/project/config.py       | __name__=project.config            | __package__=project</span><br><span class="line"> The value of config.count is 5</span><br></pre></td></tr></table></figure>
+
+<p> Running the command will also set package information (<strong>package</strong> variable). Now, the python interpreter can resolve the relative import in project&#x2F;demos&#x2F;demo.py successfully (even thought <strong>name</strong> is <strong>main</strong>).</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>13-Python-MySQL-Operation</title>
+    <url>/2020/06/08/13-Python-MySQL-Operation/</url>
+    <content><![CDATA[<h2 id="1-Install-mysql-on-Ubuntu-18-04"><a href="#1-Install-mysql-on-Ubuntu-18-04" class="headerlink" title="1. Install mysql on Ubuntu 18.04"></a>1. Install mysql on Ubuntu 18.04</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install mysql-server </span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<p>check mysql status, stop, start, and restart mysql server</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo systemctl status mysql </span><br><span class="line">$ sudo systemctl stop mysql</span><br><span class="line">$ sudo systemctl start mysql</span><br><span class="line">$ sudo systemctl restart mysql</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Solved-solution-about-ERROR1698-28000-Access-denied-for-user-root-localhost"><a href="#2-Solved-solution-about-ERROR1698-28000-Access-denied-for-user-root-localhost" class="headerlink" title="2. Solved solution about: ERROR1698(28000):Access denied for user root@localhost"></a>2. Solved solution about: ERROR1698(28000):Access denied for user root@localhost</h2><p>My operating system is ubuntu18.04, the following is my mysql version:</p>
+<p><img src="/1.png" alt="1.png"></p>
+<p>After the installation is complete, the following error occurs when logging into mysql:</p>
+<p><img src="/2.png" alt="2.png"></p>
+<p>Because the password was not set during the installation process, the password may be empty, but you can not enter mysql anyway.</p>
+<p>Here is my process:</p>
+<h4 id="Step1-Modify-the-mysqld-cnf-configuration-file"><a href="#Step1-Modify-the-mysqld-cnf-configuration-file" class="headerlink" title="Step1: Modify the mysqld.cnf configuration file"></a>Step1: Modify the mysqld.cnf configuration file</h4><p>Enter <code>sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</code> on the terminal (that is, the terminal) of ubuntu, enter this configuration file, and then in the configuration part <code>[mysqld]</code>, add the phrase <code>skip-grant-tables</code>.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> 1 [mysqld]</span><br><span class="line"> 2 #</span><br><span class="line"> 3 # * Basic Settings</span><br><span class="line"> 4 #</span><br><span class="line"> 5 user            　 = mysql</span><br><span class="line"> 6 pid-file        　 = /var/run/mysqld/mysqld.pid</span><br><span class="line"> 7 socket        　　 = /var/run/mysqld/mysqld.sock</span><br><span class="line"> 8 port            　 = 3306</span><br><span class="line"> 9 basedir        　　= /usr</span><br><span class="line">10 datadir       　　 = /var/lib/mysql</span><br><span class="line">11 tmpdir       　　　= /tmp</span><br><span class="line">12 lc-messages-dir   = /usr/share/mysql</span><br><span class="line">13 skip-external-locking</span><br><span class="line">14 character-set-server=utf8</span><br><span class="line">15 collation-server=utf8_general_ci</span><br><span class="line">16 skip-grant-tables　　　　&lt;-- add here</span><br></pre></td></tr></table></figure>
+
+<p><b>Function</b>: It allows you to log in to mysql without a password.</p>
+<p><b>Save: wq, exit. </b>Enter: <code>service mysql restart</code>, restart mysql.</p>
+<h4 id="step2：设置root密码"><a href="#step2：设置root密码" class="headerlink" title="step2：设置root密码"></a>step2：设置root密码</h4><p>Enter <code>mysql -u root -p</code> on the terminal, and press Enter when prompted to enter the password. After entering mysql, execute the following three sentences:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 use mysql;   # then enter</span><br><span class="line">2 update user set authentication_string=password(&quot;yourpassword&quot;) where user=&quot;root&quot;;  # then enter</span><br><span class="line">3 flush privileges;  # then enter</span><br></pre></td></tr></table></figure>
+
+<p>see the picture below:<br><img src="/3.png" alt="3.png"><br>then input <code>quit</code>, exit mysql.</p>
+<h4 id="step3：Comments-skip-grant-tables"><a href="#step3：Comments-skip-grant-tables" class="headerlink" title="step3：Comments skip-grant-tables"></a>step3：Comments <code>skip-grant-tables</code></h4><p>reopen <code>mysqld.cnf</code>, comment <code>skip-grant-tables</code> </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> 1 [mysqld]</span><br><span class="line"> 2 #</span><br><span class="line"> 3 # * Basic Settings</span><br><span class="line"> 4 #</span><br><span class="line"> 5 user            　 = mysql</span><br><span class="line"> 6 pid-file        　 = /var/run/mysqld/mysqld.pid</span><br><span class="line"> 7 socket        　　 = /var/run/mysqld/mysqld.sock</span><br><span class="line"> 8 port            　 = 3306</span><br><span class="line"> 9 basedir        　　= /usr</span><br><span class="line">10 datadir       　　 = /var/lib/mysql</span><br><span class="line">11 tmpdir       　　　= /tmp</span><br><span class="line">12 lc-messages-dir   = /usr/share/mysql</span><br><span class="line">13 skip-external-locking</span><br><span class="line">14 character-set-server=utf8</span><br><span class="line">15 collation-server=utf8_general_ci</span><br><span class="line">16 # skip-grant-tables　　　　&lt;-- add # here</span><br></pre></td></tr></table></figure>
+
+<p>Then return to the terminal and enter mysql -u root -p, you should be able to enter the database.</p>
+<h4 id="step4：-Solve-problem"><a href="#step4：-Solve-problem" class="headerlink" title="step4： Solve problem"></a>step4： Solve problem</h4><p>If terminal still report an error at this time, you need to return to step3, re-enter the commented out statement (that is, delete the # symbol), re-enter mysql, first choose a database, such as use mysql;</p>
+<p>Then enter select user, plugin from user; see the picture below:<br><img src="/4.png" alt="4.png"></p>
+<p>It can be seen from the figure that after executing <code>select user, plugin from user;</code>, the cause of the error is because the field of the plugin root is auth_socket, then we can change it and replace it with <code>mysql_native_password</code>. Enter:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">update user set authentication_string=password(&quot;ln122920&quot;),plugin=&#x27;mysql_native_password&#x27; where user=&#x27;root&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>Then press Enter to execute the following, and then input <code>select user, plugin from user;</code> + Enter, we can see that the root user field has been successfully changed.</p>
+<p><img src="/5.png" alt="5.png"></p>
+<p>Finally quit quit. Return to step3.</p>
+<p>Then this problem is completely solved.</p>
+<p>Reference:<br>[1]<a href="https://www.cnblogs.com/cpl9412290130/p/9583868.html">https://www.cnblogs.com/cpl9412290130/p/9583868.html</a></p>
+<p>Expand:<br>In the mysql8 version, the statement above to update the code seems to have changed, the syntax will be told to be wrong, here I post there is no syntax error:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ALTER user &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;newpassward&#x27;; //newpassward </span><br></pre></td></tr></table></figure>
+
+<p>Correspond to this sentence to Step2 above.</p>
+<p>If <code>the MySQL server is running with the --skip-grant-tables option so it cannot execute this statemen</code> error,</p>
+<p>Then the solution is as follows:</p>
+<p>First <code>flush privileges</code>, and then execute the above statement to modify the password –Step2.</p>
+<p>Under MacOS, because there is no mysql configuration file, we need to do this when we change the password. Taking my example, I installed mysql through brew and entered the mysql installation directory: cd &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;mysql @5.7&#x2F;5.7.29&#x2F;bin.</p>
+<p>Step1: .&#x2F;mysqld_safe –skip-grant-tables to disable the verification function of mysql.</p>
+<p>Step2: mysql -u root This will enter the interactive window of mysql without a password.</p>
+<p>Step3: FLUSH PRIVILEGES clear permissions</p>
+<p>Step4: SET PASSWORD FOR‘root‘@’localhost’ &#x3D; PASSWORD(‘Your new password’); Set a new password.</p>
+<p>This will modify&#x2F;add the password successfully.</p>
+<h2 id="3-MySQL-optimization"><a href="#3-MySQL-optimization" class="headerlink" title="3. MySQL optimization"></a>3. MySQL optimization</h2><h2 id="Attention"><a href="#Attention" class="headerlink" title="# Attention"></a># Attention</h2><p> <b> Thread Pool is just provided in MySQL Enterprise. </b> </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>17-Master-Thesis-On-the-topological-property-of-dynamic-transaction-graph</title>
+    <url>/2025/04/15/17-Master-Thesis-On-the-topological-property-of-dynamic-transaction-graph/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>15-InfluxDB</title>
+    <url>/2020/06/29/15-InfluxDB/</url>
+    <content><![CDATA[<h2 id="InfluxDB"><a href="#InfluxDB" class="headerlink" title="InfluxDB"></a>InfluxDB</h2><h4 id="Attention"><a href="#Attention" class="headerlink" title="Attention:"></a>Attention:</h4><ol>
+<li>How to use DataFrame Client</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client = DataFrameClient(&#x27;localhost&#x27;, 8086, user, password, dbname)</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<ol start="2">
+<li>When we want to insert a DataFrame in InfluxDB, the DataFrame must have a time format index, for example:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># open test_data.json as record </span><br><span class="line">with open(&#x27;data/test data/&#x27; + &#x27;test_data.json&#x27;) as record:</span><br><span class="line">        # load json data as list</span><br><span class="line">        new_record = json.load(record)</span><br><span class="line">        # convert list to DataFrame, and get columns &#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;.</span><br><span class="line">        new_record = pd.DataFrame(data=new_record,                       </span><br><span class="line">                                  columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;])</span><br><span class="line">        # convert the format of &quot;new_record[&#x27;First&#x27;]&quot; to datetime</span><br><span class="line">        new_record[&#x27;First&#x27;] = pd.to_datetime(new_record[&#x27;First&#x27;], format=&#x27;%Y%m%d%H%M%S&#x27;)</span><br><span class="line">        # set column &quot;First&quot; as index</span><br><span class="line">        new_record.set_index(&#x27;First&#x27;, inplace=True)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>InfluxDB writes points with the same timestamp but different measured values, otherwise InfluxDB will only insert a newest timestamp record.</li>
+</ol>
+<p>Solve:<br>    write_points use argument ‘tags’ or ‘tag_columns’(recommand)</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;], protocol=protocol)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p><a href="https://influxdb-python.readthedocs.io/en/latest/api-documentation.html">InfluxDB API Documentation and Examples</a></p>
+</li>
+<li><p>Complete example of InfluxDB using DataFrameClient.</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user = &#x27;root&#x27;</span><br><span class="line">    password = &#x27;0318&#x27;</span><br><span class="line">    dbname = &#x27;assetdb_ts&#x27;</span><br><span class="line">    protocol = &#x27;line&#x27;</span><br><span class="line"></span><br><span class="line">    client = DataFrameClient(&#x27;localhost&#x27;, 8086, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    with open(&#x27;data/test data/&#x27; + &#x27;test_data.json&#x27;) as record:</span><br><span class="line">        new_record = json.load(record)</span><br><span class="line">        new_record = pd.DataFrame(data=new_record,                       </span><br><span class="line">                                  columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;,&#x27;First&#x27;])</span><br><span class="line">        new_record[&#x27;First&#x27;] = pd.to_datetime(new_record[&#x27;First&#x27;], format=&#x27;%Y%m%d%H%M%S&#x27;)</span><br><span class="line">        new_record.set_index(&#x27;First&#x27;, inplace=True)</span><br><span class="line"></span><br><span class="line">        print(&quot;Create database: &quot; + dbname)</span><br><span class="line">        client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">        print(&quot;Write DataFrame&quot;)</span><br><span class="line">        client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;], protocol=protocol)</span><br><span class="line"></span><br><span class="line">        print(&quot;Read DataFrame&quot;)</span><br><span class="line">        result = client.query(&quot;select * from demo&quot;)</span><br><span class="line">        print(&quot;Result: &#123;0&#125;&quot;.format(result))</span><br><span class="line"></span><br><span class="line">        print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">        client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line"></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://influxdb-python.readthedocs.io/en/latest/examples.html#tutorials-pandas">Original example:</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;Tutorial for using pandas and the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">from influxdb import DataFrameClient</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(host=&#x27;localhost&#x27;, port=8086):</span><br><span class="line">    &quot;&quot;&quot;Instantiate the connection to the InfluxDB client.&quot;&quot;&quot;</span><br><span class="line">    user = &#x27;root&#x27;</span><br><span class="line">    password = &#x27;root&#x27;</span><br><span class="line">    dbname = &#x27;demo&#x27;</span><br><span class="line">    protocol = &#x27;line&#x27;</span><br><span class="line"></span><br><span class="line">    client = DataFrameClient(host, port, user, password, dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Create pandas DataFrame&quot;)</span><br><span class="line">    df = pd.DataFrame(data=list(range(30)),</span><br><span class="line">                      index=pd.date_range(start=&#x27;2014-11-16&#x27;,</span><br><span class="line">                                          periods=30, freq=&#x27;H&#x27;), columns=[&#x27;0&#x27;])</span><br><span class="line"></span><br><span class="line">    print(&quot;Create database: &quot; + dbname)</span><br><span class="line">    client.create_database(dbname)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame&quot;)</span><br><span class="line">    client.write_points(df, &#x27;demo&#x27;, protocol=protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Write DataFrame with Tags&quot;)</span><br><span class="line">    client.write_points(df, &#x27;demo&#x27;,</span><br><span class="line">                        &#123;&#x27;k1&#x27;: &#x27;v1&#x27;, &#x27;k2&#x27;: &#x27;v2&#x27;&#125;, protocol=protocol)</span><br><span class="line"></span><br><span class="line">    print(&quot;Read DataFrame&quot;)</span><br><span class="line">    client.query(&quot;select * from demo&quot;)</span><br><span class="line"></span><br><span class="line">    print(&quot;Delete database: &quot; + dbname)</span><br><span class="line">    client.drop_database(dbname)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def parse_args():</span><br><span class="line">    &quot;&quot;&quot;Parse the args from main.&quot;&quot;&quot;</span><br><span class="line">    parser = argparse.ArgumentParser(</span><br><span class="line">        description=&#x27;example code to play with InfluxDB&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--host&#x27;, type=str, required=False,</span><br><span class="line">                        default=&#x27;localhost&#x27;,</span><br><span class="line">                        help=&#x27;hostname of InfluxDB http API&#x27;)</span><br><span class="line">    parser.add_argument(&#x27;--port&#x27;, type=int, required=False, default=8086,</span><br><span class="line">                        help=&#x27;port of InfluxDB http API&#x27;)</span><br><span class="line">    return parser.parse_args()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    args = parse_args()</span><br><span class="line">    main(host=args.host, port=args.port)</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>‘field’ is the neccessary part of the influxDB data structure.<br>but ‘tag’ is not the neccessary part of the influxDB data structure, every ‘tag’ is a index, so the query of ‘tag’ is faster.</li>
+</ol>
+<p><a href="https://jasper-zhang1.gitbooks.io/influxdb/content/Concepts/key_concepts.html">More information about ‘field’ and ‘tag’</a></p>
+<ol start="7">
+<li>How to add tags or tag_columns into influxDB DataFrameClient.<br> tags:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tags = &#123; &quot;srcaddr&quot;: new_record[[&quot;srcaddr&quot;]],  &quot;srcport&quot;: new_record[[&quot;srcport&quot;]]&#125;</span><br><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tags = tags, protocol=&quot;json&quot;)</span><br></pre></td></tr></table></figure>
+
+<pre><code>tag_columns:
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">client.write_points(new_record, &#x27;demo&#x27;, tag_columns=[&#x27;srcaddr&#x27;,&#x27;srcport&#x27;], protocol=protocol)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/influxdata/influxdb-python">1. Influxdb-python</a><br><a href="https://github.com/influxdata/influxdb-python/issues/576">2. Helpful tag_columns answer</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
+    <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
+    <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
+<span id="more"></span>
+<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+]]></content>
+  </entry>
+  <entry>
+    <title>3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication</title>
+    <url>/2019/09/05/3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master">https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master</a></p>
+<span id="more"></span>
+<object data="presentation-start_presentation.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>4-mlrPlayground</title>
+    <url>/2019/09/06/4-mlrPlayground/</url>
+    <content><![CDATA[<p>Interactive machine learning playground for the mlr package done in shiny.</p>
+<span id="more"></span>
+<p>Select predefined (but tunable) tasks:<br><img src="/4-1.png" alt="#4-1"></p>
+<p>Select learner and plot prediction plane:<br><img src="/4-2.png" alt="#4-2"></p>
+<p>Adjust hyperparameters of learner and see the change in the predictions:<br><img src="/4-3.png" alt="#4-3"></p>
+<h2 id="How-to-start"><a href="#How-to-start" class="headerlink" title="How to start:"></a>How to start:</h2><p>Use this link:<br><a href="http://sebastian-gruber.shinyapps.io/mlrPlayground">http://sebastian-gruber.shinyapps.io/mlrPlayground</a></p>
+<p>Or:<br>Install the package and execute mlrPlayground::start().</p>
+<p>Or:<br>Clone the git, open the file <code>inst/mlrPlayground/global.R</code> in Rstudio and press the “start app” button.</p>
+<h2 id="About-the-learner-config-file-only-for-advanced-users"><a href="#About-the-learner-config-file-only-for-advanced-users" class="headerlink" title="About the learner.config file (only for advanced users):"></a>About the learner.config file (only for advanced users):</h2><p>The file is located in inst&#x2F;mlrPlayground and offers highy adaptability for the learners and its hyperparameters.<br>Stuff you can define in there:</p>
+<ul>
+<li>learners selectable in the UI (or remove already selectable learners; but don’t forget to adjust unit tests in this case)</li>
+<li>hyperparameter names</li>
+<li>hyperparameter default min&#x2F;max values for the sliders</li>
+<li>hyperparameter default values</li>
+<li>your own tooltips for the hyperparameters</li>
+<li>removing specific hyperparameters from the UI<br>Examples and an indepth description of how to do all this is located in the first section in learner.config.</li>
+</ul>
+<h2 id="About-the-R6-class-system-only-for-developers"><a href="#About-the-R6-class-system-only-for-developers" class="headerlink" title="About the R6 class system (only for developers):"></a>About the R6 class system (only for developers):</h2><p>Every learning process is considered as a class. Currently there are 6 classes. The base class is called “LearningProcess” and is meant as a base scheme with all required methods listed for all the other classes. The currently working classes are “ClassifLearningProcess” and “RegrLearningProcess”. Besides these “Classif3dLearningProcess”, “Regr3dLearningProcess” are not fully implemented and “ClusterLearningProcess” is implemented, but not working right now. All the plots should now be defined in each class, so tasks&#x2F;datasets in the same class have the SAME predictions and plots. This hopefully makes everything a lot clearer and more uniform. The methods for these plots are already named and called everywhere (“getDataPlot” and “getPredPlot”), so no further methods should be introduced. Every plot should be defined in one of these methods in each class respectively. So whenever a plot is changed, only adapt the class, not any code anywhere else. To make the method “getPredPlot” work, one also has to implement the method “calculatePred”, which basically calculates the predictions on a bounded set of equidistant (and predefined) points. When defining methods, ALWAYS use isolate on reactive values. Otherwise calling the method elsewhere may lead to highly unintended behaviour, like infinite update loops or triggered observers in some totally different place - basically stuff making debugging feel totally like hell.</p>
+<h2 id="About-unit-tests-only-for-developers"><a href="#About-unit-tests-only-for-developers" class="headerlink" title="About unit tests (only for developers):"></a>About unit tests (only for developers):</h2><p>Because all the app files have to be placed in the inst&#x2F;mlrPlayground folder, unit tests can’t be written for functions (and especially the R6 classes) defined there. Also the package shinytest meant for “interactive UI” testing seems to not work - every new execution of the same test suddenly changes some value in the overall state, thus throwing a test error.<br>Fortunately a different way was found to still do some potent testing.<br>shinytest allows to start the app, set input values and catch output values in a script without visiting the app. The current unit tests simply set the input to all different kinds of tasks and learners and checks if the dataset&#x2F;prediction plot json data changed compared to the last input (this way we can make sure the plots are actually updated with the input instead of guessing that “not NULL” as a output condition for the plot may actually be enough).</p>
+<p>Github: <a href="https://github.com/SebGruber1996/mlrPlayground">https://github.com/SebGruber1996/mlrPlayground</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>6-Link-Prediction-for-Knowledge-Graphs</title>
+    <url>/2019/09/08/6-Link-Prediction-for-Knowledge-Graphs/</url>
+    <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai">https://gitlab.lrz.de/adl-ai/practical-big-data-science-adl-ai</a></p>
+<span id="more"></span>
+
+<object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2019/09/07/5-Recent-Developments-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<p>This project sums up the main points of the recent developments in deep learning for robustness against adversarial perturbation, then elaborates the tasks, datasets, evaluations of the previous approach adversarial training and the state of the art parseval regularization. Furthermore, a detailed comparison was made between of the previous methods and the most advanced approaches. A summary is provided at the end of this work, aiming to provide more new ideas and directions for future work.</p>
+<span id="more"></span>
+<object data="./robustness-against-adversarial.pdf" type="application/pdf" width="100%" height="877px" alt="robustness-against-adversarial.pdf, please use computer to visit this page.">
+</object>]]></content>
+  </entry>
+  <entry>
+    <title>8-Use-Hexo+Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog</title>
+    <url>/2019/12/09/8-Use-Hexo-Github-to-Realize-the-Automatic-Deployment-of-Personal-Blog/</url>
+    <content><![CDATA[<p>Recently the computer was broken, so all study resources were lost, and before I didn’t like backup files, I had to learn to build a personal blog with Hexo and Github. Write this file, so last time will not waste too much time to redo the same things as today.</p>
+<span id="more"></span>
+
+<h4 id="Important"><a href="#Important" class="headerlink" title="Important"></a>Important</h4><p>(How to use GitHub redeploy blog):</p>
+<ol>
+<li><p>Download the source file from the <b>gh-pages</b> branch from <a href="https://github.com/wang-yuhao/wang-yuhao.github.io/tree/gh-pages">github repository.</a></p>
+</li>
+<li><p>Generate a new Post with the command:</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n post &lt;Here-is-post-name&gt;</span><br></pre></td></tr></table></figure>
+<p>then a .md file and a folder with the same name &lt;Here-is-post-name&gt; will be automatically generated.</p>
+<ol start="3">
+<li>Add relative pdfs or images in &lt;Here-is-post-name&gt; folder<br>and edit the &lt;Here-is-post-name&gt;.md file.</li>
+</ol>
+<ul>
+<li>Insert pdf files to post:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;object data=&quot;./Poster_ADL-AI_final.pdf&quot; type=&quot;application/pdf&quot; width=&quot;100%&quot; height=&quot;877px&quot;&gt;</span><br><span class="line">&lt;/object&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Insert images to post:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![comment.png](comments.png)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>Git push local <b>gh-pages</b>repository to remote repository</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m &quot;update information&quot;</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>Finally, run:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>Reset the domain in your repository <code>Setting</code> on GitHub:</li>
+</ol>
+<h4 id="Warning"><a href="#Warning" class="headerlink" title="Warning:"></a>Warning:</h4><p>If you met (Your Connection is Not Private error) or (The custom domain for your GitHub Pages site is pointed at an outdated IP address. You must update your site’s DNS records if you’d like it to be available via your custom domain. ), maybe everything are right, you just need to wait a few hours:</p>
+<h3 id="On-Ubuntu"><a href="#On-Ubuntu" class="headerlink" title="On Ubuntu"></a>On Ubuntu</h3><h4 id="1-Learn-Hexo-Blog-Framework"><a href="#1-Learn-Hexo-Blog-Framework" class="headerlink" title="1. Learn Hexo Blog Framework:"></a>1. Learn Hexo Blog Framework:</h4><ol>
+<li>install hexo: <code>npm install -g hexo</code></li>
+<li>Initlize hexo: <code>hexo init</code></li>
+<li>Install required packages: <code>npm install</code></li>
+<li>Deploy Hexo:<code>hexo s</code></li>
+<li>Open <code>localhost:4000</code> in browser.<br><a href="https://hexo.io/">Hexo</a></li>
+</ol>
+<h4 id="2-Use-NEXT-Thema-in-Hexo"><a href="#2-Use-NEXT-Thema-in-Hexo" class="headerlink" title="2. Use NEXT Thema in Hexo:"></a>2. Use NEXT Thema in Hexo:</h4><p><a href="https://theme-next.iissnan.com/">Next Thema Website</a><br>ps: This blog is using Next-Gemini.</p>
+<ol>
+<li>Install Thema:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd hexo</span><br><span class="line">$ git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Set up the theme, in _config.yml change:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Set up the scheme, in themes&#x2F;next&#x2F;_config.yml change:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>Set up menu: user can directly use Font Awesome icon in <code>themes/next/_config.yml</code></p>
+</li>
+<li><p>Dynamic background, modify <code>themes/next/_config.yml</code>:</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">canvas_nest:</span><br><span class="line">enable: true</span><br><span class="line">onmobile: true # Display on mobile or not</span><br><span class="line">color: &quot;100,100,100&quot; # RGB values, use `,` to separate</span><br><span class="line">opacity: 0.5 # The opacity of line: 0~1</span><br><span class="line">zIndex: -1 # z-index property of the background</span><br><span class="line">count: 99 # The number of lines</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>Add visitor comment, modify <code>themes/next/_config.yml</code>, first register a count in Disqus:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Multiple Comment System Support</span><br><span class="line">comments:</span><br><span class="line">  # Available values: tabs | buttons</span><br><span class="line">  style: tabs</span><br><span class="line">  # Choose a comment system to be displayed by default.</span><br><span class="line">  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine</span><br><span class="line">  active: disqus </span><br><span class="line">  # Setting `true` means remembering the comment system selected by the visitor.</span><br><span class="line">  storage: true</span><br><span class="line">  # Lazyload all comment systems.</span><br><span class="line">  lazyload: true</span><br><span class="line">  # Modify texts or order for any navs, here are some examples.</span><br><span class="line">  nav:</span><br><span class="line">    disqus:</span><br><span class="line"></span><br><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname: &lt;your-disqus-id&gt; #</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Delete-a-post-in-hexo"><a href="#3-Delete-a-post-in-hexo" class="headerlink" title="3. Delete a post in hexo"></a>3. Delete a post in hexo</h4><ol>
+<li><p>Delete the post under source&#x2F;_post folder </p>
+</li>
+<li><p>Run hexo clean to delete the database (db.json) and assets folder </p>
+</li>
+<li><p>Run hexo generateto generate the new blog without your deleted post </p>
+</li>
+<li><p>Run hexo deploy to deploy your blog</p>
+</li>
+</ol>
+<h4 id="4-Connect-Hexo-with-Github"><a href="#4-Connect-Hexo-with-Github" class="headerlink" title="4. Connect Hexo with Github"></a>4. Connect Hexo with Github</h4><ol>
+<li><p>deploy hexo on GitHub pages: build a new repository with the name: &lt;username.github.io&gt;, create a new branch <hexo></p>
+</li>
+<li><p>git clone this repository and copy hexo file into this folder</p>
+</li>
+<li><p>modify the <code>_config.yml</code></p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: git@github.com:wang-yuhao/wang-yuhao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>when there is <code>Deploy error</code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>generate and deploy</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>Important: Use <hexo> store and update files, <master> store static pages, so always run command in hexo branch</li>
+</ol>
+<h4 id="5-Achieve-Automated-Deployment"><a href="#5-Achieve-Automated-Deployment" class="headerlink" title="5. Achieve Automated Deployment:"></a>5. Achieve Automated Deployment:</h4><ol>
+<li>comment <code>repo</code> in _config.yml:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">#  repo: git@github.com:wang-yuhao/wang-yuhao.github.io.git</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>In local blog directory create a folder with name <code>.travis.yml</code>, it exists in the same directory with <code>_config.yml</code>.</p>
+</li>
+<li><p>Input this command:</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo: false</span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 12</span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">script:</span><br><span class="line">  - hexo generate</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: true</span><br><span class="line">  github-token: $GH_TOKEN</span><br><span class="line">  keep-history: true</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure>
+
+<p>Don’t need to change anything.</p>
+<ol start="4">
+<li><p>Get access token, have to write down this token and put it in <code>travis ci</code> environment variables. </p>
+</li>
+<li><p>Finally, run:</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout hexo</span><br><span class="line">hexo new &quot;my first blog&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -am&quot;add a new blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p><code>Travis ci</code> will be called automatically and automatically finish the deployment.</p>
+<p>Reference:<br><a href="https://hexo.io/">#1 HEXO</a><br><a href="https://www.cnblogs.com/zyh1020/p/11129565.html">#2</a><br><a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">#3</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
+    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
+    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
+<span id="more"></span>
+
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
+<li>download the aria2 with instruction:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>create a configuration file:<br>aria2.conf</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user=user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd=passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret=token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc=true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all=true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all=true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port=6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads=5</span><br><span class="line">#resume from break point</span><br><span class="line">continue=true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server=5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size=10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split=10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit=0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit=0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit=0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit=0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit=0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer=*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir=/home/yuhao/Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#x27;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache=0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap=true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation=prealloc</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>start configuration file:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path=&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Like:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
+<ol start="4">
+<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc">http://localhost:6800/jsonrpc</a></p>
+</li>
+<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
+</li>
+<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
+</li>
+<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
+</li>
+<li><p>The download information will be displayed on the terminal.</p>
+</li>
+</ol>
+<p>Reference:</p>
+<ul>
+<li>Download Baidunetdisk and 115 resources using Aria2</li>
+<li>Install and use aria2 to download Baidunetdisk content</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>9-Build-eCommerce-Platform-with-NodeJS/Express/Bootstrap/MongoDB/AliCloud</title>
+    <url>/2020/04/09/9-Build-eCommerce-Platform-with-NodeJS-Express-Bootstrap-MongoDB-AliCloud/</url>
+    <content><![CDATA[<p>Introduction(说明):</p>
+<span id="more"></span>
+<h4 id="Menu-菜单"><a href="#Menu-菜单" class="headerlink" title="Menu(菜单):"></a>Menu(菜单):</h4><p><img src="/menu.png" alt="menu.png"></p>
+<h4 id="signup-注册"><a href="#signup-注册" class="headerlink" title="signup(注册):"></a>signup(注册):</h4><p><img src="/signup.png" alt="signup.png"></p>
+<h4 id="Products-商品"><a href="#Products-商品" class="headerlink" title="Products(商品):"></a>Products(商品):</h4><p><img src="/products.png" alt="products.png"></p>
+<h4 id="Shopping-cart-购物车"><a href="#Shopping-cart-购物车" class="headerlink" title="Shopping cart(购物车):"></a>Shopping cart(购物车):</h4><p><img src="/shoppingcart.png" alt="shoppingcart.png"></p>
+<h4 id="Checkout-填写订单"><a href="#Checkout-填写订单" class="headerlink" title="Checkout(填写订单):"></a>Checkout(填写订单):</h4><p><img src="/checkout1.png" alt="checkout1.png"><br><img src="/checkout2.png" alt="checkout2.png"></p>
+<h4 id="Order-订单"><a href="#Order-订单" class="headerlink" title="Order(订单):"></a>Order(订单):</h4><p><img src="/order.png" alt="order.png"></p>
+<h4 id="Comment-建议"><a href="#Comment-建议" class="headerlink" title="Comment(建议):"></a>Comment(建议):</h4><p><img src="/comments.png" alt="comment.png"></p>
+<h4 id="Last-semester-did-a-Praktikum-in-a-german-company-the-main-job-was-independently-building-an-eCommerce-Platform-to-sell-german-products-to-China-customers-and-this-Website-is-the-outcome-It-should-have-more-functions-but-due-to-Corona-virus-the-plan-was-forced-to-be-interrupted-and-more-content-will-be-perfected-one-after-another"><a href="#Last-semester-did-a-Praktikum-in-a-german-company-the-main-job-was-independently-building-an-eCommerce-Platform-to-sell-german-products-to-China-customers-and-this-Website-is-the-outcome-It-should-have-more-functions-but-due-to-Corona-virus-the-plan-was-forced-to-be-interrupted-and-more-content-will-be-perfected-one-after-another" class="headerlink" title="Last semester did a Praktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customers, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another."></a>Last semester did a Praktikum in a german company, the main job was independently building an eCommerce Platform to sell german products to China customers, and this Website is the outcome. It should have more functions, but due to Corona-virus, the plan was forced to be interrupted, and more content will be perfected one after another.</h4><h4 id="This-eCommerce-Platform-was-designed-primarily-for-a-mobile-device-Use-Express-structure-bootstrap-and-handlebars-for-frontend-Nodejs-control-the-backend-Mongodb-store-the-database-early-the-project-was-deployed-on-the-Azure-but-due-to-the-GFW-limits-the-network-speed-user-can-not-open-the-Website-fast-so-have-to-change-to-AliCloud-on-HongKong-this-server-is-efficiency-cheaper-and-doesn’t-need-to-register-in-the-government-department-it-is-an-excellent-choice-for-the-global-eCommerce-Platform"><a href="#This-eCommerce-Platform-was-designed-primarily-for-a-mobile-device-Use-Express-structure-bootstrap-and-handlebars-for-frontend-Nodejs-control-the-backend-Mongodb-store-the-database-early-the-project-was-deployed-on-the-Azure-but-due-to-the-GFW-limits-the-network-speed-user-can-not-open-the-Website-fast-so-have-to-change-to-AliCloud-on-HongKong-this-server-is-efficiency-cheaper-and-doesn’t-need-to-register-in-the-government-department-it-is-an-excellent-choice-for-the-global-eCommerce-Platform" class="headerlink" title="This eCommerce Platform was designed primarily for a mobile device, Use Express structure, bootstrap, and handlebars for frontend, Nodejs control the backend, Mongodb store the database, early the project was deployed on the Azure, but due to the GFW limits the network speed, user can not open the Website fast, so have to change to AliCloud on HongKong, this server is efficiency, cheaper and doesn’t need to register in the government department, it is an excellent choice for the global eCommerce Platform."></a>This eCommerce Platform was designed primarily for a mobile device, Use Express structure, bootstrap, and handlebars for frontend, Nodejs control the backend, Mongodb store the database, early the project was deployed on the Azure, but due to the GFW limits the network speed, user can not open the Website fast, so have to change to AliCloud on HongKong, this server is efficiency, cheaper and doesn’t need to register in the government department, it is an excellent choice for the global eCommerce Platform.</h4><h2 id="Try-to-use-different-functionality-to-deconstruct-the-whole-project-and-review-the-development-process-again"><a href="#Try-to-use-different-functionality-to-deconstruct-the-whole-project-and-review-the-development-process-again" class="headerlink" title="Try to use different functionality to deconstruct the whole project and review the development process again."></a>Try to use different functionality to deconstruct the whole project and review the development process again.</h2><h4 id="1-Structure"><a href="#1-Structure" class="headerlink" title="1.  Structure:"></a>1.  Structure:</h4><p>The first and most important part is to use npm install express framework for the eCommerce platform structure. </p>
+<ul>
+<li><p>You can set up middleware to respond to HTTP requests.</p>
+</li>
+<li><p>The routing table is defined to perform different HTTP request actions.</p>
+</li>
+<li><p>You can dynamically render HTML pages by passing parameters to the template.</p>
+</li>
+</ul>
+<h4 id="2-Router"><a href="#2-Router" class="headerlink" title="2. Router"></a>2. Router</h4><p>You can think of it as a “mini-application”, which can operate middleware and routing methods. Every Express program has a built-in app routing. You can use Router () to create a new router object.</p>
+<h4 id="3-Use-Mongoose-to-operate-database"><a href="#3-Use-Mongoose-to-operate-database" class="headerlink" title="3. Use Mongoose to operate database:"></a>3. Use Mongoose to operate database:</h4><p>create a user schema:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var mongoose = require(&#x27;mongoose&#x27;);</span><br><span class="line">var Schema = mongoose.Schema;</span><br><span class="line">var bcrypt = require(&#x27;bcrypt-nodejs&#x27;);</span><br><span class="line"></span><br><span class="line">var userSchema = new Schema(&#123;</span><br><span class="line">    username: &#123;type: String, required: true&#125;,</span><br><span class="line">    password: &#123;type: String, required: true&#125;,</span><br><span class="line">    searchHistory: [Object],</span><br><span class="line">    advice: [Object],</span><br><span class="line">    dreamList: [Object]</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">userSchema.methods.encryptPassword = function(password)&#123;</span><br><span class="line">    return bcrypt.hashSync(password, bcrypt.genSaltSync(5), null);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">userSchema.methods.validPassword = function(password)&#123;</span><br><span class="line">    return bcrypt.compareSync(password, this.password);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = mongoose.model(&#x27;User&#x27;,userSchema)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>use a user schema</p>
+<h4 id="4-Pass-values-between-frontend-backend-and-database"><a href="#4-Pass-values-between-frontend-backend-and-database" class="headerlink" title="4. Pass values between frontend, backend, and database."></a>4. Pass values between frontend, backend, and database.</h4><p>4.1 Pass values from frontend to backend</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;form action=&quot;/user/signup&quot; method=&quot;post&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;form-group&quot;&gt;</span><br><span class="line">        &lt;label for=&quot;username&quot;&gt; 用户名 &lt;/label&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; class=&quot;form-control&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;form-group&quot;&gt;</span><br><span class="line">         &lt;label for=&quot;password&quot;&gt;密码&lt;/label&gt;</span><br><span class="line">         &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;input type=&quot;hidden&quot; name=&quot;_csrf&quot; value=&quot;&#123;&#123; csrfToken &#125;&#125;&quot;&gt;</span><br><span class="line">    &lt;button class=&quot;btn btn-primary btn-center&quot; type=&quot;submit&quot;&gt; 注册&lt;/button&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4.2 Router receive the value from the frontend</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">passport.use(&#x27;local.signup&#x27;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#x27;username&#x27;,</span><br><span class="line">    passwordField: &#x27;password&#x27;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">        const errors = validationResult(req).array()</span><br><span class="line">        console.log(errors.length);</span><br><span class="line">        if (errors.length&gt;0) &#123;</span><br><span class="line">            var messages = [];</span><br><span class="line">            for(i = 0; i &lt; errors.length; i++)&#123;</span><br><span class="line">                console.log(errors[i].msg);</span><br><span class="line">                messages.push(errors[i].msg);</span><br><span class="line">            &#125;</span><br><span class="line">         console.log(messages);</span><br><span class="line">         return done(null, false, req.flash(&#x27;error&#x27;, messages));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        User.findOne(&#123;&#x27;username&#x27;: username&#125;, function(err, user)&#123;</span><br><span class="line">           if(err)&#123;</span><br><span class="line">               console.log(&quot;err:&quot;+err);</span><br><span class="line">               return done(err);  </span><br><span class="line">           &#125;</span><br><span class="line">           if(user)&#123;</span><br><span class="line">               return done(null, false, &#123;message: &#x27;Email is already in use.&#x27;&#125;);</span><br><span class="line">           &#125;</span><br><span class="line">           var newUser = new User();</span><br><span class="line">           newUser.username = username;</span><br><span class="line">           newUser.password = newUser.encryptPassword(password);</span><br><span class="line">           newUser.save(function(err, result)&#123;</span><br><span class="line">               if(err)&#123;</span><br><span class="line">                   return done(err);</span><br><span class="line">               &#125;</span><br><span class="line">               return done(null, newUser);</span><br><span class="line">           &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+<p>4.3 Router store the data into database</p>
+<ul>
+<li>Router find and dave one record</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">passport.use(&#x27;local.signup&#x27;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#x27;username&#x27;,</span><br><span class="line">    passwordField: &#x27;password&#x27;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">        const errors = validationResult(req).array()</span><br><span class="line">        console.log(errors.length);</span><br><span class="line">        if (errors.length&gt;0) &#123;</span><br><span class="line">            var messages = [];</span><br><span class="line">            for(i = 0; i &lt; errors.length; i++)&#123;</span><br><span class="line">                console.log(errors[i].msg);</span><br><span class="line">                messages.push(errors[i].msg);</span><br><span class="line">            &#125;</span><br><span class="line">         console.log(messages);</span><br><span class="line">         return done(null, false, req.flash(&#x27;error&#x27;, messages));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        User.findOne(&#123;&#x27;username&#x27;: username&#125;, function(err, user)&#123;</span><br><span class="line">           if(err)&#123;</span><br><span class="line">               console.log(&quot;err:&quot;+err);</span><br><span class="line">               return done(err);  </span><br><span class="line">           &#125;</span><br><span class="line">           if(user)&#123;</span><br><span class="line">               return done(null, false, &#123;message: &#x27;Email is already in use.&#x27;&#125;);</span><br><span class="line">           &#125;</span><br><span class="line">           var newUser = new User();</span><br><span class="line">           newUser.username = username;</span><br><span class="line">           newUser.password = newUser.encryptPassword(password);</span><br><span class="line">           newUser.save(function(err, result)&#123;</span><br><span class="line">               if(err)&#123;</span><br><span class="line">                   return done(err);</span><br><span class="line">               &#125;</span><br><span class="line">               return done(null, newUser);</span><br><span class="line">           &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Router update and push one record from database</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">router.post(&#x27;/dreamList&#x27;, isLoggedIn, function(req, res, next)&#123;</span><br><span class="line">    var userId = req.user.id;</span><br><span class="line">    var user= req.user;</span><br><span class="line">    var name= req.body.name;</span><br><span class="line">    var description= req.body.description;</span><br><span class="line"></span><br><span class="line">    User.updateOne(&#123;&quot;_id&quot;: userId&#125;,&#123;$push: &#123;&quot;dreamList&quot;: &#123;&quot;name&quot;:name, &quot;description&quot;: description&#125;&#125;&#125;,&#123;multi:1&#125;, function(err)&#123;</span><br><span class="line">        if(err)&#123;</span><br><span class="line">            return res.write(&#x27;Error!&#x27;);</span><br><span class="line">        &#125;</span><br><span class="line">        res.redirect(&#x27;/dreamList&#x27;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Router pass a record to frontend</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">router.post(&#x27;/search&#x27;, function(req, res, next)&#123;</span><br><span class="line">    var replace = req.body.searchItem;</span><br><span class="line">    var re = new RegExp(replace);</span><br><span class="line">    Product.find(&#123;$or:[&#123;title: re&#125;,&#123;description: re&#125;]&#125;, function(err, products)&#123;</span><br><span class="line">        res.render(&#x27;shop/search-result&#x27;, &#123;title: &#x27;search result&#x27;, products: products, searchItem: replace&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Javascript receive the data from the router</li>
+</ul>
+<p>Js received two variables</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var category = &quot;&#123;&#123;category&#125;&#125;&quot;;</span><br><span class="line">var products = &#123;&#123;&#123;json products&#125;&#125;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Router passed two variables in different way</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* GET second level page. */</span><br><span class="line">router.get(&#x27;/second-level/:category&#x27;, function(req, res, next) &#123;</span><br><span class="line">  category = req.params.category;</span><br><span class="line">  console.log(category);</span><br><span class="line">  Product.find(&#123;category: category&#125;, function(err, docs)&#123;</span><br><span class="line">/*adjust the data sequence to fit the mobil interface by change productChunks to docs */</span><br><span class="line">    res.render(&#x27;shop/second-level&#x27;, &#123; title: &#x27;Shopping cart&#x27;, products: docs, category: category &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>The second way have to install handlebars-helper.</p>
+<h4 id="5-Handlebars"><a href="#5-Handlebars" class="headerlink" title="5. Handlebars"></a>5. <a href="http://handlebarsjs.com/guide/#what-is-handlebars">Handlebars</a></h4><p>Handlebars is a simple templating language.</p>
+<p>It uses a template and an input object to generate HTML or other text formats. Handlebars templates look like a regular text with embedded Handlebars expressions.</p>
+<h1 id="if"><a href="#if" class="headerlink" title="if"></a>if</h1><p>Use handlebars can simplify many steps</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;entry&quot;&gt;</span><br><span class="line">&#123;&#123;#if author&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125;&lt;/h1&gt;</span><br><span class="line">&#123;&#123;/if&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Input:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  author: true,</span><br><span class="line">  firstName: &quot;Yehuda&quot;,</span><br><span class="line">  lastName: &quot;Katz&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;entry&quot;&gt;</span><br><span class="line">&lt;h1&gt;Yehuda Katz&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="each"><a href="#each" class="headerlink" title="each"></a>each</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;ul class=&quot;people_list&quot;&gt;</span><br><span class="line">  &#123;&#123;#each people&#125;&#125;</span><br><span class="line">    &lt;li&gt;&#123;&#123;this&#125;&#125;&lt;/li&gt;</span><br><span class="line">  &#123;&#123;/each&#125;&#125;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Input: </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  people: [</span><br><span class="line">    &quot;Yehuda Katz&quot;,</span><br><span class="line">    &quot;Alan Johnson&quot;,</span><br><span class="line">    &quot;Charles Jolley&quot;,</span><br><span class="line">  ],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;ul class=&quot;people_list&quot;&gt;</span><br><span class="line">    &lt;li&gt;Yehuda Katz&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;Alan Johnson&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;Charles Jolley&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-Bootstrap"><a href="#6-Bootstrap" class="headerlink" title="6. Bootstrap"></a>6. <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/">Bootstrap</a></h4><p>Bootstrap is an open-source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+<p>There are many beauty model, you can directly reference some model in you programm. Like:</p>
+<ul>
+<li>Navbar</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;</span><br><span class="line">  &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;</span><br><span class="line">  &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/button&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;</span><br><span class="line">    &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;</span><br><span class="line">      &lt;li class=&quot;nav-item active&quot;&gt;</span><br><span class="line">        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">      &lt;li class=&quot;nav-item&quot;&gt;</span><br><span class="line">        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">      &lt;li class=&quot;nav-item dropdown&quot;&gt;</span><br><span class="line">        &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; id=&quot;navbarDropdown&quot; role=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;</span><br><span class="line">          Dropdown</span><br><span class="line">        &lt;/a&gt;</span><br><span class="line">        &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;navbarDropdown&quot;&gt;</span><br><span class="line">          &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;</span><br><span class="line">          &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;</span><br><span class="line">          &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;</span><br><span class="line">          &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">      &lt;li class=&quot;nav-item&quot;&gt;</span><br><span class="line">        &lt;a class=&quot;nav-link disabled&quot; href=&quot;#&quot; tabindex=&quot;-1&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/a&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;form class=&quot;form-inline my-2 my-lg-0&quot;&gt;</span><br><span class="line">      &lt;input class=&quot;form-control mr-sm-2&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;</span><br><span class="line">      &lt;button class=&quot;btn btn-outline-success my-2 my-sm-0&quot; type=&quot;submit&quot;&gt;Search&lt;/button&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/nav&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Carousel:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div id=&quot;carouselExampleControls&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;carousel-inner&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;carousel-item active&quot;&gt;</span><br><span class="line">      &lt;img src=&quot;...&quot; class=&quot;d-block w-100&quot; alt=&quot;...&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;carousel-item&quot;&gt;</span><br><span class="line">      &lt;img src=&quot;...&quot; class=&quot;d-block w-100&quot; alt=&quot;...&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;carousel-item&quot;&gt;</span><br><span class="line">      &lt;img src=&quot;...&quot; class=&quot;d-block w-100&quot; alt=&quot;...&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;a class=&quot;carousel-control-prev&quot; href=&quot;#carouselExampleControls&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">  &lt;a class=&quot;carousel-control-next&quot; href=&quot;#carouselExampleControls&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-Javascript"><a href="#6-Javascript" class="headerlink" title="6. Javascript"></a>6. Javascript</h4><p>Use javascript to display the products more flexible, especially when we can not ensure the count of the products.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var div = document.getElementById(&quot;products-div&quot;);</span><br><span class="line"></span><br><span class="line">//create a new product card div</span><br><span class="line">var div_pro = document.createElement(&quot;div&quot;);</span><br><span class="line">div_pro.setAttribute(&quot;class&quot;,&quot;row&quot;);</span><br><span class="line">div.appendChild(div_pro);</span><br><span class="line">var div_pro_col = document.createElement(&quot;div&quot;);</span><br><span class="line">div_pro_col.setAttribute(&quot;class&quot;,&quot;def-col-sm-6&quot;);</span><br><span class="line">div_pro.appendChild(div_pro_col);</span><br><span class="line"> </span><br><span class="line">var div_pro_col_link = document.createElement(&quot;a&quot;);</span><br><span class="line">div_pro_col_link.href = &quot;/product/&quot; + product._id;</span><br><span class="line">var div_pro_col_img = document.createElement(&quot;img&quot;);</span><br><span class="line">div_pro_col_img.setAttribute(&quot;class&quot;,&quot;img w-50&quot;);</span><br><span class="line">div_pro_col_img.src = product.imagePath;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-Decrypt-and-encrypt-force-user-to-login"><a href="#7-Decrypt-and-encrypt-force-user-to-login" class="headerlink" title="7. Decrypt and encrypt, force user to login"></a>7. Decrypt and encrypt, force user to login</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var LocalStrategy = require(&#x27;passport-local&#x27;).Strategy;</span><br><span class="line">var &#123;check, validationResult&#125; = require(&#x27;express-validator&#x27;);</span><br><span class="line"></span><br><span class="line">passport.serializeUser(function(user, done)&#123;</span><br><span class="line">    done(null, user.id);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">passport.deserializeUser(function(id, done)&#123;</span><br><span class="line">    User.findById(id, function(err, user)&#123;</span><br><span class="line">        done(err, user);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">passport.use(&#x27;local.signup&#x27;, new LocalStrategy(&#123;</span><br><span class="line">    usernameField: &#x27;username&#x27;,</span><br><span class="line">    passwordField: &#x27;password&#x27;,</span><br><span class="line">    passReqToCallback: true</span><br><span class="line">&#125;,</span><br><span class="line">    function(req, username, password, done)&#123;</span><br><span class="line">       ......</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Feature-Work"><a href="#Feature-Work" class="headerlink" title="Feature Work"></a>Feature Work</h2><blockquote>
+<ul>
+<li>send email to admin mailbox</li>
+<li>collect user visit and input data</li>
+<li>analyse user data</li>
+<li>support Wechat, Taobao and google account Login</li>
+<li>add Wechatpay and Alipay Link</li>
+<li>add more new interest product</li>
+<li>provide prompt words in search input based on user history.</li>
+<li>prompt words are provided according to the background products.</li>
+<li>recommend products based on historical purchases and browsing history</li>
+<li>add user chat</li>
+<li>add a website and product reviews</li>
+<li>add shipping method</li>
+</ul>
+</blockquote>
+<ul>
+<li>Website: <a href="germanfamily.eu">germanfamily.eu</a></li>
+<li>Github: <a href="https://github.com/wang-yuhao/shopping-cart">https://github.com/wang-yuhao/shopping-cart</a></li>
+</ul>
+]]></content>
+  </entry>
+</search>
