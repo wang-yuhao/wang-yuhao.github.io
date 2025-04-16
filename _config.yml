@@ -4,8 +4,8 @@
 
 # Site
 title: Yuhao's Blog
-subtitle: 'Spirit of indepence, thought of freedom'
-description: 'Keep on going never give up.'
+subtitle: <p><em>“An independent spirit, a free mind.”</em><br>独立之精神，自由之思想</p>
+description: 'Keep going, never give up.'
 keywords:
 author: Yuhao Wang
 language: en
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://yuhao.de
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -29,7 +29,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md # skip this file during deployment
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -107,3 +107,14 @@ search:
   field: post
   format: html
   limit: 10000
+
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 4
+  wpm: 275
+  suffix: "mins."
