@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation</title>
-    <url>/2020/06/01/11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation/</url>
-    <content><![CDATA[<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Due to the recent interview at the Sony research department in Stuttgart,  so have to explore deeper in GAN. This blog will introduce more details of adversarial examples resarch and more state-of-the-art solutions.</p>
-<span id="more"></span> ]]></content>
-  </entry>
-  <entry>
-    <title>1-First-story</title>
-    <url>/2019/05/16/1-First-story/</url>
-    <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4>]]></content>
-  </entry>
-  <entry>
-    <title>12-Mongodb-Operations</title>
-    <url>/2020/06/04/12-Mongodb-Operations/</url>
-    <content><![CDATA[<h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
-<span id="more"></span>
-
-<p>Example:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: &#x27;0256&#x27;&#125;,</span><br><span class="line">        $inc:&#123;&#x27;packets&#x27;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;,&#x27;first&#x27;: &#x27;0221&#x27;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>Error: “errmsg” : “Updating the path ‘last’ would create a conflict at ‘last’”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: 0226&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;,&#x27;first&#x27;: 221,&#x27;last&#x27;:26, &#x27;packets&#x27;: 17&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>Reason: There is already $set ‘last’, second time $setOnInsert ‘last’ make a conflict.</p>
-<h4 id="Solution-Remove-all-repeat-field-in-objNew"><a href="#Solution-Remove-all-repeat-field-in-objNew" class="headerlink" title="Solution: Remove all repeat field in objNew"></a>Solution: Remove all repeat field in objNew</h4>]]></content>
-  </entry>
-  <entry>
     <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
     <url>/2020/04/19/10-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
     <content><![CDATA[<p>(Draft)</p>
@@ -48,15 +22,15 @@
 ]]></content>
   </entry>
   <entry>
-    <title>14-Latex</title>
-    <url>/2020/06/22/14-Latex/</url>
-    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505">here</a> to your local device, and keep it with the same file with your .tex file.</p>
-<span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib/stud77.bib&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Or you can change the file path in <code>\bibliographystyle&#123; %.bst file path % &#125;</code>.<br>Delete the space between { and %. </p>
-]]></content>
+    <title>11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2020/06/01/11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Due to the recent interview at the Sony research department in Stuttgart,  so have to explore deeper in GAN. This blog will introduce more details of adversarial examples resarch and more state-of-the-art solutions.</p>
+<span id="more"></span> ]]></content>
+  </entry>
+  <entry>
+    <title>1-First-story</title>
+    <url>/2019/05/16/1-First-story/</url>
+    <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4>]]></content>
   </entry>
   <entry>
     <title>13-Python-MySQL-Operation</title>
@@ -110,6 +84,32 @@
 <p>Step4: SET PASSWORD FOR‘root‘@’localhost’ &#x3D; PASSWORD(‘Your new password’); Set a new password.</p>
 <p>This will modify&#x2F;add the password successfully.</p>
 <h2 id="3-MySQL-optimization"><a href="#3-MySQL-optimization" class="headerlink" title="3. MySQL optimization"></a>3. MySQL optimization</h2><h2 id="Attention"><a href="#Attention" class="headerlink" title="# Attention"></a># Attention</h2><p> <b> Thread Pool is just provided in MySQL Enterprise. </b> </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>12-Mongodb-Operations</title>
+    <url>/2020/06/04/12-Mongodb-Operations/</url>
+    <content><![CDATA[<h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
+<span id="more"></span>
+
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: &#x27;0256&#x27;&#125;,</span><br><span class="line">        $inc:&#123;&#x27;packets&#x27;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;,&#x27;first&#x27;: &#x27;0221&#x27;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Error: “errmsg” : “Updating the path ‘last’ would create a conflict at ‘last’”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: 0226&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;,&#x27;first&#x27;: 221,&#x27;last&#x27;:26, &#x27;packets&#x27;: 17&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Reason: There is already $set ‘last’, second time $setOnInsert ‘last’ make a conflict.</p>
+<h4 id="Solution-Remove-all-repeat-field-in-objNew"><a href="#Solution-Remove-all-repeat-field-in-objNew" class="headerlink" title="Solution: Remove all repeat field in objNew"></a>Solution: Remove all repeat field in objNew</h4>]]></content>
+  </entry>
+  <entry>
+    <title>14-Latex</title>
+    <url>/2020/06/22/14-Latex/</url>
+    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505">here</a> to your local device, and keep it with the same file with your .tex file.</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib/stud77.bib&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Or you can change the file path in <code>\bibliographystyle&#123; %.bst file path % &#125;</code>.<br>Delete the space between { and %. </p>
 ]]></content>
   </entry>
   <entry>
@@ -235,15 +235,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
-    <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
-    <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
-<span id="more"></span>
-<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
-</object>
-]]></content>
-  </entry>
-  <entry>
     <title>3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication</title>
     <url>/2019/09/05/3-p2p-matrix-Rust-library-for-distributed-matrix-multiplication/</url>
     <content><![CDATA[<p>Gitlab: <a href="https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master">https://gitlab.lrz.de/ru36ray/rustgroupf/tree/master</a></p>
@@ -251,6 +242,15 @@
 <object data="presentation-start_presentation.pdf" type="application/pdf" width="100%" height="877px">
 </object>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
+    <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
+    <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
+<span id="more"></span>
+<object data="out_report-gutsy-gibbons.pdf" type="application/pdf" width="100%" height="877px">
+</object>
 ]]></content>
   </entry>
   <entry>
