@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>0-Kick-off</title>
-    <url>/2019/05/03/0-Kick-off/</url>
-    <content><![CDATA[<p>Welcome to Yuhao’s Blog!</p>
-<p>There are always many people who think they are very special, unique and important. I am very happy to be able to visit many places in the world, meet many people from different cultures and different classes, and also absorb some professional knowledge or common sense from books, courses or the Internet.</p>
-<p>With these, I can understand the world more clearly. It also makes it harder to try to fool or control me.</p>
-<p>But most importantly, as I grew up, I became more and more convinced:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Everyone is equal.</span><br><span class="line">Time and freedom are most important.</span><br></pre></td></tr></table></figure>
-
-]]></content>
+    <title>11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation</title>
+    <url>/2020/06/01/11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation/</url>
+    <content><![CDATA[<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Due to the recent interview at the Sony research department in Stuttgart,  so have to explore deeper in GAN. This blog will introduce more details of adversarial examples resarch and more state-of-the-art solutions.</p>
+<span id="more"></span> ]]></content>
   </entry>
   <entry>
     <title>1-First-story</title>
     <url>/2019/05/16/1-First-story/</url>
-    <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4><span id="more"></span>
-<p><img src="/1-First-story.png" alt="first story.png"></p>
-]]></content>
+    <content><![CDATA[<h4 id="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"><a href="#“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》" class="headerlink" title="“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》"></a>“转瞬即逝的相逢与离别，每一个瞬间，我都想要珍惜。”——《夏目友人帐》</h4>]]></content>
+  </entry>
+  <entry>
+    <title>12-Mongodb-Operations</title>
+    <url>/2020/06/04/12-Mongodb-Operations/</url>
+    <content><![CDATA[<h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
+<span id="more"></span>
+
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: &#x27;0256&#x27;&#125;,</span><br><span class="line">        $inc:&#123;&#x27;packets&#x27;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;,&#x27;first&#x27;: &#x27;0221&#x27;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Error: “errmsg” : “Updating the path ‘last’ would create a conflict at ‘last’”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: 0226&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;,&#x27;first&#x27;: 221,&#x27;last&#x27;:26, &#x27;packets&#x27;: 17&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Reason: There is already $set ‘last’, second time $setOnInsert ‘last’ make a conflict.</p>
+<h4 id="Solution-Remove-all-repeat-field-in-objNew"><a href="#Solution-Remove-all-repeat-field-in-objNew" class="headerlink" title="Solution: Remove all repeat field in objNew"></a>Solution: Remove all repeat field in objNew</h4>]]></content>
   </entry>
   <entry>
     <title>10-Master-Thesis:Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum</title>
-    <url>/2020/04/19/10-Master-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
+    <url>/2020/04/19/10-Thesis-Conception-and-Implementation-of-a-realtime-asset-database-based-on-NetFlow-data-in-Leibniz-Rechenzentrum/</url>
     <content><![CDATA[<p>(Draft)</p>
 <span id="more"></span>
 <h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1   Introduction"></a>1   Introduction</h2><h4 id="1-1-Motivation"><a href="#1-1-Motivation" class="headerlink" title="1.1   Motivation"></a>1.1   Motivation</h4><p>The Leibniz Supercomputing Centre of the Bavarian Academy of Sciences and Humanities (LRZ) is the largest Supercomputing Center in Germany operates the Munich Scientific Network (MWN). In this network, including the Munich universities, many student dormitories, and some non-university facilities such as e.g., Bavarian State Library, museums, and the institutes of Max Planck Society and Fraunhofer Society.  A total of approximately 100,000 devices are connected. The MWN consists of a backbone network to which the networks of the facilities at the various locations are connected via routers and switches. The routers in the backbone area of the Cisco Nexus C7010 type. To connect buildings connected via DSL and smaller X-WiN locations, we operate some devices of the Cisco 1900 series (manufacturer information) and Cisco ISR 1100 (manufacturer information). For broadband connection of the computer clusters in the LRZ, a Leaf &amp; Spine infrastructure (Leaf &amp; Spine Design) based on Cisco Nexus 9364C (manufacturer information) is used. </p>
@@ -37,31 +45,18 @@
 <li>Read more state-of-the-art data science technogy to handel the data.</li>
 <li>Use RDD, redis</li>
 </ol>
-<h4 id="Question"><a href="#Question" class="headerlink" title="Question:"></a>Question:</h4><ol>
-<li>Can I cite the words from other website?</li>
-</ol>
 ]]></content>
   </entry>
   <entry>
-    <title>11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation</title>
-    <url>/2020/06/01/11-In-depth-Knowledge-in-Robustness-against-Adversarial-Perturbation/</url>
-    <content><![CDATA[<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Due to the recent interview at the Sony research department in Stuttgart,  so have to explore deeper in GAN. This blog will introduce more details of adversarial examples resarch and more state-of-the-art solutions.</p>
-<span id="more"></span> ]]></content>
-  </entry>
-  <entry>
-    <title>12-Mongodb-Operations</title>
-    <url>/2020/06/04/12-Mongodb-Operations/</url>
-    <content><![CDATA[<h4 id="1-update"><a href="#1-update" class="headerlink" title="1. update"></a>1. update</h4><p>db.collection.update(criteria, objNew, upset, multi)<br>    criteria: The search condition of update,<br>    objNew: The object or operator of update, like <code>$set, $inc, $setOnInsert</code><br>    upsert: If the criteria doesn’t exist, if insert objNew, true is insert, default[false], not insert.<br>    multi: default[false], just update the first record of the founded result, if this argument is true, update all founded records.</p>
+    <title>14-Latex</title>
+    <url>/2020/06/22/14-Latex/</url>
+    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505">here</a> to your local device, and keep it with the same file with your .tex file.</p>
 <span id="more"></span>
 
-<p>Example:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: &#x27;0256&#x27;&#125;,</span><br><span class="line">        $inc:&#123;&#x27;packets&#x27;: 17&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.4&#x27;,&#x27;first&#x27;: &#x27;0221&#x27;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib/stud77.bib&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Error: “errmsg” : “Updating the path ‘last’ would create a conflict at ‘last’”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">db.test.update(</span><br><span class="line">    &#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        $set:&#123;&#x27;last&#x27;: 0226&#125;, </span><br><span class="line">        $setOnInsert:&#123;&#x27;srcaddr&#x27;:&#x27;10.0.0.2&#x27;,&#x27;first&#x27;: 221,&#x27;last&#x27;:26, &#x27;packets&#x27;: 17&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;upsert: true&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>Reason: There is already $set ‘last’, second time $setOnInsert ‘last’ make a conflict.</p>
-<h4 id="Solution-Remove-all-repeat-field-in-objNew"><a href="#Solution-Remove-all-repeat-field-in-objNew" class="headerlink" title="Solution: Remove all repeat field in objNew"></a>Solution: Remove all repeat field in objNew</h4>]]></content>
+<p>Or you can change the file path in <code>\bibliographystyle&#123; %.bst file path % &#125;</code>.<br>Delete the space between { and %. </p>
+]]></content>
   </entry>
   <entry>
     <title>13-Python-MySQL-Operation</title>
@@ -115,17 +110,6 @@
 <p>Step4: SET PASSWORD FOR‘root‘@’localhost’ &#x3D; PASSWORD(‘Your new password’); Set a new password.</p>
 <p>This will modify&#x2F;add the password successfully.</p>
 <h2 id="3-MySQL-optimization"><a href="#3-MySQL-optimization" class="headerlink" title="3. MySQL optimization"></a>3. MySQL optimization</h2><h2 id="Attention"><a href="#Attention" class="headerlink" title="# Attention"></a># Attention</h2><p> <b> Thread Pool is just provided in MySQL Enterprise. </b> </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>14-Latex</title>
-    <url>/2020/06/22/14-Latex/</url>
-    <content><![CDATA[<h4 id="1-If-you-can-not-use-alphadin-bst-in-your-TexStudio"><a href="#1-If-you-can-not-use-alphadin-bst-in-your-TexStudio" class="headerlink" title="1.If you can not use alphadin.bst in your TexStudio:"></a>1.If you can not use <code>alphadin.bst</code> in your TexStudio:</h4><p>save <code>alphadin.bst</code> file from <a href="https://ctan.org/tex-archive/biblio/bibtex/contrib/german/din1505">here</a> to your local device, and keep it with the same file with your .tex file.</p>
-<span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\bibliographystyle&#123;alphadin&#125;</span><br><span class="line">\bibliography&#123;Bib/stud77.bib&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Or you can change the file path in <code>\bibliographystyle&#123; %.bst file path % &#125;</code>.<br>Delete the space between { and %. </p>
 ]]></content>
   </entry>
   <entry>
@@ -240,6 +224,17 @@
 ]]></content>
   </entry>
   <entry>
+    <title>17-Master-Thesis-On-the-topological-property-of-dynamic-transaction-graph</title>
+    <url>/2022/09/04/17-Master-Thesis-On-the-topological-property-of-dynamic-transaction-graph/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Many previous studies have shown the importance of basic features such as transaction amount and the previous price in predicting the bitcoin price. Moreover, as already observed in previous studies that reveal the relationship between the transaction amount, and market price with the underlying graph structure, the topological data analysis (TDA) can capture these higher-order interactions\cite{abay2019chainnet}. However, in 2020, due to the rapid development of the cryptocurrency market, the market price of Bitcoin transactions has increased over sixfold, and massive large-scale international capital has poured into this market. In addition, blockchain technology based on Bitcoin has been gradually optimized, and a variety of new cryptocurrencies with different characteristics are constantly being introduced to the market, such as Ethereum, Litecoin, and Dogecoin. Therefore, the general strength of TDA in the analysis of various cryptocurrency transactions urgently needs to be further verified. </p>
+<p>In contrast, different research has shown the high performance of vanilla Machine Learning algorithms such as Random forest, Gaussian Process, and ElasticNet in the long-term bitcoin price prediction. However, the latest efficient deep learning model in time series data prediction like RNN, LSTM, and other neural networks did not significantly improve\cite{abay2019chainnet}. Since 2017 with the introduction of the attention mechanism in neural networks, the vanilla transformer’s performance has achieved satisfactory results in many research fields \cite{vaswani2017attention}. Then in 2020, based on the vanilla Transformer, Haoyi Zhou proposed a more efficient model, Informer, which successfully enhanced the prediction capacity in the LSTM problem and used the ProbSparse Self-attention mechanism to replace the canonical self-attention for the reduction of the time complexity and memory usage\cite{zhou2020informer}. </p>
+<p>In this research, we focus on topological properties on the dynamics graph of cryptocurrencies of Bitcoin and Ethereum and use the latest attention neural network model Informer to improve the price prediction of cryptocurrencies. At last, we will also explore the different influences of the topological properties on the various cryptocurrency datasets based on their characteristics.</p>
+<span id="more"></span>
+<object data="On the topological property of dynamic transaction graph.pdf" type="application/pdf" width="100%" height="877px">
+</object>
+]]></content>
+  </entry>
+  <entry>
     <title>2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork</title>
     <url>/2019/09/04/2-landmARTigo-A-game-that-allows-user-to-identify-and-geolocate-landmarks-depicted-in-artwork/</url>
     <content><![CDATA[<p>This project draft envisions the human computation system landmARTigo that leverages the human perception and knowledge of real users to identify landmarks that might<br>be depicted in artworks. The system is similar to the ESP game, ARTigo and Karido. To incentivize users, we elaborated several benefits for users and stakeholders. We also developed a concept for the user interface. The draft includes a model for data processing and the algorithms involved in the human computation system. The system has to deal with the cold-start problem, which we want to mitigate with several solutions. We devised metrics for evaluation and how to execute the evaluation. For future work, there are several extensions we came up with, that are possible, if the system is successful.</p>
@@ -300,6 +295,47 @@
 <object data="./Poster_ADL-AI_final.pdf" type="application/pdf" width="100%" height="877px">
 </object>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
+    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
+    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
+<span id="more"></span>
+
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
+<li>download the aria2 with instruction:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>create a configuration file:<br>aria2.conf</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user=user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd=passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret=token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc=true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all=true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all=true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port=6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads=5</span><br><span class="line">#resume from break point</span><br><span class="line">continue=true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server=5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size=10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split=10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit=0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit=0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit=0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit=0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit=0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer=*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir=/home/yuhao/Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#x27;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache=0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap=true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation=prealloc</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>start configuration file:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path=&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Like:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
+<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
+<ol start="4">
+<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc">http://localhost:6800/jsonrpc</a></p>
+</li>
+<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
+</li>
+<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
+</li>
+<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
+</li>
+<li><p>The download information will be displayed on the terminal.</p>
+</li>
+</ol>
+<p>Reference:</p>
+<ul>
+<li>Download Baidunetdisk and 115 resources using Aria2</li>
+<li>Install and use aria2 to download Baidunetdisk content</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
@@ -428,47 +464,6 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout hexo</span><br><span class="line">hexo new &quot;my first blog&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -am&quot;add a new blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
 <p><code>Travis ci</code> will be called automatically and automatically finish the deployment.</p>
 <p>Reference:<br><a href="https://hexo.io/">#1 HEXO</a><br><a href="https://www.cnblogs.com/zyh1020/p/11129565.html">#2</a><br><a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">#3</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>7-Download-files-ffrom-Baidunetdisk-by-Aria2</title>
-    <url>/2019/09/09/7-Download-files-ffrom-Baidunetdisk-by-Aria2/</url>
-    <content><![CDATA[<p>Because of the intellectual property protection laws are so strict in Germany, downloading with p2p tools like baidunetdisk or xunlei online is very dangourous and is likely to be discovered by online police at any time. So we can try to replace these p2p tools with Aria2 that is faster and sampler.</p>
-<span id="more"></span>
-
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux:"></a>Linux:</h2><ol>
-<li>download the aria2 with instruction:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install aria2</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>create a configuration file:<br>aria2.conf</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#usename</span><br><span class="line">#rpc-user=user</span><br><span class="line">#password</span><br><span class="line">#rpc-passwd=passwd</span><br><span class="line">#the above suthentication method is not recommended. It is recommended to use the following token method</span><br><span class="line">#setup the encrypted key</span><br><span class="line">#rpc-secret=token</span><br><span class="line">#allow rpc</span><br><span class="line">enable-rpc=true</span><br><span class="line">#allow all sources, web interface cross domain permissions required</span><br><span class="line">rpc-allow-origin-all=true</span><br><span class="line">#Allow external access, if false, only listen to local port</span><br><span class="line">rpc-listen-all=true</span><br><span class="line">#RPC port is modified only when the default port is occupied</span><br><span class="line">#rpc-listen-port=6800</span><br><span class="line">#maximum simultaneous downloads(number of tasks), route suggested value: 3</span><br><span class="line">max-concurrent-downloads=5</span><br><span class="line">#resume from break point</span><br><span class="line">continue=true</span><br><span class="line">#number of connections to the server</span><br><span class="line">max-connection-per-server=5</span><br><span class="line"># minimum file shard size, the maximum number of download threads depends on how many slices can be split, which is important for small files.</span><br><span class="line">min-split-size=10M</span><br><span class="line">#Maximum number of threads per file, recommended route: 5</span><br><span class="line">split=10</span><br><span class="line">#</span><br><span class="line">max-overall-download-limit=0</span><br><span class="line">#limitation of download speed </span><br><span class="line">max-download-limit=0</span><br><span class="line">#limitation of upload speed</span><br><span class="line">max-overall-upload-limit=0</span><br><span class="line">#limitation of uploading a single file</span><br><span class="line">max-upload-limit=0</span><br><span class="line">#Disconnect the connection that is too slow</span><br><span class="line">#lowest-speed-limit=0</span><br><span class="line">#For verification putposes, a release version after 1.16.1 is required</span><br><span class="line">#referer=*</span><br><span class="line"># File save path, default to the current boot location</span><br><span class="line"># !!!! change this to the path in your computer </span><br><span class="line">dir=/home/yuhao/Downloads </span><br><span class="line"># File caching, using the built-in file cache, is you don&#x27;t believe the Linux kernel file cache and disk built-in cache, you need version 1.16 and above</span><br><span class="line">#disk-cache=0</span><br><span class="line">#Another way to cache Linux files, make sure that the kernel you are using supports thsi option before use. It requires 1.15 and above</span><br><span class="line">#enable-mmap=true</span><br><span class="line">#File pre-allocation, which can be effectively reduce file fragmentation and improve disk performance. Th dis advantage is that the pre-allocation time is longer.</span><br><span class="line"># Time required none &lt; falloc ? trunc &lt;&lt; prealloc, falloc and trunc require file system and kernel support&gt;</span><br><span class="line">file-allocation=prealloc</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>start configuration file:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">aria2c --conf-path=&lt;path&gt; # &lt;path&gt; is the absolute path of aria2.conf</span><br></pre></td></tr></table></figure>
-<p>Like:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\aria2\aria2.conf</span><br></pre></td></tr></table></figure>
-<p>Adding -D parameter can make the Aria2 run in the background, wven you close the terminal, it will not stop running.</p>
-<ol start="4">
-<li><p>Online Aria2 monitor:<br>Change the RPC PATH in the aria2.conf to <a href="http://localhost:6800/jsonrpc">http://localhost:6800/jsonrpc</a></p>
-</li>
-<li><p>Install and enable Baiduexporter Add-ons in Firefox or Chrome(invalid in Chrome?)</p>
-</li>
-<li><p>Open the link of resource in Baidunetdisk, then login in the baidu account.</p>
-</li>
-<li><p>select the export download-aria2c RPC download, and enter the confimation code.</p>
-</li>
-<li><p>The download information will be displayed on the terminal.</p>
-</li>
-</ol>
-<p>Reference:</p>
-<ul>
-<li>Download Baidunetdisk and 115 resources using Aria2</li>
-<li>Install and use aria2 to download Baidunetdisk content</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
